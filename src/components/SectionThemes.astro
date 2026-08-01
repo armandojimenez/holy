@@ -1,0 +1,229 @@
+---
+// The theme gallery device (deck port: themes.js), alive: the green check
+// wanders across REAL card themes from card_theme_list.dart — real
+// gradients, colors and theme_bg artwork, each specimen in its theme's own
+// bundled font. The "create custom theme" gradient button is the app's.
+import FeatureSection from './FeatureSection.astro';
+import Phone from './Phone.astro';
+import { deck, landing } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+import sections from '../data/generated/sections.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+const sec = sections[locale];
+const sample = d.themes.sample ?? 'Aa';
+
+const serif = "var(--font-serif)";
+// Holy CARD_THEMES subset (12 = 4 full rows). Image themes use app art.
+const cards = [
+  { img: 'holy_bg_green', font: serif, color: '#FFF', size: 30 },
+  { img: 'holy_bg_gold', font: serif, color: '#FFF', size: 30 },
+  { img: 'holy_bg_redish', font: serif, color: '#FFF', size: 30 },
+  { img: 'holy_bg_blue', font: serif, color: '#FFF', size: 30 },
+  { img: 'holy_bg_crema', font: serif, color: '#252525', size: 30 },
+  { img: 'holy_bg_black', font: serif, color: '#FCF9F0', size: 30 },
+  { img: 'holy_bg_pinky', font: serif, color: '#2F3C7E', size: 30 },
+  { img: 'holy_bg_white', font: serif, color: '#252525', size: 30 },
+  { img: 'bottom_flower', font: serif, color: '#6E6666', size: 30 },
+  { img: 'candle', font: serif, color: '#FFF', size: 30 },
+  { img: 'book', font: serif, color: '#FFF', size: 30 },
+  { img: 'hands', font: serif, color: '#FFF', size: 30 },
+];
+---
+
+<FeatureSection title={d.themes.hero} body={s.sections.themes.body} flip tone="tint">
+  <div class="scene" role="img" aria-label={s.sections.themes.artLabel}>
+    <div class="space" aria-hidden="true">
+      <div class="phone-scale">
+        <Phone frame="light" status="dark">
+          <div class="th-screen">
+            <div class="th-bar">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5 8 12l6.5 7"/></svg>
+              <span class="th-title">{sec.themes.title}</span>
+            </div>
+            <div class="th-make">{sec.themes.make}</div>
+            <div class="th-grid" data-theme-grid>
+              {cards.map((c, i) => (
+                <div
+                  class={`th-card ${i === 0 ? 'selected' : ''}`}
+                  data-theme-card
+                  style={c.img
+                    ? `background-image:url(${asset(`/app/images/backgrounds/theme_bg/${c.img}.webp`)});background-size:100% 100%`
+                    : `background:${c.css}`}
+                >
+                  <span
+                    class="sample"
+                    data-fit
+                    style={`font-family:${c.font};color:${c.color};font-weight:${c.w ?? 400};font-size:${c.size}px;${c.shadow ? `text-shadow:${c.shadow}` : ''}`}
+                  >
+                    {sample}
+                  </span>
+                  <svg class="th-check" width="30" height="30" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="11" fill="#499E5F" stroke="#FFFFFF" stroke-width="1.8"></circle>
+                    <path d="M6.8 12.4 10.2 15.8 17.2 8.6" stroke="#fff" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Phone>
+      </div>
+    </div>
+  </div>
+</FeatureSection>
+
+<style>
+  .scene {
+    --fw: 400;
+    width: calc(var(--fw) * 1px);
+    height: calc(var(--fw) * 1.62px);
+    position: relative;
+  }
+
+  .space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 504px;
+    height: 1068px;
+    transform: scale(calc(var(--fw) / 504));
+    transform-origin: top left;
+  }
+
+  .phone-scale {
+    transform: scale(0.46);
+    transform-origin: top left;
+  }
+
+  /* ── In-screen (440pt logical space): deck grid pad 12, gap 10, top 196,
+     cards 132x198 (2:3) after the 52px gradient button at 124 ── */
+  .th-screen {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+  }
+
+  .th-bar {
+    position: absolute;
+    top: 58px;
+    left: 14px;
+    right: 14px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+
+  .th-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1a1a1a;
+  }
+
+  .th-make {
+    position: absolute;
+    top: 124px;
+    left: 16px;
+    right: 16px;
+    height: 52px;
+    border-radius: 16px;
+    background: #176d70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 17.8px;
+    color: #ffffff;
+    box-shadow: none;
+  }
+
+  .th-grid {
+    position: absolute;
+    top: 196px;
+    left: 12px;
+    right: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .th-card {
+    position: relative;
+    height: 198px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  .th-card.selected {
+    z-index: 2;
+  }
+
+  .sample {
+    position: relative;
+  }
+
+  .th-check {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    opacity: 0;
+    transform: scale(0.4);
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25));
+    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.34, 1.6, 0.5, 1);
+  }
+
+  .th-card.selected .th-check {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media (max-width: 1120px) {
+    .scene { --fw: 350; }
+  }
+  @media (max-width: 470px) {
+    .scene { --fw: 300; }
+  }
+  @media (max-width: 340px) {
+    .scene { --fw: 280; }
+  }
+</style>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const grid of document.querySelectorAll('[data-theme-grid]')) {
+    if (reduced) continue;
+    const cards = [...grid.querySelectorAll('[data-theme-card]')];
+    if (cards.length < 2) continue;
+    let current = cards.findIndex((c) => c.classList.contains('selected'));
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const step = () => {
+      if (document.hidden) return;
+      cards[current]?.classList.remove('selected');
+      current = (current + 1) % cards.length;
+      cards[current]?.classList.add('selected');
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !timer) timer = setInterval(step, 2200);
+        else if (!entry.isIntersecting && timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(grid);
+  }
+</script>

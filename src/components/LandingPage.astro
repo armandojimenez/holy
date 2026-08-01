@@ -1,0 +1,273 @@
+---
+// The whole landing page for one locale. /holy/ renders it with en; the
+// [locale] route renders the others. Everything locale-specific flows
+// from the deck copy modules + src/i18n/<locale>.mjs. Section order
+// mirrors the store deck's narrative arc.
+import Base from '../layouts/Base.astro';
+import SiteHeader from './SiteHeader.astro';
+import HeroArt from './HeroArt.astro';
+import ProofStrip from './ProofStrip.astro';
+import SectionCards from './SectionCards.astro';
+import SectionCategories from './SectionCategories.astro';
+import SectionWidgets from './SectionWidgets.astro';
+import SectionThemes from './SectionThemes.astro';
+import SectionShare from './SectionShare.astro';
+import SectionMyOwn from './SectionMyOwn.astro';
+import SectionPractice from './SectionPractice.astro';
+import SectionFamily from './SectionFamily.astro';
+import SectionFaq from './SectionFaq.astro';
+import SectionCta from './SectionCta.astro';
+import QuoteBand from './QuoteBand.astro';
+import ContactModal from './ContactModal.astro';
+import SiteFooter from './SiteFooter.astro';
+import LangBanner from './LangBanner.astro';
+import { deck, landing, localeUrl, PUBLISHED_LOCALES } from '../i18n/index.mjs';
+import { storeUrls, asset } from '../config.mjs';
+import { mobileApp, organization, webSite, faqPage } from '../seo/schema.mjs';
+import sections from '../data/generated/sections.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+const sec = sections[locale];
+// The landing owns its own title line breaks: the deck's reminders.hero \n
+// was authored for the portrait slide. s.hero.title (same approved words,
+// landing-fit breaks) wins when a locale defines it.
+const heroLines = (s.hero.title ?? d.reminders.hero).split('\n');
+const bands = sec.bands; // [tree, Tyson, Jung, day-one]
+const stores = storeUrls(locale);
+
+const pageUrl = new URL(localeUrl(locale), Astro.site).href;
+// Same og-image fallback rule as Base.astro: a locale without its own
+// /og/<locale>.png shares the en art.
+const ogKey = PUBLISHED_LOCALES.includes(locale) ? locale : 'en';
+const schemas = [
+  mobileApp({
+    description: s.meta.description,
+    url: pageUrl,
+    image: new URL(asset(`/og/${ogKey}.png`), Astro.site).href,
+    screenshot: new URL(asset(`/og/screenshot-${ogKey}.png`), Astro.site).href,
+  }),
+  organization(),
+  webSite({ url: pageUrl }),
+  faqPage(s.faq.items),
+];
+---
+
+<Base
+  locale={locale}
+  title={s.meta.title}
+  description={s.meta.description}
+  ogAlt={s.meta.ogAlt}
+  schemas={schemas}
+>
+  <a id="top"></a>
+  <SiteHeader locale={locale} />
+  <LangBanner locale={locale} />
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>
+            {heroLines.map((line) => <span class="line">{line}</span>)}
+          </h1>
+          <span class="bird" aria-hidden="true"></span>
+          <p class="lead">{s.hero.sub}</p>
+          <div class="badges">
+            <a href={stores.ios}>
+              <img src={asset('/img/badges/app-store-badge.svg')} alt={s.hero.badgeIos} width="182" height="54" />
+            </a>
+            <a href={stores.android}>
+              <img src={asset('/img/badges/google-play-badge.svg')} alt={s.hero.badgeAndroid} width="182" height="54" />
+            </a>
+          </div>
+        </div>
+        <div class="hero-art-col">
+          <HeroArt locale={locale} />
+        </div>
+      </div>
+    </section>
+
+    <ProofStrip locale={locale} />
+
+    <SectionCards locale={locale} />
+    <QuoteBand text={bands[0].text} author={bands[0].author} marks={s.quoteMarks} tone="night" />
+
+    <SectionCategories locale={locale} />
+    <SectionWidgets locale={locale} />
+    <QuoteBand text={bands[1].text} author={bands[1].author} marks={s.quoteMarks} tone="light" />
+
+    <SectionThemes locale={locale} />
+    <SectionShare locale={locale} />
+    <QuoteBand text={bands[2].text} author={bands[2].author} marks={s.quoteMarks} tone="night" />
+
+    <SectionMyOwn locale={locale} />
+    <SectionPractice locale={locale} />
+
+    <SectionFamily locale={locale} />
+    <SectionFaq locale={locale} />
+    <QuoteBand text={bands[3].text} author={bands[3].author} marks={s.quoteMarks} tone="light" />
+
+    <SectionCta locale={locale} />
+  </main>
+
+  <ContactModal locale={locale} />
+  <SiteFooter locale={locale} />
+</Base>
+
+<style>
+  .hero {
+    background: linear-gradient(180deg, var(--lav-0) 0%, var(--lav-1) 100%);
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(24px, 4vw, 56px);
+    padding-top: clamp(32px, 6vh, 72px);
+  }
+
+  .hero-copy {
+    padding-top: clamp(8px, 4vh, 48px);
+    padding-bottom: clamp(24px, 5vh, 64px);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(48px, 6.6vw, 92px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  /* CJK has no word spaces to break on and reads tighter a step down.
+     ja's 7-glyph line needs the lower cap (desktop) AND floor (320px:
+     strict line-breaking treats the phrase as unbreakable). */
+  :global(:lang(ja)) h1,
+  :global(:lang(ko)) h1 {
+    font-size: clamp(30px, 5.4vw, 62px);
+    letter-spacing: 0;
+  }
+
+  /* Longer Latin compounds need a landing cap below the portrait-deck
+     scale so each reviewed line remains intact at both 320px and desktop. */
+  :global(:lang(en)) h1 {
+    font-size: clamp(40px, 5.2vw, 72px);
+  }
+  :global(:lang(pt)) h1,
+  :global(:lang(de)) h1,
+  :global(:lang(fr)) h1 {
+    font-size: clamp(34px, 5vw, 64px);
+  }
+
+  /* Measured caps (qa-sweep 2026-07-24): every authored title line must
+     render as ONE line in the narrowest capped column (~464px). es "cada
+     día con" (12ch) and pl "z motywacją" wrap at the 92px cap; id "Awali
+     harimu" rides the same limit. */
+  :global(:lang(es)) h1 {
+    font-size: clamp(36px, 6.6vw, 70px);
+  }
+  :global(:lang(pl)) h1 {
+    font-size: clamp(40px, 6.6vw, 72px);
+  }
+  :global(:lang(id)) h1 {
+    font-size: clamp(34px, 5vw, 58px);
+  }
+
+  h1 .line {
+    display: block;
+  }
+
+  .bird {
+    display: block;
+    margin-top: 18px;
+    transform: rotate(-8deg);
+    width: 56px;
+    height: 56px;
+    background: var(--bird);
+    -webkit-mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+    mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+  }
+
+  .lead {
+    margin-top: 18px;
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+
+  .badges {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .badges img {
+    height: 54px;
+    width: auto;
+  }
+
+  .hero-art-col {
+    display: flex;
+    justify-content: center;
+    align-self: end;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-copy {
+      text-align: center;
+      padding-bottom: 0;
+    }
+    .bird {
+      margin-inline: auto;
+    }
+    .lead {
+      margin-inline: auto;
+    }
+    .badges {
+      justify-content: center;
+    }
+    .hero-art-col {
+      margin-top: 8px;
+    }
+  }
+</style>
+
+<script>
+  // The screenshot studio marks fixed app-UI text with data-fit. Port its
+  // measured 60% floor so longer localized verses shrink inside the same
+  // production geometry instead of clipping or shifting the composition.
+  const fitStudioText = async () => {
+    await document.fonts.ready;
+    for (const node of document.querySelectorAll<HTMLElement>('[data-fit]')) {
+      const base = Number(node.dataset.fitBase ?? parseFloat(getComputedStyle(node).fontSize));
+      const container = node.parentElement;
+      const overflows = () =>
+        node.scrollWidth > node.clientWidth + 1 ||
+        node.scrollHeight > node.clientHeight + 1 ||
+        (container != null &&
+          (container.scrollWidth > container.clientWidth + 1 ||
+            container.scrollHeight > container.clientHeight + 1));
+      node.dataset.fitBase = String(base);
+      node.style.fontSize = `${base}px`;
+      for (
+        let size = base;
+        size > base * 0.6 && overflows();
+        size -= 2
+      ) {
+        node.style.fontSize = `${size - 2}px`;
+      }
+    }
+  };
+
+  fitStudioText();
+</script>

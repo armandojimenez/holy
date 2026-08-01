@@ -1,0 +1,213 @@
+---
+// The categories device, alive: the app's 2-column grid (deck port:
+// categories.js + appui.js categoryCard) where cards take turns being
+// selected: blue-violet gradient fill, white title, the green check badge,
+// a gentle pop. Card geometry in the 440pt logical space: 199x243, 14 gaps.
+import FeatureSection from './FeatureSection.astro';
+import Phone from './Phone.astro';
+import { deck, landing } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+import sections from '../data/generated/sections.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+const sec = sections[locale];
+---
+
+<FeatureSection
+  title={d.categories.hero}
+  body={s.sections.categories.body}
+  flip
+  tone="tint"
+>
+  <div class="scene" role="img" aria-label={s.sections.categories.artLabel}>
+    <div class="space" aria-hidden="true">
+      <div class="phone-scale">
+        <Phone frame="light" status="dark">
+          <div class="cat-screen">
+            <div class="cat-header">{sec.categoriesTitle}</div>
+            <div class="cat-grid" data-cat-grid>
+              {sec.categories.map((c, i) => (
+                <div class={`cat-card ${i === 0 ? 'selected' : ''}`} data-cat-card>
+                  <div class="cat-img">
+                    <img src={asset(`/app/images/backgrounds/categories_bg/${c.key}.webp`)} alt="" loading="lazy" width="199" height="146" />
+                  </div>
+                  <div class="cat-label">{c.title}</div>
+                  <svg class="cat-check" width="30" height="30" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="11" fill="#499E5F" stroke="#FFFFFF" stroke-width="1.8"></circle>
+                    <path d="M6.8 12.4 10.2 15.8 17.2 8.6" stroke="#fff" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Phone>
+      </div>
+    </div>
+  </div>
+</FeatureSection>
+
+<style>
+  .scene {
+    --fw: 400;
+    width: calc(var(--fw) * 1px);
+    height: calc(var(--fw) * 1.62px);
+    position: relative;
+  }
+
+  .space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 504px;
+    height: 1068px;
+    transform: scale(calc(var(--fw) / 504));
+    transform-origin: top left;
+  }
+
+  .phone-scale {
+    transform: scale(0.46);
+    transform-origin: top left;
+  }
+
+  /* ── In-screen (440pt logical space) ── */
+  .cat-screen {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+  }
+
+  .cat-header {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    font-weight: 600;
+    font-size: 21px;
+    color: #1b1b1b;
+  }
+
+  .cat-grid {
+    position: absolute;
+    top: 124px;
+    left: 14px;
+    right: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .cat-card {
+    position: relative;
+    height: 243px;
+    border-radius: 16px;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: background 0.45s ease, transform 0.45s cubic-bezier(0.34, 1.4, 0.5, 1);
+  }
+
+  /* Selected: the app's blue-violet gradient (category_card.dart) */
+  .cat-card.selected {
+    background: linear-gradient(90deg, #12585b 0%, #31999d 100%);
+    transform: scale(1.045);
+    z-index: 2;
+  }
+
+  .cat-img {
+    flex: 4;
+    display: flex;
+    align-items: stretch;
+    margin: 20px 20px 0;
+  }
+
+  .cat-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px 20px 6px 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .cat-label {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px 10px;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.2;
+    color: #2a2a2a;
+    transition: color 0.45s ease;
+  }
+
+  .cat-card.selected .cat-label {
+    color: #ffffff;
+  }
+
+  .cat-check {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.4);
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25));
+    transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.34, 1.6, 0.5, 1);
+  }
+
+  .cat-card.selected .cat-check {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media (max-width: 1120px) {
+    .scene { --fw: 350; }
+  }
+  @media (max-width: 470px) {
+    .scene { --fw: 300; }
+  }
+  @media (max-width: 340px) {
+    .scene { --fw: 280; }
+  }
+</style>
+
+<script>
+  // One category at a time takes the selection, like a hand browsing.
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const grid of document.querySelectorAll('[data-cat-grid]')) {
+    if (reduced) continue;
+    const cards = [...grid.querySelectorAll('[data-cat-card]')];
+    if (cards.length < 2) continue;
+    let current = cards.findIndex((c) => c.classList.contains('selected'));
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const step = () => {
+      if (document.hidden) return;
+      cards[current]?.classList.remove('selected');
+      current = (current + 1) % cards.length;
+      cards[current]?.classList.add('selected');
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !timer) timer = setInterval(step, 2600);
+        else if (!entry.isIntersecting && timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(grid);
+  }
+</script>

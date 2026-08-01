@@ -1,0 +1,1135 @@
+{
+  "en": {
+    "categoriesTitle": "Categories",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Holy Verses"
+      },
+      {
+        "key": "faith",
+        "title": "Faith"
+      },
+      {
+        "key": "hope",
+        "title": "Hope"
+      },
+      {
+        "key": "pray",
+        "title": "Prayer"
+      },
+      {
+        "key": "gratitude",
+        "title": "Gratefulness"
+      },
+      {
+        "key": "jesus",
+        "title": "Son of God"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Forgiveness"
+      },
+      {
+        "key": "love",
+        "title": "God's Love"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "I can do all things through Christ who strengthens me.",
+        "author": "Philippians 4:13"
+      },
+      "label": "Holy Verses"
+    },
+    "widgets": {
+      "medium": "Casting all your worries on him, because he cares for you.",
+      "smallDark": "I can do all things through Christ who strengthens me.",
+      "smallPink": "For we walk by faith, not by sight.",
+      "medium2": "The LORD is my strength and song. He has become my salvation."
+    },
+    "themes": {
+      "title": "Choose your art",
+      "make": "Create custom theme"
+    },
+    "share": {
+      "quote": {
+        "text": "For we walk by faith, not by sight.",
+        "author": "2 Corinthians 5:7"
+      },
+      "story": "Story",
+      "square": "Square",
+      "save": "Save",
+      "copy": "Copy",
+      "more": "More"
+    },
+    "myown": {
+      "title": "My Verses",
+      "add": "Add",
+      "dialogTitle": "Add a new verse!",
+      "save": "Save"
+    },
+    "practice": {
+      "quote": {
+        "text": "Seek the LORD and his strength. Seek his face forever more.",
+        "author": "1 Chronicles 16:11"
+      },
+      "day": "Day",
+      "night": "Night"
+    },
+    "dark": {
+      "quote": {
+        "text": "The light shines in the darkness, and the darkness hasn’t overcome it.",
+        "author": "John 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "The light shines in the darkness, and the darkness hasn’t overcome it.",
+        "author": "John 1:5"
+      },
+      {
+        "text": "The LORD bless you, and keep you. The LORD make his face to shine on you, and be gracious to you. The LORD lift up his face toward you, and give you peace.",
+        "author": "Numbers 6:24-26"
+      },
+      {
+        "text": "And the peace of God, which surpasses all understanding, will guard your hearts and your thoughts in Christ Jesus.",
+        "author": "Philippians 4:7"
+      },
+      {
+        "text": "For I know the thoughts that I think toward you,” says the LORD, “thoughts of peace, and not of evil, to give you hope and a future.",
+        "author": "Jeremiah 29:11"
+      }
+    ]
+  },
+  "es": {
+    "categoriesTitle": "Categorías",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Versículos bíblicos"
+      },
+      {
+        "key": "faith",
+        "title": "Fe"
+      },
+      {
+        "key": "hope",
+        "title": "Esperanza"
+      },
+      {
+        "key": "pray",
+        "title": "Oración"
+      },
+      {
+        "key": "gratitude",
+        "title": "Gratitud"
+      },
+      {
+        "key": "jesus",
+        "title": "Hijo de Dios"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Perdón"
+      },
+      {
+        "key": "love",
+        "title": "El amor de Dios"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Todo lo puedo en Cristo que me fortalece.",
+        "author": "Filipenses 4:13"
+      },
+      "label": "Versículos bíblicos"
+    },
+    "widgets": {
+      "medium": "Echando toda vuestra solicitud en él, porque él tiene cuidado de vosotros.",
+      "smallDark": "Todo lo puedo en Cristo que me fortalece.",
+      "smallPink": "Porque por fe andamos, no por vista.",
+      "medium2": "Mi fortaleza y mi canción es JAH; y él me ha sido por salud."
+    },
+    "themes": {
+      "title": "Elige tu diseño",
+      "make": "Crear tema personalizado"
+    },
+    "share": {
+      "quote": {
+        "text": "Porque por fe andamos, no por vista.",
+        "author": "2 Corintios 5:7"
+      },
+      "story": "Historia",
+      "square": "Cuadrado",
+      "save": "Guardar imagen",
+      "copy": "Copiar texto",
+      "more": "Más"
+    },
+    "myown": {
+      "title": "Mis frases",
+      "add": "Agregar",
+      "dialogTitle": "¡Agrega una nueva frase!",
+      "save": "Guardar"
+    },
+    "practice": {
+      "quote": {
+        "text": "Buscad á Jehová y su fortaleza; buscad su rostro continuamente.",
+        "author": "1 Crónicas 16:11"
+      },
+      "day": "Día",
+      "night": "Noche"
+    },
+    "dark": {
+      "quote": {
+        "text": "Y la luz en las tinieblas resplandece; mas las tinieblas no la comprendieron.",
+        "author": "Juan 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Y la luz en las tinieblas resplandece; mas las tinieblas no la comprendieron.",
+        "author": "Juan 1:5"
+      },
+      {
+        "text": "Jehová te bendiga, y te guarde: Haga resplandecer Jehová su rostro sobre ti, y haya de ti misericordia: Jehová alce á ti su rostro, y ponga en ti paz.",
+        "author": "Números 6:24-26"
+      },
+      {
+        "text": "Y la paz de Dios, que sobrepuja todo entendimiento, guardará vuestros corazones y vuestros entendimientos en Cristo Jesús.",
+        "author": "Filipenses 4:7"
+      },
+      {
+        "text": "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis.",
+        "author": "Jeremías 29:11"
+      }
+    ]
+  },
+  "pt": {
+    "categoriesTitle": "Categorias",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Versículos bíblicos"
+      },
+      {
+        "key": "faith",
+        "title": "Fé"
+      },
+      {
+        "key": "hope",
+        "title": "Esperança"
+      },
+      {
+        "key": "pray",
+        "title": "Oração"
+      },
+      {
+        "key": "gratitude",
+        "title": "Gratidão"
+      },
+      {
+        "key": "jesus",
+        "title": "Filho de Deus"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Perdão"
+      },
+      {
+        "key": "love",
+        "title": "Amor de Deus"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Posso todas as coisas em Cristo que me fortalece.",
+        "author": "Filipenses 4:13"
+      },
+      "label": "Versículos bíblicos"
+    },
+    "widgets": {
+      "medium": "Lançando sobre ele toda a vossa ansiedade; porque ele tem cuidado de vós.",
+      "smallDark": "Posso todas as coisas em Cristo que me fortalece.",
+      "smallPink": "Pois andamos pela fé, e não pela vista.",
+      "medium2": "O SENHOR é minha força e minha canção, porque ele tem sido minha salvação."
+    },
+    "themes": {
+      "title": "Escolha sua arte",
+      "make": "Criar tema personalizado"
+    },
+    "share": {
+      "quote": {
+        "text": "Pois andamos pela fé, e não pela vista.",
+        "author": "2 Coríntios 5:7"
+      },
+      "story": "Story",
+      "square": "Quadrado",
+      "save": "Salvar imagem",
+      "copy": "Copiar texto",
+      "more": "Mais"
+    },
+    "myown": {
+      "title": "Minhas frases",
+      "add": "Adicionar",
+      "dialogTitle": "Adicione uma nova frase!",
+      "save": "Salvar"
+    },
+    "practice": {
+      "quote": {
+        "text": "Procurai ao SENHOR e à sua força; buscai a sua face continuamente.",
+        "author": "1 Crônicas 16:11"
+      },
+      "day": "Dia",
+      "night": "Noite"
+    },
+    "dark": {
+      "quote": {
+        "text": "E a luz brilha nas trevas; e as trevas não a compreenderam.",
+        "author": "João 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "E a luz brilha nas trevas; e as trevas não a compreenderam.",
+        "author": "João 1:5"
+      },
+      {
+        "text": "O SENHOR te abençoe, e te guarde: Faça resplandecer o SENHOR seu rosto sobre ti, e tenha de ti misericórdia: O SENHOR levante a ti seu rosto, e ponha em ti paz.",
+        "author": "Números 6:24-26"
+      },
+      {
+        "text": "E a paz de Deus, que excede todo entendimento, guardará os vossos corações e as vossas mentes em Cristo Jesus.",
+        "author": "Filipenses 4:7"
+      },
+      {
+        "text": "Porque eu sei os pensamentos que penso quanto a vós, diz o SENHOR, pensamentos de paz, e não de mal, para vos dar um futuro com esperança.",
+        "author": "Jeremias 29:11"
+      }
+    ]
+  },
+  "de": {
+    "categoriesTitle": "Kategorien",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Bibelverse"
+      },
+      {
+        "key": "faith",
+        "title": "Glaube"
+      },
+      {
+        "key": "hope",
+        "title": "Hoffnung"
+      },
+      {
+        "key": "pray",
+        "title": "Gebet"
+      },
+      {
+        "key": "gratitude",
+        "title": "Dankbarkeit"
+      },
+      {
+        "key": "jesus",
+        "title": "Sohn Gottes"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Vergebung"
+      },
+      {
+        "key": "love",
+        "title": "Gottes Liebe"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Ich vermag alles durch den, der mich mächtig macht, Christus.",
+        "author": "Philipper 4:13"
+      },
+      "label": "Bibelverse"
+    },
+    "widgets": {
+      "medium": "Alle Sorge werfet auf ihn; denn er sorgt für euch.",
+      "smallDark": "Ich vermag alles durch den, der mich mächtig macht, Christus.",
+      "smallPink": "Denn wir wandeln im Glauben, und nicht im Schauen.",
+      "medium2": "Der HERR ist meine Macht und mein Psalm und ist mein Heil."
+    },
+    "themes": {
+      "title": "Wähle dein Design",
+      "make": "Benutzerdefiniertes Design erstellen"
+    },
+    "share": {
+      "quote": {
+        "text": "Denn wir wandeln im Glauben, und nicht im Schauen.",
+        "author": "2 Korinther 5:7"
+      },
+      "story": "Story",
+      "square": "Quadrat",
+      "save": "Bild speichern",
+      "copy": "Text kopieren",
+      "more": "Mehr"
+    },
+    "myown": {
+      "title": "Meine Sprüche",
+      "add": "Hinzufügen",
+      "dialogTitle": "Neuen Spruch hinzufügen!",
+      "save": "Speichern"
+    },
+    "practice": {
+      "quote": {
+        "text": "Fraget nach dem HERRN und nach seiner Macht; suchet sein Angesicht allezeit!",
+        "author": "1 Chroniken 16:11"
+      },
+      "day": "Tag",
+      "night": "Nacht"
+    },
+    "dark": {
+      "quote": {
+        "text": "Und das Licht scheint in der Finsternis, und die Finsternis hat's nicht begriffen.",
+        "author": "Johannes 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Und das Licht scheint in der Finsternis, und die Finsternis hat's nicht begriffen.",
+        "author": "Johannes 1:5"
+      },
+      {
+        "text": "Der HERR segne dich und behüte dich; der HERR lasse sein Angesicht leuchten über dir und sei dir gnädig; der HERR hebe sein Angesicht über dich und gebe dir Frieden.",
+        "author": "4. Mose 6:24-26"
+      },
+      {
+        "text": "Und der Friede Gottes, welcher höher ist denn alle Vernunft, bewahre eure Herzen und Sinne in Christo Jesu!",
+        "author": "Philipper 4:7"
+      },
+      {
+        "text": "Denn ich weiß wohl, was ich für Gedanken über euch habe, spricht der HERR: Gedanken des Friedens und nicht des Leidens, daß ich euch gebe das Ende, des ihr wartet.",
+        "author": "Jeremia 29:11"
+      }
+    ]
+  },
+  "fr": {
+    "categoriesTitle": "Catégories",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Versets bibliques"
+      },
+      {
+        "key": "faith",
+        "title": "Foi"
+      },
+      {
+        "key": "hope",
+        "title": "Espérance"
+      },
+      {
+        "key": "pray",
+        "title": "Prière"
+      },
+      {
+        "key": "gratitude",
+        "title": "Gratitude"
+      },
+      {
+        "key": "jesus",
+        "title": "Fils de Dieu"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Pardon"
+      },
+      {
+        "key": "love",
+        "title": "L’amour de Dieu"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Je puis tout par celui qui me fortifie.",
+        "author": "Philippiens 4:13"
+      },
+      "label": "Versets bibliques"
+    },
+    "widgets": {
+      "medium": "Et déchargez-vous sur lui de tous vos soucis, car lui-même prend soin de vous.",
+      "smallDark": "Je puis tout par celui qui me fortifie.",
+      "smallPink": "Car nous marchons par la foi et non par la vue.",
+      "medium2": "L’Éternel est ma force et le sujet de mes louanges; C’est lui qui m’a sauvé."
+    },
+    "themes": {
+      "title": "Choisis ton œuvre",
+      "make": "Créer un thème personnalisé"
+    },
+    "share": {
+      "quote": {
+        "text": "Car nous marchons par la foi et non par la vue.",
+        "author": "2 Corinthiens 5:7"
+      },
+      "story": "Story",
+      "square": "Carré",
+      "save": "Enregistrer l’image",
+      "copy": "Copier le texte",
+      "more": "Plus"
+    },
+    "myown": {
+      "title": "Mes phrases",
+      "add": "Ajouter",
+      "dialogTitle": "Ajouter une nouvelle phrase !",
+      "save": "Enregistrer"
+    },
+    "practice": {
+      "quote": {
+        "text": "Ayez recours à l’Éternel et à son appui, Cherchez continuellement sa face!",
+        "author": "1 Chroniques 16:11"
+      },
+      "day": "Jour",
+      "night": "Nuit"
+    },
+    "dark": {
+      "quote": {
+        "text": "La lumière luit dans les ténèbres, et les ténèbres ne l’ont point reçue.",
+        "author": "Jean 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "La lumière luit dans les ténèbres, et les ténèbres ne l’ont point reçue.",
+        "author": "Jean 1:5"
+      },
+      {
+        "text": "Que l’Éternel te bénisse, et qu’il te garde! Que l’Éternel fasse luire sa face sur toi, et qu’il t’accorde sa grâce! Que l’Éternel tourne sa face vers toi, et qu’il te donne la paix!",
+        "author": "Nombres 6:24-26"
+      },
+      {
+        "text": "Et la paix de Dieu, qui surpasse toute intelligence, gardera vos cœurs et vos pensées en Jésus-Christ.",
+        "author": "Philippiens 4:7"
+      },
+      {
+        "text": "Car je connais les projets que j’ai formés sur vous, dit l’Éternel, projets de paix et non de malheur, afin de vous donner un avenir et de l’espérance.",
+        "author": "Jérémie 29:11"
+      }
+    ]
+  },
+  "it": {
+    "categoriesTitle": "Categorie",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Versetti biblici"
+      },
+      {
+        "key": "faith",
+        "title": "Fede"
+      },
+      {
+        "key": "hope",
+        "title": "Speranza"
+      },
+      {
+        "key": "pray",
+        "title": "Preghiera"
+      },
+      {
+        "key": "gratitude",
+        "title": "Gratitudine"
+      },
+      {
+        "key": "jesus",
+        "title": "Figlio di Dio"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Perdono"
+      },
+      {
+        "key": "love",
+        "title": "L’amore di Dio"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Io posso ogni cosa in Colui che mi fortifica.",
+        "author": "Filippesi 4:13"
+      },
+      "label": "Versetti biblici"
+    },
+    "widgets": {
+      "medium": "Gettando su lui ogni vostra sollecitudine, perch’Egli ha cura di voi.",
+      "smallDark": "Io posso ogni cosa in Colui che mi fortifica.",
+      "smallPink": "Poiché camminiamo per fede e non per visione.",
+      "medium2": "L’Eterno è la mia forza e il mio cantico, ed è stato la mia salvezza."
+    },
+    "themes": {
+      "title": "Scegli la tua grafica",
+      "make": "Crea un tema personalizzato"
+    },
+    "share": {
+      "quote": {
+        "text": "Poiché camminiamo per fede e non per visione.",
+        "author": "2 Corinzi 5:7"
+      },
+      "story": "Storia",
+      "square": "Quadrato",
+      "save": "Salva immagine",
+      "copy": "Copia testo",
+      "more": "Altro"
+    },
+    "myown": {
+      "title": "Le mie frasi",
+      "add": "Aggiungi",
+      "dialogTitle": "Aggiungi una nuova frase!",
+      "save": "Salva"
+    },
+    "practice": {
+      "quote": {
+        "text": "Cercate l’Eterno e la sua forza, cercate del continuo la sua faccia!",
+        "author": "1 Cronache 16:11"
+      },
+      "day": "Giorno",
+      "night": "Notte"
+    },
+    "dark": {
+      "quote": {
+        "text": "E la luce splende nelle tenebre, e le tenebre non l’hanno ricevuta.",
+        "author": "Giovanni 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "E la luce splende nelle tenebre, e le tenebre non l’hanno ricevuta.",
+        "author": "Giovanni 1:5"
+      },
+      {
+        "text": "L’Eterno ti benedica e ti guardi! L’Eterno faccia risplendere il suo volto su te e ti sia propizio! L’Eterno volga verso te il suo volto, e ti dia la pace!",
+        "author": "Numeri 6:24-26"
+      },
+      {
+        "text": "E la pace di Dio che sopravanza ogni intelligenza, guarderà i vostri cuori e i vostri pensieri in Cristo Gesù.",
+        "author": "Filippesi 4:7"
+      },
+      {
+        "text": "Poiché io so i pensieri che medito per voi, dice l’Eterno: pensieri di pace e non di male, per darvi un avvenire e una speranza.",
+        "author": "Geremia 29:11"
+      }
+    ]
+  },
+  "ja": {
+    "categoriesTitle": "カテゴリー",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "聖句"
+      },
+      {
+        "key": "faith",
+        "title": "信仰"
+      },
+      {
+        "key": "hope",
+        "title": "希望"
+      },
+      {
+        "key": "pray",
+        "title": "祈り"
+      },
+      {
+        "key": "gratitude",
+        "title": "感謝"
+      },
+      {
+        "key": "jesus",
+        "title": "神の子"
+      },
+      {
+        "key": "forgiveness",
+        "title": "許し"
+      },
+      {
+        "key": "love",
+        "title": "神の愛"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "我を強くし給ふ者によりて、凡ての事をなし得るなり。",
+        "author": "フィリピの信徒への手紙 4:13"
+      },
+      "label": "聖句"
+    },
+    "widgets": {
+      "medium": "又もろもろの心勞を神に委ねよ、神なんぢらの爲に慮ぱかり給へばなり。",
+      "smallDark": "我を強くし給ふ者によりて、凡ての事をなし得るなり。",
+      "smallPink": "見ゆる所によらず、信仰によりて歩めばなり。",
+      "medium2": "ヱホバはわが力わが歌にしてわが救となりたまへり"
+    },
+    "themes": {
+      "title": "アートを選択",
+      "make": "カスタムテーマを作成"
+    },
+    "share": {
+      "quote": {
+        "text": "見ゆる所によらず、信仰によりて歩めばなり。",
+        "author": "コリントの信徒への手紙二 5:7"
+      },
+      "story": "ストーリー",
+      "square": "正方形",
+      "save": "画像を保存",
+      "copy": "テキストをコピー",
+      "more": "その他"
+    },
+    "myown": {
+      "title": "自分の言葉",
+      "add": "追加",
+      "dialogTitle": "新しい言葉を追加！",
+      "save": "保存"
+    },
+    "practice": {
+      "quote": {
+        "text": "ヱホバとその能力とをたづねよ恒にその聖顔をたづねよ",
+        "author": "歴代誌上 16:11"
+      },
+      "day": "昼",
+      "night": "夜"
+    },
+    "dark": {
+      "quote": {
+        "text": "光は暗黒に照る、而して暗黒は之を悟らざりき。",
+        "author": "ヨハネによる福音書 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "光は暗黒に照る、而して暗黒は之を悟らざりき。",
+        "author": "ヨハネによる福音書 1:5"
+      },
+      {
+        "text": "願くはヱホバ汝を惠み汝を守りたまへ 願くはヱホバその面をもて汝を照し汝を憐みたまへ 願くはヱホバその面を擧て汝を眷み汝に平安を賜へと",
+        "author": "民数記 6:24-26"
+      },
+      {
+        "text": "さらば凡て人の思にすぐる神の平安は、汝らの心と思とをキリスト・イエスによりて守らん。",
+        "author": "フィリピの信徒への手紙 4:7"
+      },
+      {
+        "text": "ヱホバいひたまふ我が汝らにむかひて懷くところの念は我これを知るすなはち災をあたへんとにあらず平安を與へんとおもひ又汝らに後と望をあたへんとおもふなり",
+        "author": "エレミヤ書 29:11"
+      }
+    ]
+  },
+  "ko": {
+    "categoriesTitle": "카테고리",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "성경 구절"
+      },
+      {
+        "key": "faith",
+        "title": "믿음"
+      },
+      {
+        "key": "hope",
+        "title": "희망"
+      },
+      {
+        "key": "pray",
+        "title": "기도"
+      },
+      {
+        "key": "gratitude",
+        "title": "감사"
+      },
+      {
+        "key": "jesus",
+        "title": "하나님의 아들"
+      },
+      {
+        "key": "forgiveness",
+        "title": "용서"
+      },
+      {
+        "key": "love",
+        "title": "하나님의 사랑"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라",
+        "author": "빌립보서 4:13"
+      },
+      "label": "성경 구절"
+    },
+    "widgets": {
+      "medium": "너희 염려를 다 주께 맡겨 버리라 이는 저가 너희를 권고하심이니라",
+      "smallDark": "내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라",
+      "smallPink": "이는 우리가 믿음으로 행하고 보는 것으로 하지 아니함이로라",
+      "medium2": "여호와는 나의 능력과 찬송이시요 또 나의 구원이 되셨도다"
+    },
+    "themes": {
+      "title": "아트 선택",
+      "make": "맞춤 테마 만들기"
+    },
+    "share": {
+      "quote": {
+        "text": "이는 우리가 믿음으로 행하고 보는 것으로 하지 아니함이로라",
+        "author": "고린도후서 5:7"
+      },
+      "story": "스토리",
+      "square": "정사각형",
+      "save": "이미지 저장",
+      "copy": "텍스트 복사",
+      "more": "더 보기"
+    },
+    "myown": {
+      "title": "내 글귀",
+      "add": "추가",
+      "dialogTitle": "새 글귀 추가하기!",
+      "save": "저장"
+    },
+    "practice": {
+      "quote": {
+        "text": "여호와와 그 능력을 구할지어다 그 얼굴을 항상 구할지어다",
+        "author": "역대상 16:11"
+      },
+      "day": "낮",
+      "night": "밤"
+    },
+    "dark": {
+      "quote": {
+        "text": "빛이 어두움에 비취되 어두움이 깨닫지 못하더라",
+        "author": "요한복음 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "빛이 어두움에 비취되 어두움이 깨닫지 못하더라",
+        "author": "요한복음 1:5"
+      },
+      {
+        "text": "여호와는 네게 복을 주시고 너를 지키시기를 원하며 여호와는 그 얼굴로 네게 비취사 은혜 베푸시기를 원하며 여호와는 그 얼굴을 네게로 향하여 드사 평강주시기를 원하노라 할지니라 하라",
+        "author": "민수기 6:24-26"
+      },
+      {
+        "text": "그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라",
+        "author": "빌립보서 4:7"
+      },
+      {
+        "text": "나 여호와가 말하노라 너희를 향한 나의 생각은 내가 아나니 재앙이 아니라 곧 평안이요 너희 장래에 소망을 주려하는 생각이라",
+        "author": "예레미야 29:11"
+      }
+    ]
+  },
+  "id": {
+    "categoriesTitle": "Kategori",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Ayat Alkitab"
+      },
+      {
+        "key": "faith",
+        "title": "Iman"
+      },
+      {
+        "key": "hope",
+        "title": "Harapan"
+      },
+      {
+        "key": "pray",
+        "title": "Doa"
+      },
+      {
+        "key": "gratitude",
+        "title": "Rasa Syukur"
+      },
+      {
+        "key": "jesus",
+        "title": "Anak Allah"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Pengampunan"
+      },
+      {
+        "key": "love",
+        "title": "Kasih Allah"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Segala sesuatu aku cakap menanggung di dalam Dia yang menguatkan aku.",
+        "author": "Filipi 4:13"
+      },
+      "label": "Ayat Alkitab"
+    },
+    "widgets": {
+      "medium": "Serahkanlah segala kuatirmu kepada-Nya, karena Ialah yang memperdulikan kamu.",
+      "smallDark": "Segala sesuatu aku cakap menanggung di dalam Dia yang menguatkan aku.",
+      "smallPink": "Karena perjalanan kami dengan iman, bukannya dengan penglihatan.",
+      "medium2": "Bahwa Tuhan juga kuatku dan mazmurku, karena Ia telah menjadi selamatku."
+    },
+    "themes": {
+      "title": "Pilih karya senimu",
+      "make": "Buat tema kustom"
+    },
+    "share": {
+      "quote": {
+        "text": "Karena perjalanan kami dengan iman, bukannya dengan penglihatan.",
+        "author": "2 Korintus 5:7"
+      },
+      "story": "Cerita",
+      "square": "Persegi",
+      "save": "Simpan gambar",
+      "copy": "Salin teks",
+      "more": "Lainnya"
+    },
+    "myown": {
+      "title": "Pesanku",
+      "add": "Tambah",
+      "dialogTitle": "Tambahkan pesan baru!",
+      "save": "Simpan"
+    },
+    "practice": {
+      "quote": {
+        "text": "Bertanya-tanyalah akan Tuhan dan akan kuasa-Nya dan caharilah hadirat-Nya selalu.",
+        "author": "1 Tawarikh 16:11"
+      },
+      "day": "Siang",
+      "night": "Malam"
+    },
+    "dark": {
+      "quote": {
+        "text": "Maka terang itu bercahaya di dalam gelap, maka gelap itu tiada sadar akan Dia.",
+        "author": "Yohanes 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Maka terang itu bercahaya di dalam gelap, maka gelap itu tiada sadar akan Dia.",
+        "author": "Yohanes 1:5"
+      },
+      {
+        "text": "Bahwa Tuhan memberkati apalah kamu dan memeliharakan kamu! Bahwa Tuhan menerangi apalah kamu dengan wajah-Nya dan dikasihankan-Nyalah kamu! Bahwa Tuhan menunjukkan apalah wajah-Nya kepada kamu dan mengarunia kamu dengan selamat!",
+        "author": "Bilangan 6:24-26"
+      },
+      {
+        "text": "Dan sejahtera Allah yang melebihi segala akal itu akan mengawali hatimu dan pikiranmu di dalam Kristus Yesus.",
+        "author": "Filipi 4:7"
+      },
+      {
+        "text": "Karena Aku ini amat mengetahui akan segala maksud yang Kutaruh akan kamu, demikianlah firman Tuhan, yaitu maksud akan hal selamat dan bukan akan barang sesuatu yang jahat, supaya pada akhirnya Aku mengaruniakan kepadamu barang yang kamu harap itu.",
+        "author": "Yeremia 29:11"
+      }
+    ]
+  },
+  "tr": {
+    "categoriesTitle": "Kategoriler",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Kutsal Kitap Ayetleri"
+      },
+      {
+        "key": "faith",
+        "title": "İman"
+      },
+      {
+        "key": "hope",
+        "title": "Umut"
+      },
+      {
+        "key": "pray",
+        "title": "Dua"
+      },
+      {
+        "key": "gratitude",
+        "title": "Şükran"
+      },
+      {
+        "key": "jesus",
+        "title": "Tanrı’nın Oğlu"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Bağışlama"
+      },
+      {
+        "key": "love",
+        "title": "Tanrı’nın Sevgisi"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Beni güçlendiren Mesih aracılığıyla her şeyi yapabilirim.",
+        "author": "Filipililer 4:13"
+      },
+      "label": "Kutsal Kitap Ayetleri"
+    },
+    "widgets": {
+      "medium": "Bütün kaygılarınızı O’na bırakın, çünkü O sizi kayırır.",
+      "smallDark": "Beni güçlendiren Mesih aracılığıyla her şeyi yapabilirim.",
+      "smallPink": "Çünkü imanla yürüyoruz, gözle değil.",
+      "medium2": "Yah benim gücüm ve ezgimdir. O benim kurtuluşum oldu."
+    },
+    "themes": {
+      "title": "Tasarımını seç",
+      "make": "Özel tema oluştur"
+    },
+    "share": {
+      "quote": {
+        "text": "Çünkü imanla yürüyoruz, gözle değil.",
+        "author": "2 Korintliler 5:7"
+      },
+      "story": "Hikaye",
+      "square": "Kare",
+      "save": "Görseli kaydet",
+      "copy": "Metni kopyala",
+      "more": "Daha fazla"
+    },
+    "myown": {
+      "title": "Sözlerim",
+      "add": "Ekle",
+      "dialogTitle": "Yeni bir söz ekle!",
+      "save": "Kaydet"
+    },
+    "practice": {
+      "quote": {
+        "text": "Yahve'yi ve O'nun gücünü arayın. Daima O'nun yüzünü arayın.",
+        "author": "1 Kronikler 16:11"
+      },
+      "day": "Gündüz",
+      "night": "Gece"
+    },
+    "dark": {
+      "quote": {
+        "text": "Işık karanlıkta parlar ve karanlık onu yenemedi.",
+        "author": "Yuhanna 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Işık karanlıkta parlar ve karanlık onu yenemedi.",
+        "author": "Yuhanna 1:5"
+      },
+      {
+        "text": "Yahve sizi kutsasın ve korusun. Yahve yüzünü sizin üzerinizde ışıldatsın ve size lütfetsin. Yahve yüzünü size doğru kaldırsın ve size esenlik versin.",
+        "author": "Sayılar 6:24-26"
+      },
+      {
+        "text": "Ve Tanrı’nın her anlayışı aşan esenliği Mesih Yeşua aracılığıyla yüreklerinizi ve düşüncelerinizi koruyacaktır.",
+        "author": "Filipililer 4:7"
+      },
+      {
+        "text": "Çünkü sizin için düşündüğüm düşünceleri biliyorum,” diyor Yahve, “kötü düşünceler değil, size umut ve gelecek vermek için esenlik düşünceleri.",
+        "author": "Yeremya 29:11"
+      }
+    ]
+  },
+  "pl": {
+    "categoriesTitle": "Kategorie",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Wersety biblijne"
+      },
+      {
+        "key": "faith",
+        "title": "Wiara"
+      },
+      {
+        "key": "hope",
+        "title": "Nadzieja"
+      },
+      {
+        "key": "pray",
+        "title": "Modlitwa"
+      },
+      {
+        "key": "gratitude",
+        "title": "Wdzięczność"
+      },
+      {
+        "key": "jesus",
+        "title": "Syn Boży"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Przebaczenie"
+      },
+      {
+        "key": "love",
+        "title": "Miłość Boga"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Wszystko mogę w Chrystusie, który mnie umacnia.",
+        "author": "List do Filipian 4:13"
+      },
+      "label": "Wersety biblijne"
+    },
+    "widgets": {
+      "medium": "Wszystkie wasze troski przerzućcie na niego, gdyż on troszczy się o was.",
+      "smallDark": "Wszystko mogę w Chrystusie, który mnie umacnia.",
+      "smallPink": "Przez wiarę bowiem kroczymy, a nie przez widzenie.",
+      "medium2": "PAN jest moją siłą i pieśnią, on stał się moim zbawieniem."
+    },
+    "themes": {
+      "title": "Wybierz swoją oprawę graficzną",
+      "make": "Utwórz własny motyw"
+    },
+    "share": {
+      "quote": {
+        "text": "Przez wiarę bowiem kroczymy, a nie przez widzenie.",
+        "author": "2 List do Koryntian 5:7"
+      },
+      "story": "Relacja",
+      "square": "Kwadrat",
+      "save": "Zapisz obraz",
+      "copy": "Kopiuj tekst",
+      "more": "Więcej"
+    },
+    "myown": {
+      "title": "Moje teksty",
+      "add": "Dodaj",
+      "dialogTitle": "Dodaj nowy tekst!",
+      "save": "Zapisz"
+    },
+    "practice": {
+      "quote": {
+        "text": "Szukajcie PANA i jego mocy, szukajcie zawsze jego oblicza.",
+        "author": "1 Księga Kronik 16:11"
+      },
+      "day": "Dzień",
+      "night": "Noc"
+    },
+    "dark": {
+      "quote": {
+        "text": "A ta światłość świeci w ciemności, ale ciemność jej nie ogarnęła.",
+        "author": "Ewangelia Jana 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "A ta światłość świeci w ciemności, ale ciemność jej nie ogarnęła.",
+        "author": "Ewangelia Jana 1:5"
+      },
+      {
+        "text": "Niech ci błogosławi PAN i niech cię strzeże; Niech PAN rozjaśni nad tobą swoje oblicze i niech ci będzie łaskawy; Niech PAN zwróci ku tobie swoje oblicze i niech da ci pokój.",
+        "author": "Księga Liczb 6:24-26"
+      },
+      {
+        "text": "A pokój Boży, który przewyższa wszelkie zrozumienie, będzie strzegł waszych serc i myśli w Chrystusie Jezusie.",
+        "author": "List do Filipian 4:7"
+      },
+      {
+        "text": "Gdyż ja znam myśli, które mam o was, mówi PAN: myśli o pokoju, a nie o utrapieniu, aby zapewnić wam koniec, jakiego oczekujecie.",
+        "author": "Księga Jeremiasza 29:11"
+      }
+    ]
+  }
+}

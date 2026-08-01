@@ -1,0 +1,84 @@
+---
+// Generic marketing phone shell, port of the deck's frame.js device():
+// white or dark bezel at the deck's 1096px canvas width, iOS status bar,
+// and a 440x956 logical screen (scaled 2.37273) provided via the slot.
+// Parents wrap it in a scale transform to size it.
+const { frame = 'light', status = 'dark', time = '10:10', screenBg = '#FFFFFF' } = Astro.props;
+const ink = status === 'dark' ? '#0A0A0A' : '#FFFFFF';
+---
+
+<div class={`phone frame-${frame}`}>
+  <div class="screen" style={`background:${screenBg}`}>
+    <div class="logical">
+      <div class="status">
+        <span class="st-time" style={`color:${ink}`}>{time}</span>
+        <svg width="78" height="14" viewBox="0 0 78 14" fill={ink} xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="9" width="3.4" height="5" rx="1"></rect>
+          <rect x="5.4" y="6.5" width="3.4" height="7.5" rx="1"></rect>
+          <rect x="10.8" y="4" width="3.4" height="10" rx="1"></rect>
+          <rect x="16.2" y="1.5" width="3.4" height="12.5" rx="1"></rect>
+          <path d="M33 4.6a10.4 10.4 0 0 1 13.2 0l-1.9 2.2a7.4 7.4 0 0 0-9.4 0L33 4.6Z"></path>
+          <path d="M35.6 7.6a6.4 6.4 0 0 1 8 0l-1.9 2.2a3.4 3.4 0 0 0-4.2 0l-1.9-2.2Z"></path>
+          <circle cx="39.6" cy="11.8" r="1.9"></circle>
+          <rect x="55" y="1.5" width="20" height="11" rx="3.5" fill="none" stroke={ink} stroke-opacity="0.45"></rect>
+          <rect x="57" y="3.5" width="16" height="7" rx="1.8"></rect>
+          <path d="M76.5 5.2v3.6c1-.3 1.5-1 1.5-1.8s-.5-1.5-1.5-1.8Z" fill-opacity="0.5"></path>
+        </svg>
+      </div>
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .phone {
+    width: 1096px;
+    padding: 26px;
+    border-radius: 159px;
+    box-shadow: 0 40px 90px rgba(16, 10, 40, 0.3);
+  }
+
+  .frame-light {
+    background: #ffffff;
+  }
+
+  .frame-dark {
+    background: #1c1c1e;
+  }
+
+  .screen {
+    width: 1044px;
+    height: 2268px;
+    border-radius: 133px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .logical {
+    width: 440px;
+    height: 956px;
+    transform: scale(2.37273);
+    transform-origin: top left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 40px 0 46px;
+    z-index: 30;
+  }
+
+  .st-time {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+  }
+</style>

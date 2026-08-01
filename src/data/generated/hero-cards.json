@@ -1,0 +1,255 @@
+{
+  "en": {
+    "appName": "Holy",
+    "whens": [
+      "now",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "God loves me.",
+    "cards": [
+      {
+        "text": "Casting all your worries on him, because he cares for you.",
+        "author": "1 Peter 5:7"
+      },
+      {
+        "text": "For we walk by faith, not by sight.",
+        "author": "2 Corinthians 5:7"
+      },
+      {
+        "text": "What then shall we say about these things? If God is for us, who can be against us?",
+        "author": "Romans 8:31"
+      }
+    ]
+  },
+  "es": {
+    "appName": "Holy",
+    "whens": [
+      "ahora",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Dios me ama.",
+    "cards": [
+      {
+        "text": "Echando toda vuestra solicitud en él, porque él tiene cuidado de vosotros.",
+        "author": "1 Pedro 5:7"
+      },
+      {
+        "text": "Porque por fe andamos, no por vista.",
+        "author": "2 Corintios 5:7"
+      },
+      {
+        "text": "¿Pues qué diremos á esto? Si Dios por nosotros, ¿quién contra nosotros?",
+        "author": "Romanos 8:31"
+      }
+    ]
+  },
+  "pt": {
+    "appName": "Holy",
+    "whens": [
+      "agora",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Deus me ama.",
+    "cards": [
+      {
+        "text": "Lançando sobre ele toda a vossa ansiedade; porque ele tem cuidado de vós.",
+        "author": "1 Pedro 5:7"
+      },
+      {
+        "text": "Pois andamos pela fé, e não pela vista.",
+        "author": "2 Coríntios 5:7"
+      },
+      {
+        "text": "Então, que diremos acerca dessas coisas? Se Deus é por nós, quem será contra nós?",
+        "author": "Romanos 8:31"
+      }
+    ]
+  },
+  "de": {
+    "appName": "Holy",
+    "whens": [
+      "jetzt",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Gott liebt mich.",
+    "cards": [
+      {
+        "text": "Alle Sorge werfet auf ihn; denn er sorgt für euch.",
+        "author": "1. Petrus 5:7"
+      },
+      {
+        "text": "Denn wir wandeln im Glauben, und nicht im Schauen.",
+        "author": "2 Korinther 5:7"
+      },
+      {
+        "text": "Was wollen wir nun hierzu sagen? Ist Gott für uns, wer mag wider uns sein?",
+        "author": "Römer 8:31"
+      }
+    ]
+  },
+  "fr": {
+    "appName": "Holy",
+    "whens": [
+      "maintenant",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Dieu m’aime.",
+    "cards": [
+      {
+        "text": "Et déchargez-vous sur lui de tous vos soucis, car lui-même prend soin de vous.",
+        "author": "1 Pierre 5:7"
+      },
+      {
+        "text": "Car nous marchons par la foi et non par la vue.",
+        "author": "2 Corinthiens 5:7"
+      },
+      {
+        "text": "Que dirons-nous donc à l’égard de ces choses? Si Dieu est pour nous, qui sera contre nous?",
+        "author": "Romains 8:31"
+      }
+    ]
+  },
+  "it": {
+    "appName": "Holy",
+    "whens": [
+      "adesso",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Dio mi ama.",
+    "cards": [
+      {
+        "text": "Gettando su lui ogni vostra sollecitudine, perch’Egli ha cura di voi.",
+        "author": "1 Pietro 5:7"
+      },
+      {
+        "text": "Poiché camminiamo per fede e non per visione.",
+        "author": "2 Corinzi 5:7"
+      },
+      {
+        "text": "Che diremo dunque a queste cose? Se Dio è per noi, chi sarà contro di noi?",
+        "author": "Romani 8:31"
+      }
+    ]
+  },
+  "ja": {
+    "appName": "Holy",
+    "whens": [
+      "今",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "神は私を愛しています。",
+    "cards": [
+      {
+        "text": "又もろもろの心勞を神に委ねよ、神なんぢらの爲に慮ぱかり給へばなり。",
+        "author": "ペトロの手紙一 5:7"
+      },
+      {
+        "text": "見ゆる所によらず、信仰によりて歩めばなり。",
+        "author": "コリントの信徒への手紙二 5:7"
+      },
+      {
+        "text": "然れば此 等の事につきて何をか言はん、神もし我らの味方ならば、誰か我らに敵せんや。",
+        "author": "ローマの信徒への手紙 8:31"
+      }
+    ]
+  },
+  "ko": {
+    "appName": "Holy",
+    "whens": [
+      "지금",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "하나님은 나를 사랑하세요.",
+    "cards": [
+      {
+        "text": "너희 염려를 다 주께 맡겨 버리라 이는 저가 너희를 권고하심이니라",
+        "author": "베드로전서 5:7"
+      },
+      {
+        "text": "이는 우리가 믿음으로 행하고 보는 것으로 하지 아니함이로라",
+        "author": "고린도후서 5:7"
+      },
+      {
+        "text": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요",
+        "author": "로마서 8:31"
+      }
+    ]
+  },
+  "id": {
+    "appName": "Holy",
+    "whens": [
+      "sekarang",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Allah mengasihiku.",
+    "cards": [
+      {
+        "text": "Serahkanlah segala kuatirmu kepada-Nya, karena Ialah yang memperdulikan kamu.",
+        "author": "1 Petrus 5:7"
+      },
+      {
+        "text": "Karena perjalanan kami dengan iman, bukannya dengan penglihatan.",
+        "author": "2 Korintus 5:7"
+      },
+      {
+        "text": "Sekarang apakah hendak kita katakan atas segala hal itu? Jikalau Allah memihak kita, siapakah lawan kita?",
+        "author": "Roma 8:31"
+      }
+    ]
+  },
+  "tr": {
+    "appName": "Holy",
+    "whens": [
+      "şimdi",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Tanrı beni seviyor.",
+    "cards": [
+      {
+        "text": "Bütün kaygılarınızı O’na bırakın, çünkü O sizi kayırır.",
+        "author": "1. Petrus 5:7"
+      },
+      {
+        "text": "Çünkü imanla yürüyoruz, gözle değil.",
+        "author": "2 Korintliler 5:7"
+      },
+      {
+        "text": "Öyleyse bu şeyler için ne diyelim? Eğer Tanrı bizden yanaysa, kim bize karşı olabilir?",
+        "author": "Romalılar 8:31"
+      }
+    ]
+  },
+  "pl": {
+    "appName": "Holy",
+    "whens": [
+      "teraz",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Bóg mnie kocha.",
+    "cards": [
+      {
+        "text": "Wszystkie wasze troski przerzućcie na niego, gdyż on troszczy się o was.",
+        "author": "1 List Piotra 5:7"
+      },
+      {
+        "text": "Przez wiarę bowiem kroczymy, a nie przez widzenie.",
+        "author": "2 List do Koryntian 5:7"
+      },
+      {
+        "text": "Cóż więc na to powiemy? Jeśli Bóg za nami, któż przeciwko nam?",
+        "author": "List do Rzymian 8:31"
+      }
+    ]
+  }
+}

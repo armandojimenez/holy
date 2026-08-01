@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: '하루 종일\n하나님 말씀을 가까이',
+    date: '1월 1일 월요일',
+    time: '3:16',
+    whens: ['지금', '3:16', '3:16'],
+  },
+  hook: { hero: '매일 만나는\n성경 한 구절' },
+  categories: { hero: '모든 마음과 순간을\n위한 말씀' },
+  widgets: {
+    hero: '홈 화면에서\n만나는 하나님 말씀',
+    heroAndroid: '홈 화면에서\n만나는 하나님 말씀',
+  },
+  themes: { hero: '말씀을 나답게\n꾸며 보세요', sample: '가' },
+  share: { hero: '아름답게 말씀을\n나누세요' },
+  myown: {
+    hero: '기도와 묵상을\n소중히 간직하세요',
+    dialogTyped: '주님, 오늘 제 마음과 걸음을 인도해 주세요.',
+    dialogAuthor: '나의 기도',
+    rows: [
+      { text: '주님, 오늘도 믿음으로 걷게 도와주세요.', date: '7월 21일' },
+      { text: '앞으로의 일에 필요한 지혜를 주세요.', date: '7월 14일' },
+      { text: '아침마다 새롭게 베푸시는 자비에 감사드립니다.', date: '7월 6일' },
+      { text: '주님의 평안 안에서 제 마음을 지켜주세요.', date: '6월 28일' },
+      { text: '은혜로 용서하는 법을 가르쳐 주세요.', date: '6월 19일' },
+      { text: '오늘 제 말이 희망을 전하게 해주세요.', date: '6월 9일' },
+      { text: '이 하루를 주님의 손에 맡깁니다.', date: '6월 1일' },
+    ],
+  },
+  practice: { hero: '한 구절에\n천천히 머물러 보세요' },
+  dark: { hero: '낮에도 밤에도\n함께하는 말씀' },
+  proof: {
+    hero: '말씀으로 돌아오는\n독자들의 사랑',
+    heroAndroid: '전 세계 독자들이\n사랑하는 Holy',
+    storeIos: 'App Store에서',
+    storeAndroid: 'Google Play에서',
+    familyTitle: 'Believe 가족이 사랑을 담아 만들었어요',
+    familySub: '전체 앱 누적 다운로드 100만 회 이상',
+  },
+  feature: { hero: '매일 만나는\n성경 구절', qOpen: '“', qClose: '”' },
+};

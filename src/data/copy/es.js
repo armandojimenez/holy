@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Mantén la Palabra\nde Dios cerca',
+    date: 'lunes, 1 de enero',
+    time: '3:16',
+    whens: ['ahora', '3:16', '3:16'],
+  },
+  hook: { hero: 'Un versículo bíblico\npara cada día' },
+  categories: { hero: 'Versículos para cada\nánimo y momento' },
+  widgets: {
+    hero: 'La Palabra de Dios\nen tu pantalla de inicio',
+    heroAndroid: 'La Palabra de Dios\nen tu pantalla de inicio',
+  },
+  themes: { hero: 'Personaliza cada\nversículo', sample: 'Aa' },
+  share: { hero: 'Comparte la Palabra\ncon belleza' },
+  myown: {
+    hero: 'Guarda tus oraciones\ny palabras',
+    dialogTyped: 'Señor, guía hoy mi corazón y mis pasos.',
+    dialogAuthor: 'Mi oración',
+    rows: [
+      { text: 'Señor, ayúdame a caminar con fe hoy.', date: '21 de julio' },
+      { text: 'Dame sabiduría para lo que viene.', date: '14 de julio' },
+      { text: 'Gracias por tus nuevas misericordias cada mañana.', date: '6 de julio' },
+      { text: 'Mantén mi corazón firme en tu paz.', date: '28 de junio' },
+      { text: 'Enséñame a perdonar con gracia.', date: '19 de junio' },
+      { text: 'Que mis palabras lleven esperanza hoy.', date: '9 de junio' },
+      { text: 'Pongo este día en tus manos.', date: '1 de junio' },
+    ],
+  },
+  practice: { hero: 'Detente en\nun solo pasaje' },
+  dark: { hero: 'Contigo,\nde día y de noche' },
+  proof: {
+    hero: 'Amado por quienes\nvuelven a la Palabra',
+    heroAndroid: 'Amado por lectores\nde todo el mundo',
+    storeIos: 'en App Store',
+    storeAndroid: 'en Google Play',
+    familyTitle: 'Hecho con amor, con la familia Believe',
+    familySub: 'Más de 1 millón de descargas en nuestras apps',
+  },
+  feature: { hero: 'Versículos bíblicos\ndiarios', qOpen: '“', qClose: '”' },
+};

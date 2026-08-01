@@ -1,0 +1,242 @@
+---
+// The core Scripture experience (deck port: home.js, the hook slide): Holy's
+// home with the script wordmark, faint dove and bottom nav; the front card
+// wears the app's main teal gradient with the category label, verse and
+// Scripture reference, while two Holy card themes fan out behind it.
+import FeatureSection from './FeatureSection.astro';
+import Phone from './Phone.astro';
+import { deck, landing } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+import sections from '../data/generated/sections.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+const sec = sections[locale];
+---
+
+<FeatureSection id="features" title={d.hook.hero} body={s.sections.cards.body} tone="light">
+  <div class="scene" role="img" aria-label={s.sections.cards.artLabel}>
+    <div class="space" aria-hidden="true">
+      <div class="phone-scale">
+        <Phone frame="light" status="dark">
+          <div class="home-screen">
+            <img class="home-mark" src={asset('/app/images/svgIcons/holy_alt_light.svg')} alt="" width="132" height="46" />
+            <span class="home-bird" aria-hidden="true"></span>
+            <svg class="nav" width="392" height="26" viewBox="0 0 392 26" fill="#2F2F30">
+              <g transform="translate(30 0)"><path d="M0 0h9v9H0zM12 0h9v9h-9zM0 12h9v9H0zM12 12h9v9h-9z"/></g>
+              <g transform="translate(126 1) scale(1)"><rect x="0" y="8" width="3" height="6" rx="1"/><rect x="4" y="5" width="3.4" height="12" rx="1.2"/><rect x="8.6" y="9" width="7" height="3.4"/><rect x="16.4" y="5" width="3.4" height="12" rx="1.2"/><rect x="20.6" y="8" width="3" height="6" rx="1"/></g>
+              <g transform="translate(232 1)"><path d="M1.5 0h13a1.5 1.5 0 0 1 1.5 1.5V4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 4V1.5A1.5 1.5 0 0 1 1.5 0zM18 1.5h.5A1.5 1.5 0 0 1 20 3v3.5A1.5 1.5 0 0 1 18.5 8H11a1 1 0 0 0-1 1v1.5H8V9a3 3 0 0 1 3-3h7zM8 12h2v6a1 1 0 0 1-2 0z"/></g>
+              <g transform="translate(338 0)"><circle cx="10" cy="6" r="4.4"/><path d="M10 12c4 0 7 2.3 7 5.4 0 .6-.5 1.1-1.1 1.1H4.1A1.1 1.1 0 0 1 3 17.4C3 14.3 6 12 10 12z"/></g>
+            </svg>
+          </div>
+        </Phone>
+      </div>
+
+      <!-- The carousel deck, canvas-level so it breaks the bezel -->
+      <div
+        class="deck deck-l"
+        style={`background-image:url(${asset('/app/images/backgrounds/theme_bg/holy_bg_gold.webp')})`}
+      ></div>
+      <div
+        class="deck deck-r"
+        style={`background-image:url(${asset('/app/images/backgrounds/theme_bg/holy_bg_redish.webp')})`}
+      ></div>
+      <div class="card-wrap">
+        <div
+          class="card"
+          style={`background-image:url(${asset('/app/images/backgrounds/theme_bg/holy_bg_green.webp')})`}
+        >
+          <div class="cat">- {sec.card.label} -</div>
+          <div class="q-box">
+            <p class="q" data-fit>{sec.card.quote.text}</p>
+            {sec.card.quote.author && <p class="a">- {sec.card.quote.author}</p>}
+          </div>
+          <div class="bar">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5v12"/><path d="M8.2 6 12 2.5 15.8 6"/><path d="M7.5 9.5H6a1.5 1.5 0 0 0-1.5 1.5v8.5A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V11A1.5 1.5 0 0 0 18 9.5h-1.5"/></svg>
+            <svg class="heart" width="37" height="37" viewBox="0 0 24 24" fill="#EF5350" stroke="#EF5350" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20.3S4.9 15.9 2.6 11.6C.9 8.4 2.8 4.9 6.1 4.9c1.9 0 3.5 1 4.4 2.5.4.7 1.4.7 1.8 0 .9-1.5 2.5-2.5 4.4-2.5 3.3 0 5.2 3.5 3.5 6.7C18 15.9 12 20.3 12 20.3z"/></svg>
+            <svg width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"><path d="M3 12s3.4-6 9-6 9 6 9 6-3.4 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.7"/><path d="M4 4l16 16"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</FeatureSection>
+
+<style>
+  .scene {
+    --fw: 400;
+    width: calc(var(--fw) * 1px);
+    height: calc(var(--fw) * 1.62px);
+    position: relative;
+  }
+
+  .space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 504px;
+    height: 1068px;
+    transform: scale(calc(var(--fw) / 504));
+    transform-origin: top left;
+  }
+
+  .phone-scale {
+    transform: scale(0.46);
+    transform-origin: top left;
+  }
+
+  /* ── In-screen (440pt logical space) ── */
+  .home-screen {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+  }
+
+  .home-mark {
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 46px;
+    width: auto;
+  }
+
+  /* HomeAnimal: the faint centered dove (grey[50] like the app) */
+  .home-bird {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    background: #e4f1ef;
+    -webkit-mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+    mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+  }
+
+  .nav {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    opacity: 0.95;
+  }
+
+  /* ── Canvas-space card stack (breaks the bezel) ──
+     Exact home.js phone slot: 414x736pt at (13,134). Because CSS scales
+     around the wrapper center, the layout origin includes half of the
+     scaled-size delta; this is what keeps the front card centered on the
+     440pt app screen. Studio canvas offsets ±46/−12/+8 become ±21/−6/+4
+     after the phone's 0.46 landing scale. */
+  .card-wrap,
+  .deck {
+    position: absolute;
+    width: 414px;
+    height: 736px;
+    transform-origin: center;
+  }
+
+  .card-wrap {
+    left: 45px;
+    top: 192px;
+    transform: scale(1.09146);
+    z-index: 14;
+  }
+
+  .deck {
+    left: 45px;
+    top: 192px;
+    border-radius: 10px;
+    box-shadow: 0 14px 34px rgba(18, 12, 44, 0.35);
+    background-color: #e8ddc8;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .deck-l {
+    transform: translate(-21px, -6px) scale(1.09146) rotate(-6.5deg);
+    z-index: 12;
+  }
+
+  .deck-r {
+    transform: translate(21px, 4px) scale(1.09146) rotate(6deg);
+    z-index: 13;
+  }
+
+  .card {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(18, 12, 44, 0.45);
+    background-color: #12585b;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  .cat {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  .q-box {
+    position: absolute;
+    inset: 99px 30px 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .q {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 49px;
+    line-height: 1.4;
+    color: #ffffff;
+  }
+
+  .a {
+    margin-top: 15px;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 27px;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  /* The app's black options bar, solid, heart favorited (deck parity) */
+  .bar {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 8px 8px 0 0;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 47px;
+    padding: 8px 23px 10px;
+  }
+
+  @media (max-width: 1120px) {
+    .scene { --fw: 350; }
+  }
+  @media (max-width: 470px) {
+    .scene { --fw: 300; }
+  }
+  @media (max-width: 340px) {
+    .scene { --fw: 280; }
+  }
+</style>

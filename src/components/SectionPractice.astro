@@ -1,0 +1,283 @@
+---
+// The practice session device (deck port: practice.js), alive: the day-sky
+// scene, Day/Night toggle, session progress, the big bold quote and the
+// MM:SS countdown ring in the blue-violet gradient — and the countdown
+// actually counts.
+import FeatureSection from './FeatureSection.astro';
+import Phone from './Phone.astro';
+import { deck, landing } from '../i18n/index.mjs';
+import sections from '../data/generated/sections.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+const sec = sections[locale];
+
+// Ring geometry (deck: R=300, stroke 20)
+const R = 300;
+const STROKE = 20;
+const r = (R - STROKE) / 2;
+const circ = 2 * Math.PI * r;
+const frac = 0.62;
+---
+
+<FeatureSection title={d.practice.hero} body={s.sections.practice.body} tone="light">
+  <div class="scene" role="img" aria-label={s.sections.practice.artLabel}>
+    <div class="space" aria-hidden="true">
+      <div class="phone-scale">
+        <Phone frame="light" status="dark">
+          <div class="pr-screen">
+            <i class="sun"></i>
+            <i class="cloud c1"></i>
+            <i class="cloud c2"></i>
+            <i class="cloud c3"></i>
+            <div class="close">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </div>
+            <div class="aa">Aa</div>
+            <div class="toggle">
+              <span class="seg active">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFD75E"><circle cx="12" cy="12" r="5"/><g stroke="#FFD75E" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg>
+                {sec.practice.day}
+              </span>
+              <span class="seg">
+                <svg width="15" height="15" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="#EDEDF4"/></svg>
+                {sec.practice.night}
+              </span>
+            </div>
+            <div class="progress"><i></i></div>
+            <p class="quote">{sec.practice.quote.text}</p>
+            <div class="ring" data-practice-ring data-circ={circ.toFixed(1)}>
+              <svg width={R} height={R} viewBox={`0 0 ${R} ${R}`}>
+                <defs>
+                  <linearGradient id="mgrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#12585B"></stop><stop offset="1" stop-color="#31999D"></stop>
+                  </linearGradient>
+                  <linearGradient id="mgrad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#12585B"></stop><stop offset="1" stop-color="#31999D"></stop>
+                  </linearGradient>
+                </defs>
+                <circle cx={R / 2} cy={R / 2} r={r - STROKE / 2 - 4} fill="url(#mgrad2)"></circle>
+                <circle cx={R / 2} cy={R / 2} r={r} fill="none" stroke="rgba(110,110,125,0.4)" stroke-width={STROKE}></circle>
+                <circle
+                  data-arc
+                  cx={R / 2}
+                  cy={R / 2}
+                  r={r}
+                  fill="none"
+                  stroke="url(#mgrad)"
+                  stroke-width={STROKE}
+                  stroke-linecap="round"
+                  stroke-dasharray={`${(circ * frac).toFixed(1)} ${circ.toFixed(1)}`}
+                  transform={`rotate(-90 ${R / 2} ${R / 2})`}></circle>
+              </svg>
+              <span class="mmss" data-mmss>03:24</span>
+            </div>
+          </div>
+        </Phone>
+      </div>
+    </div>
+  </div>
+</FeatureSection>
+
+<style>
+  .scene {
+    --fw: 400;
+    width: calc(var(--fw) * 1px);
+    height: calc(var(--fw) * 1.62px);
+    position: relative;
+  }
+
+  .space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 504px;
+    height: 1068px;
+    transform: scale(calc(var(--fw) / 504));
+    transform-origin: top left;
+  }
+
+  .phone-scale {
+    transform: scale(0.46);
+    transform-origin: top left;
+  }
+
+  /* ── In-screen (440pt logical space, deck practice.js geometry) ── */
+  .pr-screen {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #8fc7ee 0%, #b6dcf6 42%, #e3f2fc 100%);
+  }
+
+  .sun {
+    position: absolute;
+    top: -70px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 244, 200, 0.95) 0%, rgba(255, 244, 200, 0) 70%);
+  }
+
+  .cloud {
+    position: absolute;
+    background: #fff;
+    filter: blur(10px);
+  }
+  .c1 { left: 30px; top: 200px; width: 190px; height: 65px; border-radius: 190px; opacity: 0.8; }
+  .c2 { right: 40px; top: 320px; width: 160px; height: 54px; border-radius: 160px; opacity: 0.65; }
+  .c3 { left: 80px; top: 470px; width: 140px; height: 48px; border-radius: 140px; opacity: 0.5; }
+
+  .close {
+    position: absolute;
+    top: 66px;
+    left: 16px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aa {
+    position: absolute;
+    top: 70px;
+    right: 18px;
+    font-size: 22px;
+    color: #2a2a33;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(20, 20, 60, 0.25);
+  }
+
+  .seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 90px;
+    padding: 9px 0;
+    background: #0d0d12;
+    font-weight: 600;
+    font-size: 13px;
+    color: #ffffff;
+  }
+
+  .seg.active {
+    background: #31999d;
+  }
+
+  .progress {
+    position: absolute;
+    top: 132px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.45);
+    overflow: hidden;
+  }
+
+  .progress i {
+    display: block;
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    background: #31999d;
+  }
+
+  .quote {
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    right: 30px;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 1.35;
+    color: #141419;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.7);
+  }
+
+  .ring {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 16px 34px rgba(30, 20, 80, 0.35));
+  }
+
+  .mmss {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffffff;
+  }
+
+  @media (max-width: 1120px) {
+    .scene { --fw: 350; }
+  }
+  @media (max-width: 470px) {
+    .scene { --fw: 300; }
+  }
+  @media (max-width: 340px) {
+    .scene { --fw: 280; }
+  }
+</style>
+
+<script>
+  // The countdown actually counts (03:24 → 02:55, then loops back).
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const ring of document.querySelectorAll<HTMLElement>('[data-practice-ring]')) {
+    if (reduced) continue;
+    const arc = ring.querySelector('[data-arc]') as SVGCircleElement | null;
+    const label = ring.querySelector('[data-mmss]');
+    const circ = Number(ring.dataset.circ);
+    if (!arc || !label || !circ) continue;
+    const TOTAL = 330; // a 5:30 session
+    let sec = 204; // 03:24
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const tick = () => {
+      if (document.hidden) return;
+      sec -= 1;
+      if (sec < 175) sec = 204;
+      const m = Math.floor(sec / 60);
+      const ss = String(sec % 60).padStart(2, '0');
+      label.textContent = `0${m}:${ss}`;
+      arc.setAttribute('stroke-dasharray', `${((sec / TOTAL) * circ).toFixed(1)} ${circ.toFixed(1)}`);
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !timer) timer = setInterval(tick, 1000);
+        else if (!entry.isIntersecting && timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      },
+      { threshold: 0.3 }
+    );
+    io.observe(ring);
+  }
+</script>

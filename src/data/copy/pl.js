@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Słowo Boże\nblisko przez cały dzień',
+    date: 'poniedziałek, 1 stycznia',
+    time: '3:16',
+    whens: ['teraz', '3:16', '3:16'],
+  },
+  hook: { hero: 'Werset biblijny\nna każdy dzień' },
+  categories: { hero: 'Słowo na każdy\nnastrój i chwilę' },
+  widgets: {
+    hero: 'Słowo Boże na\nekranie początkowym',
+    heroAndroid: 'Słowo Boże na\nekranie głównym',
+  },
+  themes: { hero: 'Nadaj każdemu\nwersetowi własny styl', sample: 'Aa' },
+  share: { hero: 'Dziel się Słowem\nw pięknej formie' },
+  myown: {
+    hero: 'Zachowaj modlitwy\ni własne słowa',
+    dialogTyped: 'Panie, prowadź dziś moje serce i moje kroki.',
+    dialogAuthor: 'Moja modlitwa',
+    rows: [
+      { text: 'Panie, pomóż mi dziś iść drogą wiary.', date: '21 lipca' },
+      { text: 'Daj mi mądrość na to, co przede mną.', date: '14 lipca' },
+      { text: 'Dziękuję za miłosierdzie nowe każdego ranka.', date: '6 lipca' },
+      { text: 'Zachowaj moje serce w Twoim pokoju.', date: '28 czerwca' },
+      { text: 'Naucz mnie przebaczać z łaską.', date: '19 czerwca' },
+      { text: 'Niech moje słowa niosą dziś nadzieję.', date: '9 czerwca' },
+      { text: 'Oddaję ten dzień w Twoje ręce.', date: '1 czerwca' },
+    ],
+  },
+  practice: { hero: 'Zatrzymaj się\nprzy jednym fragmencie' },
+  dark: { hero: 'Z Tobą,\ndniem i nocą' },
+  proof: {
+    hero: 'Ceniona przez tych,\nktórzy wracają do Słowa',
+    heroAndroid: 'Czytelnicy na całym\nświecie kochają Holy',
+    storeIos: 'w App Store',
+    storeAndroid: 'w Google Play',
+    familyTitle: 'Stworzone z miłością przez rodzinę Believe',
+    familySub: 'Ponad milion pobrań naszych aplikacji',
+  },
+  feature: { hero: 'Codzienne\nwersety biblijne', qOpen: '„', qClose: '”' },
+};

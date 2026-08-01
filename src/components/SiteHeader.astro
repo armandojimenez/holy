@@ -1,0 +1,286 @@
+---
+import { landing, PUBLISHED_LOCALES, ENDONYMS, HREFLANG, localeUrl } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+import LangSelect from './LangSelect.astro';
+
+const { locale = 'en' } = Astro.props;
+const s = landing(locale);
+// Holy's script wordmark with the dove (never translated).
+const wordmark = asset('/app/images/svgIcons/holy_alt_light.svg');
+---
+
+<header class="site-header nav" data-nav>
+  <div class="container inner">
+    <a class="brand" href="#top" aria-label="Holy">
+      <img src={wordmark} alt="Holy" width="118" height="40" />
+    </a>
+    <nav aria-label={s.a11y.mainNav}>
+      <a class="nav-link" href="#features">{s.nav.features}</a>
+      <a class="nav-link" href="#faq">{s.nav.faq}</a>
+      <a class="nav-link" href="#" data-contact-open>{s.nav.contact}</a>
+      <LangSelect locale={locale} label={s.a11y.language} />
+      <a class="btn-pill" href="#download">{s.nav.download}</a>
+      <button class="burger" type="button" data-menu-open aria-label={s.a11y.menu} aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile bottom sheet: nav + the full language list -->
+<div class="sheet-wrap" data-menu-sheet hidden>
+  <div class="sheet-backdrop" data-menu-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label={s.a11y.menu}>
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <nav class="sheet-nav" aria-label={s.a11y.mainNav}>
+      <a href="#features" data-menu-close>{s.nav.features}</a>
+      <a href="#faq" data-menu-close>{s.nav.faq}</a>
+      <a href="#" data-contact-open data-menu-close>{s.nav.contact}</a>
+      <a class="btn-pill" href="#download" data-menu-close>{s.nav.download}</a>
+    </nav>
+    <div class="sheet-langs">
+      <span class="sheet-label">{s.a11y.language}</span>
+      <div class="sheet-grid">
+        {PUBLISHED_LOCALES.map((l) => (
+          <a
+            href={localeUrl(l)}
+            lang={HREFLANG[l]}
+            hreflang={HREFLANG[l]}
+            aria-current={l === locale ? 'page' : undefined}
+          >
+            {ENDONYMS[l]}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(245, 244, 254, 0.82);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    border-bottom: 1px solid rgba(21, 63, 64, 0.08);
+  }
+
+  .site-header.scrolled {
+    background: rgba(243, 248, 246, 0.96);
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .brand img {
+    display: block;
+    width: 118px;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-link {
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    transition: color 0.15s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--ink);
+  }
+
+  .burger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--ink);
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  /* Below 900px the full nav row crowds the wordmark, so the links and
+     language pill hand off to the hamburger sheet early. */
+  @media (max-width: 900px) {
+    .nav-link {
+      display: none;
+    }
+    nav {
+      gap: 10px;
+    }
+    .burger {
+      display: inline-flex;
+    }
+  }
+
+  /* Bottom sheet */
+  .sheet-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+  }
+
+  .sheet-wrap[hidden] {
+    display: none;
+  }
+
+  .sheet-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 12, 40, 0.45);
+    backdrop-filter: blur(3px);
+  }
+
+  .sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 520px;
+    margin-inline: auto;
+    background: var(--lav-0);
+    border-radius: 22px 22px 0 0;
+    padding: 14px 22px calc(26px + env(safe-area-inset-bottom));
+    box-shadow: 0 -24px 60px rgba(16, 10, 40, 0.3);
+    animation: sheet-up 0.28s cubic-bezier(0.3, 1, 0.4, 1);
+  }
+
+  /* The sheet only exists in the hamburger world */
+  @media (min-width: 901px) {
+    .sheet-wrap {
+      display: none;
+    }
+  }
+
+  @keyframes sheet-up {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+  }
+
+  .sheet-handle {
+    width: 40px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(21, 63, 64, 0.2);
+    margin: 0 auto 16px;
+  }
+
+  .sheet-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sheet-nav a {
+    font-size: 17px;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 11px 4px;
+  }
+
+  .sheet-nav .btn-pill {
+    justify-content: center;
+    margin-top: 8px;
+    color: #fff;
+  }
+
+  .sheet-langs {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(21, 63, 64, 0.1);
+  }
+
+  .sheet-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+
+  .sheet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 16px;
+  }
+
+  .sheet-grid a {
+    font-size: 15px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 8px 4px;
+    border-radius: 8px;
+  }
+
+  .sheet-grid a[aria-current='page'] {
+    color: var(--ink);
+    font-weight: 700;
+  }
+</style>
+
+<script>
+  const sheet = document.querySelector('[data-menu-sheet]') as HTMLElement | null;
+  const opener = document.querySelector('[data-menu-open]') as HTMLButtonElement | null;
+  if (sheet && opener) {
+    const panel = sheet.querySelector('.sheet') as HTMLElement;
+    const focusables = () =>
+      Array.from(panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'));
+    let lastFocus: HTMLElement | null = null;
+    const setOpen = (open: boolean) => {
+      sheet.hidden = !open;
+      opener.setAttribute('aria-expanded', String(open));
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+      if (open) {
+        lastFocus = document.activeElement as HTMLElement;
+        focusables()[0]?.focus();
+      } else {
+        (lastFocus ?? opener).focus();
+      }
+    };
+    opener.addEventListener('click', () => setOpen(sheet.hidden));
+    for (const el of sheet.querySelectorAll('[data-menu-close]')) {
+      el.addEventListener('click', () => setOpen(false));
+    }
+    // Resizing past the breakpoint hides the sheet via CSS; release the
+    // scroll lock too instead of leaving the page frozen.
+    matchMedia('(min-width: 901px)').addEventListener('change', (m) => {
+      if (m.matches && !sheet.hidden) setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (sheet.hidden) return;
+      if (e.key === 'Escape') setOpen(false);
+      // aria-modal promises focus stays inside: trap Tab at the edges
+      if (e.key === 'Tab') {
+        const f = focusables();
+        if (!f.length) return;
+        const first = f[0];
+        const last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  }
+</script>

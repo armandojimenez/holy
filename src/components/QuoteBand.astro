@@ -1,0 +1,78 @@
+---
+// Full-width Scripture interlude: big Playfair with the dove above.
+// Unlike Believe's English-only bands, these are REAL localized corpus
+// entries (sections.json bands). marks = the locale's native quotation
+// marks («» fr, „" de/pl, 「」 ja...). tone: 'light' | 'night'.
+const { text, author = null, tone = 'light', marks = ['“', '”'] } = Astro.props;
+// A ja corpus line can open with its own 「…」; wrapping it again would
+// render 「「. When the text already starts with the locale's opening
+// mark, show it bare (UI review 2026-07-24).
+const wrapped = text.startsWith(marks[0].trim()) ? text : `${marks[0]}${text}${marks[1]}`;
+---
+
+<div class={`quote tone-${tone}`}>
+  <div class="container inner">
+    <span class="dove" aria-hidden="true"></span>
+    <figure>
+      <blockquote>
+        <p>{wrapped}</p>
+      </blockquote>
+      {author && <figcaption>{author}</figcaption>}
+    </figure>
+  </div>
+</div>
+
+<style>
+  .quote {
+    padding: clamp(56px, 8vh, 96px) 0;
+  }
+
+  .tone-night {
+    background: linear-gradient(180deg, var(--night-2) 0%, var(--night) 100%);
+    color: #f2effb;
+  }
+
+  .tone-light {
+    background: var(--lav-1);
+    color: var(--ink);
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .dove {
+    display: block;
+    width: 34px;
+    height: 34px;
+    background: var(--bird);
+    transform: rotate(-8deg);
+    -webkit-mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+    mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+  }
+
+  .tone-night .dove {
+    background: #ffffff;
+    opacity: 0.92;
+  }
+
+  blockquote p {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 2.6vw, 34px);
+    line-height: 1.45;
+    max-width: 28ch;
+  }
+
+  figcaption {
+    margin-top: 16px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+</style>

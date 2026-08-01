@@ -1,0 +1,22 @@
+{
+  "name": "holy-landing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Landing page for Holy - Daily Bible Verses (armandojimenez.dev/holy)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "sync": "node scripts/sync-content.mjs",
+    "validate": "node scripts/validate.mjs",
+    "audit:a11y": "node scripts/a11y-audit.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.4.1",
+    "astro": "^7.1.6"
+  },
+  "devDependencies": {
+    "axe-core": "^4.12.1"
+  }
+}

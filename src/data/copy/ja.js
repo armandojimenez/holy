@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: '神の言葉を\nいつもそばに',
+    date: '1月1日 月曜日',
+    time: '3:16',
+    whens: ['今', '3:16', '3:16'],
+  },
+  hook: { hero: '毎日に\n聖書の一節を' },
+  categories: { hero: '気分や場面に\n寄り添う聖句' },
+  widgets: {
+    hero: 'ホーム画面に\n神の言葉を',
+    heroAndroid: 'ホーム画面に\n神の言葉を',
+  },
+  themes: { hero: '聖句をもっと\n自分らしく', sample: 'あ' },
+  share: { hero: '聖句を美しく\n分かち合おう' },
+  myown: {
+    hero: '祈りと言葉を\n大切に残す',
+    dialogTyped: '主よ、今日の心と歩みを導いてください。',
+    dialogAuthor: '私の祈り',
+    rows: [
+      { text: '主よ、今日も信仰をもって歩めるよう助けてください。', date: '7月21日' },
+      { text: 'これからの歩みに知恵をお与えください。', date: '7月14日' },
+      { text: '朝ごとに新しい憐れみをありがとうございます。', date: '7月6日' },
+      { text: 'あなたの平安のうちに心を守ってください。', date: '6月28日' },
+      { text: '恵みをもって赦すことを教えてください。', date: '6月19日' },
+      { text: '今日、私の言葉が希望を届けますように。', date: '6月9日' },
+      { text: 'この一日をあなたの御手に委ねます。', date: '6月1日' },
+    ],
+  },
+  practice: { hero: 'ひとつの聖句と\n静かに向き合う' },
+  dark: { hero: '昼も夜も\nあなたとともに' },
+  proof: {
+    hero: 'み言葉に帰る人々に\n愛されています',
+    heroAndroid: '世界中の読者に\n愛されています',
+    storeIos: 'App Storeで',
+    storeAndroid: 'Google Playで',
+    familyTitle: 'Believeファミリーが心を込めてつくりました',
+    familySub: 'シリーズ累計100万ダウンロード突破',
+  },
+  feature: { hero: '毎日の\n聖書の言葉', qOpen: '「', qClose: '」' },
+};

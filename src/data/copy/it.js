@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'La Parola di Dio\nsempre con te',
+    date: 'lunedì 1 gennaio',
+    time: '3:16',
+    whens: ['adesso', '3:16', '3:16'],
+  },
+  hook: { hero: 'Un versetto biblico\nper ogni giorno' },
+  categories: { hero: 'Versetti per ogni\nstato d’animo' },
+  widgets: {
+    hero: 'La Parola di Dio\nsulla schermata Home',
+    heroAndroid: 'La Parola di Dio\nsulla schermata Home',
+  },
+  themes: { hero: 'Ogni versetto,\ncome piace a te', sample: 'Aa' },
+  share: { hero: 'Condividi la Parola\ncon bellezza' },
+  myown: {
+    hero: 'Custodisci preghiere\ne parole',
+    dialogTyped: 'Signore, guida oggi il mio cuore e i miei passi.',
+    dialogAuthor: 'La mia preghiera',
+    rows: [
+      { text: 'Signore, aiutami oggi a camminare nella fede.', date: '21 luglio' },
+      { text: 'Donami saggezza per ciò che verrà.', date: '14 luglio' },
+      { text: 'Grazie per le Tue misericordie nuove ogni mattina.', date: '6 luglio' },
+      { text: 'Tieni saldo il mio cuore nella Tua pace.', date: '28 giugno' },
+      { text: 'Insegnami a perdonare con grazia.', date: '19 giugno' },
+      { text: 'Fa’ che oggi le mie parole portino speranza.', date: '9 giugno' },
+      { text: 'Metto questo giorno nelle Tue mani.', date: '1 giugno' },
+    ],
+  },
+  practice: { hero: 'Fermati su\nun solo passo' },
+  dark: { hero: 'Con te,\ngiorno e notte' },
+  proof: {
+    hero: 'Amata da chi\ntorna alla Parola',
+    heroAndroid: 'Amata da lettori\ndi tutto il mondo',
+    storeIos: 'sull’App Store',
+    storeAndroid: 'su Google Play',
+    familyTitle: 'Fatta con amore, con la famiglia Believe',
+    familySub: 'Oltre 1 milione di download tra le nostre app',
+  },
+  feature: { hero: 'Versetti biblici\nquotidiani', qOpen: '«', qClose: '»' },
+};

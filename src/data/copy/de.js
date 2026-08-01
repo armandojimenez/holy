@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Gottes Wort\nden ganzen Tag bei dir',
+    date: 'Montag, 1. Januar',
+    time: '3:16',
+    whens: ['jetzt', '3:16', '3:16'],
+  },
+  hook: { hero: 'Ein Bibelvers\nfür jeden Tag' },
+  categories: { hero: 'Bibelworte für jede\nStimmung und Lage' },
+  widgets: {
+    hero: 'Gottes Wort auf\ndeinem Home-Bildschirm',
+    heroAndroid: 'Gottes Wort auf\ndeinem Startbildschirm',
+  },
+  themes: { hero: 'Jeden Vers\nganz persönlich', sample: 'Aa' },
+  share: { hero: 'Teile Gottes Wort\nauf schöne Weise' },
+  myown: {
+    hero: 'Bewahre Gebete\nund Gedanken',
+    dialogTyped: 'Herr, leite heute mein Herz und meine Schritte.',
+    dialogAuthor: 'Mein Gebet',
+    rows: [
+      { text: 'Herr, hilf mir, heute im Glauben zu gehen.', date: '21. Juli' },
+      { text: 'Schenke mir Weisheit für das, was kommt.', date: '14. Juli' },
+      { text: 'Danke für Deine neue Gnade an jedem Morgen.', date: '6. Juli' },
+      { text: 'Halte mein Herz fest in Deinem Frieden.', date: '28. Juni' },
+      { text: 'Lehre mich, mit Gnade zu vergeben.', date: '19. Juni' },
+      { text: 'Lass meine Worte heute Hoffnung schenken.', date: '9. Juni' },
+      { text: 'Ich lege diesen Tag in Deine Hände.', date: '1. Juni' },
+    ],
+  },
+  practice: { hero: 'Nimm dir Zeit\nfür einen Vers' },
+  dark: { hero: 'Bei dir,\nTag und Nacht' },
+  proof: {
+    hero: 'Geliebt von Menschen,\ndie Gottes Wort lesen',
+    heroAndroid: 'Weltweit von\nLesern geschätzt',
+    storeIos: 'im App Store',
+    storeAndroid: 'bei Google Play',
+    familyTitle: 'Mit Liebe gemacht von der Believe-Familie',
+    familySub: 'Über 1 Million Downloads unserer Apps',
+  },
+  feature: { hero: 'Tägliche\nBibelverse', qOpen: '„', qClose: '“' },
+};

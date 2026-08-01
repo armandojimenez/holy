@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Tanrı’nın Sözü\ngün boyu yanında',
+    date: '1 Ocak Pazartesi',
+    time: '3:16',
+    whens: ['şimdi', '3:16', '3:16'],
+  },
+  hook: { hero: 'Her gün için\nbir Kutsal Kitap ayeti' },
+  categories: { hero: 'Her ruh hâline\nve ana uygun ayetler' },
+  widgets: {
+    hero: 'Ana ekranında\nTanrı’nın Sözü',
+    heroAndroid: 'Ana ekranında\nTanrı’nın Sözü',
+  },
+  themes: { hero: 'Her ayeti\nkendine göre uyarla', sample: 'Aa' },
+  share: { hero: 'Kutsal Yazı’yı\ngüzellikle paylaş' },
+  myown: {
+    hero: 'Dualarını ve\nsözlerini sakla',
+    dialogTyped: 'Rab, bugün kalbime ve adımlarıma yol göster.',
+    dialogAuthor: 'Duam',
+    rows: [
+      { text: 'Rab, bugün imanla yürümeme yardım et.', date: '21 Temmuz' },
+      { text: 'Önümdeki yol için bana bilgelik ver.', date: '14 Temmuz' },
+      { text: 'Her sabah yenilenen merhametin için teşekkür ederim.', date: '6 Temmuz' },
+      { text: 'Kalbimi esenliğinde sağlam tut.', date: '28 Haziran' },
+      { text: 'Bana lütufla bağışlamayı öğret.', date: '19 Haziran' },
+      { text: 'Sözlerim bugün umut getirsin.', date: '9 Haziran' },
+      { text: 'Bu günü Senin ellerine bırakıyorum.', date: '1 Haziran' },
+    ],
+  },
+  practice: { hero: 'Tek bir ayetle\nyavaşla' },
+  dark: { hero: 'Gündüz ve gece\nseninle' },
+  proof: {
+    hero: 'Söz’e dönen\nokurların sevgisi',
+    heroAndroid: 'Dünyanın her yerinden\nokurlar seviyor',
+    storeIos: 'App Store’da',
+    storeAndroid: 'Google Play’de',
+    familyTitle: 'Believe ailesiyle, sevgiyle yapıldı',
+    familySub: 'Tüm uygulamalarımızda 1 milyondan fazla indirme',
+  },
+  feature: { hero: 'Günlük Kutsal\nKitap ayetleri', qOpen: '“', qClose: '”' },
+};

@@ -1,0 +1,151 @@
+---
+// Desktop language selector: a pill with the current endonym opening a
+// popover of real crawlable links (no JS routing, never auto-redirect).
+// At 900px and below the header collapses to the hamburger sheet, which
+// carries the same language list, so this hides there.
+import { PUBLISHED_LOCALES, ENDONYMS, HREFLANG, localeUrl } from '../i18n/index.mjs';
+
+const { locale = 'en', label } = Astro.props;
+---
+
+<div class="lang" data-lang>
+  <button class="lang-btn" type="button" aria-expanded="false" aria-label={label}>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"></path>
+    </svg>
+    <span>{ENDONYMS[locale]}</span>
+    <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+      <path d="m6 9 6 6 6-6"></path>
+    </svg>
+  </button>
+  <div class="lang-menu" hidden>
+    {PUBLISHED_LOCALES.map((l) => (
+      <a
+        href={localeUrl(l)}
+        lang={HREFLANG[l]}
+        hreflang={HREFLANG[l]}
+        aria-current={l === locale ? 'page' : undefined}
+      >
+        {ENDONYMS[l]}
+        {l === locale && (
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true">
+            <path d="m4.5 12.5 5 5 10-11"></path>
+          </svg>
+        )}
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+  .lang {
+    position: relative;
+  }
+
+  .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--ink-soft);
+    background: none;
+    border: 1px solid rgba(21, 63, 64, 0.18);
+    border-radius: 999px;
+    padding: 7px 13px;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .lang-btn:hover,
+  .lang-btn[aria-expanded='true'] {
+    color: var(--ink);
+    border-color: rgba(21, 63, 64, 0.36);
+  }
+
+  .chev {
+    transition: transform 0.18s ease;
+  }
+
+  .lang-btn[aria-expanded='true'] .chev {
+    transform: rotate(180deg);
+  }
+
+  .lang-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 190px;
+    background: var(--paper);
+    border: 1px solid rgba(21, 63, 64, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 18px 44px rgba(21, 63, 64, 0.16);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    z-index: 120;
+  }
+
+  .lang-menu[hidden] {
+    display: none;
+  }
+
+  .lang-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+
+  .lang-menu a:hover {
+    background: var(--lav-1);
+    color: var(--ink);
+  }
+
+  .lang-menu a[aria-current='page'] {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .lang-menu svg {
+    color: var(--bird);
+  }
+
+  @media (max-width: 900px) {
+    .lang {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const root = document.querySelector('[data-lang]');
+  const btn = root?.querySelector('.lang-btn') as HTMLButtonElement | null;
+  const menu = root?.querySelector('.lang-menu') as HTMLElement | null;
+  if (btn && menu) {
+    const close = () => {
+      btn.setAttribute('aria-expanded', 'false');
+      menu.hidden = true;
+    };
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.hidden = open;
+    });
+    document.addEventListener('click', (e) => {
+      if (!root!.contains(e.target as Node)) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.hidden) {
+        close();
+        btn.focus();
+      }
+    });
+  }
+</script>

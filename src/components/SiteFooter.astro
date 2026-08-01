@@ -1,0 +1,118 @@
+---
+// Full footer: wordmark tagline, social, legal, contact trigger, and the
+// full language cluster as crawlable links.
+import { landing, PUBLISHED_LOCALES, ENDONYMS, HREFLANG, localeUrl } from '../i18n/index.mjs';
+import { INSTAGRAM_URL, FACEBOOK_URL, legalUrls, asset } from '../config.mjs';
+
+const { locale = 'en' } = Astro.props;
+const s = landing(locale);
+const year = new Date().getFullYear();
+const legal = legalUrls(locale);
+---
+
+<footer class="site-footer">
+  <div class="container top">
+    <div class="brand-col">
+      <img src={asset('/app/images/svgIcons/holy_alt_dark.svg')} alt="Holy" width="114" height="38" />
+      <p>{s.footer.tagline}</p>
+    </div>
+    <nav class="links" aria-label={s.a11y.footerNav}>
+      <a href={INSTAGRAM_URL} rel="noopener">Instagram</a>
+      <a href={FACEBOOK_URL} rel="noopener">Facebook</a>
+      <a href="#" data-contact-open>{s.contact.open}</a>
+      <a href={legal.privacy}>{s.footer.privacy}</a>
+      <a href={legal.terms}>{s.footer.terms}</a>
+    </nav>
+  </div>
+  <nav class="container langs" aria-label={s.a11y.language}>
+    {PUBLISHED_LOCALES.map((l) => (
+      <a
+        href={localeUrl(l)}
+        lang={HREFLANG[l]}
+        hreflang={HREFLANG[l]}
+        aria-current={l === locale ? 'page' : undefined}
+      >
+        {ENDONYMS[l]}
+      </a>
+    ))}
+  </nav>
+  <div class="container bottom">
+    <span>{year} &copy; Armando Jiménez. {s.footer.rights}</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--night);
+    color: rgba(242, 239, 251, 0.75);
+    padding: 48px 0 28px;
+  }
+
+  .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .brand-col img {
+    height: 38px;
+    width: auto;
+  }
+
+  .brand-col p {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 34ch;
+  }
+
+  .links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  .links a {
+    text-decoration: none;
+    opacity: 0.85;
+  }
+
+  .links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .langs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  .langs a {
+    color: rgba(242, 239, 251, 0.62);
+    text-decoration: none;
+  }
+
+  .langs a:hover {
+    color: #f2effb;
+    text-decoration: underline;
+  }
+
+  .langs a[aria-current='page'] {
+    color: #f2effb;
+    font-weight: 700;
+  }
+
+  .bottom {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(242, 239, 251, 0.14);
+    font-size: 13px;
+    color: rgba(242, 239, 251, 0.8);
+  }
+</style>

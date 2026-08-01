@@ -1,0 +1,18 @@
+---
+// Localized pages: /holy/es/ and the rest of the approved locale family
+// (en lives at /holy/). Only published locales build — see
+// PUBLISHED_LOCALES.
+import LandingPage from '../../components/LandingPage.astro';
+import { LOCALES, PUBLISHED_LOCALES } from '../../i18n/index.mjs';
+
+export function getStaticPaths() {
+  // Dev serves ALL locales so scripts/qa-sweep.mjs --all can audit
+  // unpublished translations; production output stays gated.
+  const list = import.meta.env.DEV ? LOCALES : PUBLISHED_LOCALES;
+  return list.filter((l) => l !== 'en').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<LandingPage locale={locale} />

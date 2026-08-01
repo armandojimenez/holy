@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Dekatkan Firman Tuhan\nsepanjang hari',
+    date: 'Senin, 1 Januari',
+    time: '3:16',
+    whens: ['sekarang', '3:16', '3:16'],
+  },
+  hook: { hero: 'Satu ayat Alkitab\nsetiap hari' },
+  categories: { hero: 'Ayat untuk setiap\nsuasana dan momen' },
+  widgets: {
+    hero: 'Firman Tuhan di\nLayar Utamamu',
+    heroAndroid: 'Firman Tuhan di\nlayar utamamu',
+  },
+  themes: { hero: 'Buat setiap ayat\nterasa personal', sample: 'Aa' },
+  share: { hero: 'Bagikan Firman\ndengan indah' },
+  myown: {
+    hero: 'Simpan doa dan\nrenunganmu',
+    dialogTyped: 'Tuhan, tuntun hati dan langkahku hari ini.',
+    dialogAuthor: 'Doaku',
+    rows: [
+      { text: 'Tuhan, tolong aku berjalan dalam iman hari ini.', date: '21 Juli' },
+      { text: 'Beri aku hikmat untuk langkah berikutnya.', date: '14 Juli' },
+      { text: 'Terima kasih atas rahmat-Mu yang baru setiap pagi.', date: '6 Juli' },
+      { text: 'Teguhkan hatiku dalam damai-Mu.', date: '28 Juni' },
+      { text: 'Ajari aku mengampuni dengan kasih karunia.', date: '19 Juni' },
+      { text: 'Biarlah kata-kataku membawa harapan hari ini.', date: '9 Juni' },
+      { text: 'Kuserahkan hari ini ke dalam tangan-Mu.', date: '1 Juni' },
+    ],
+  },
+  practice: { hero: 'Renungkan\nsatu bagian' },
+  dark: { hero: 'Menemanimu,\nsiang dan malam' },
+  proof: {
+    hero: 'Dicintai pembaca\nyang kembali pada Firman',
+    heroAndroid: 'Dicintai pembaca\ndi seluruh dunia',
+    storeIos: 'di App Store',
+    storeAndroid: 'di Google Play',
+    familyTitle: 'Dibuat dengan cinta oleh keluarga Believe',
+    familySub: 'Lebih dari 1 juta unduhan di semua aplikasi kami',
+  },
+  feature: { hero: 'Ayat Alkitab\nsetiap hari', qOpen: '“', qClose: '”' },
+};

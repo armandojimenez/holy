@@ -1,0 +1,98 @@
+---
+// Shared two-column feature section: copy on one side, a device scene on
+// the other (slot). `flip` puts the art on the left. Titles reuse the
+// deck's reviewed hero strings, so they arrive with "\n" line breaks.
+const { id, title, body, flip = false, tone = 'light' } = Astro.props;
+const lines = title.split('\n');
+---
+
+<section id={id} class={`feature tone-${tone}`}>
+  <div class={`container grid ${flip ? 'flip' : ''}`}>
+    <div class="copy">
+      <h2>{lines.map((l) => <span class="line">{l}</span>)}</h2>
+      <p>{body}</p>
+      <slot name="extra" />
+    </div>
+    <div class="art">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature {
+    padding: clamp(64px, 9vh, 110px) 0;
+    overflow: hidden;
+  }
+
+  .tone-light {
+    background: var(--lav-0);
+  }
+
+  .tone-tint {
+    background: linear-gradient(180deg, var(--lav-1) 0%, var(--lav-0) 100%);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: clamp(28px, 5vw, 72px);
+  }
+
+  .grid.flip .copy {
+    order: 2;
+  }
+
+  .grid.flip .art {
+    order: 1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: clamp(32px, 3.6vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+
+  h2 .line {
+    display: block;
+  }
+
+  .copy p {
+    margin-top: 18px;
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 44ch;
+  }
+
+  .art {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    .grid,
+    .grid.flip {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .copy,
+    .art {
+      min-width: 0;
+    }
+    .grid.flip .copy {
+      order: 0;
+    }
+    .grid.flip .art {
+      order: 1;
+    }
+    .copy {
+      text-align: center;
+    }
+    .copy p {
+      margin-inline: auto;
+    }
+  }
+</style>

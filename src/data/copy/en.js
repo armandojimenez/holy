@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Keep God’s Word\nclose all day',
+    date: 'Monday, January 1',
+    time: '3:16',
+    whens: ['now', '3:16', '3:16'],
+  },
+  hook: { hero: 'A Bible verse\nfor every day' },
+  categories: { hero: 'Scripture for every\nmood and moment' },
+  widgets: {
+    hero: 'God’s Word on\nyour Home Screen',
+    heroAndroid: 'God’s Word on\nyour home screen',
+  },
+  themes: { hero: 'Make every verse\nfeel personal', sample: 'Aa' },
+  share: { hero: 'Share Scripture\nbeautifully' },
+  myown: {
+    hero: 'Keep your prayers\nand words close',
+    dialogTyped: 'Lord, guide my heart and my steps today.',
+    dialogAuthor: 'My prayer',
+    rows: [
+      { text: 'Lord, help me walk in faith today.', date: 'July 21' },
+      { text: 'Give me wisdom for what comes next.', date: 'July 14' },
+      { text: 'Thank You for mercies new every morning.', date: 'July 6' },
+      { text: 'Keep my heart steady in Your peace.', date: 'June 28' },
+      { text: 'Teach me to forgive with grace.', date: 'June 19' },
+      { text: 'Let my words bring hope today.', date: 'June 9' },
+      { text: 'I place this day in Your hands.', date: 'June 1' },
+    ],
+  },
+  practice: { hero: 'Slow down with\none passage' },
+  dark: { hero: 'With you,\nday and night' },
+  proof: {
+    hero: 'Loved by readers\nwho return to Scripture',
+    heroAndroid: 'Loved by readers\naround the world',
+    storeIos: 'on the App Store',
+    storeAndroid: 'on Google Play',
+    familyTitle: 'Made with love, with the Believe family',
+    familySub: 'Over 1 million downloads across our apps',
+  },
+  feature: { hero: 'Daily Bible\nverses', qOpen: '“', qClose: '”' },
+};

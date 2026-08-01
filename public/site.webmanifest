@@ -1,0 +1,13 @@
+{
+  "name": "Holy: Daily Bible Verses",
+  "short_name": "Holy",
+  "description": "Daily Bible verses and Scripture reminders.",
+  "icons": [
+    { "src": "/holy/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/holy/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#31999D",
+  "background_color": "#F3F8F6",
+  "start_url": "/holy/",
+  "display": "browser"
+}

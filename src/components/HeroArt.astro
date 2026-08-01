@@ -1,0 +1,274 @@
+---
+// The hero composition, alive: the reminders lock-screen phone tilted like
+// the Play feature graphic, with two Holy notification cards fanned over
+// it. Every ~4.6s a fresh quote card drops onto the fan: new card enters
+// slot 0, the others shift down a slot, the last fades out. Slot animation
+// is pure transform/opacity, so variable card heights and background tabs
+// can never corrupt the layout.
+// Cards use the deck notification design (reminders.js notificationCard)
+// at factor 0.5162 of its 1170px canvas values. A faint teal dove
+// floats behind the fan, echoing the feature graphic's watermark.
+// Design space: 640x850 units, scaled to --hw px.
+import LockPhone from './LockPhone.astro';
+import { deck, landing } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+import heroData from '../data/generated/hero-cards.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const hc = heroData[locale];
+const initial = [0, 1].map((i) => ({
+  card: hc.cards[i],
+  when: hc.whens[i % hc.whens.length],
+}));
+const payload = JSON.stringify({ cards: hc.cards, whens: hc.whens });
+---
+
+<div class="hero-art" role="img" aria-label={landing(locale).hero.artLabel}>
+  <div class="space" aria-hidden="true">
+    <span class="bird" aria-hidden="true"></span>
+
+    <div class="phone-wrap">
+      <div class="phone-scale">
+        <LockPhone date={d.reminders.date} time={d.reminders.time} pill={hc.pill} />
+      </div>
+    </div>
+
+    <div class="stack" data-hero-stack data-cards={payload}>
+      {
+        initial.map((c, i) => (
+          <article class={`hero-card slot-${i}`}>
+            <img src={asset('/app/images/icons/alternate_app_icons/default.png')} alt="" width="72" height="72" />
+            <div class="hc-text">
+              <div class="hc-top">
+                <span class="hc-app">{hc.appName}</span>
+                <span class="hc-when" data-when>{c.when}</span>
+              </div>
+              <p class="hc-body">
+                <span data-body>{c.card.text}</span>
+                {c.card.author && <span class="hc-author" data-author>{`  -${c.card.author}`}</span>}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+      <template>
+        <article class="hero-card slot-enter">
+          <img src={asset('/app/images/icons/alternate_app_icons/default.png')} alt="" width="72" height="72" />
+          <div class="hc-text">
+            <div class="hc-top">
+              <span class="hc-app">{hc.appName}</span>
+              <span class="hc-when" data-when></span>
+            </div>
+            <p class="hc-body"><span data-body></span><span class="hc-author" data-author></span></p>
+          </div>
+        </article>
+      </template>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-art {
+    --hw: 560;
+    width: calc(var(--hw) * 1px);
+    height: calc(var(--hw) * 1.33px);
+    position: relative;
+  }
+
+  .space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 850px;
+    transform: scale(calc(var(--hw) / 640));
+    transform-origin: top left;
+  }
+
+  /* The feature graphic's dove echo: faint, teal, tilted. */
+  .bird {
+    position: absolute;
+    left: -60px;
+    top: 330px;
+    width: 300px;
+    height: 300px;
+    background: #31999d;
+    opacity: 0.12;
+    transform: rotate(-10deg);
+    -webkit-mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+    mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+  }
+
+  .phone-wrap {
+    position: absolute;
+    left: 86px;
+    top: 6px;
+    width: 504px;
+    height: 1068px;
+    transform: rotate(-5deg);
+    transform-origin: 50% 20%;
+  }
+
+  .phone-scale {
+    transform: scale(0.46);
+    transform-origin: top left;
+  }
+
+  .stack {
+    position: absolute;
+    left: 18px;
+    top: 424px;
+    width: 604px;
+    height: 380px;
+    z-index: 15;
+  }
+
+  .hero-card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 27px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 14px 32px rgba(8, 6, 22, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.85);
+    padding: 18px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    transition: transform 0.7s cubic-bezier(0.22, 0.8, 0.3, 1), opacity 0.55s ease;
+  }
+
+  .slot-enter {
+    transform: translateY(-30px) rotate(-2deg) scale(0.97);
+    opacity: 0;
+    z-index: 4;
+  }
+  .slot-0 {
+    transform: translateY(0) rotate(-2deg);
+    opacity: 1;
+    z-index: 3;
+  }
+  .slot-1 {
+    transform: translateY(158px) rotate(1.6deg);
+    opacity: 1;
+    z-index: 2;
+  }
+  .slot-2 {
+    transform: translateY(310px) rotate(-0.6deg);
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .hero-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+    flex: 0 0 auto;
+  }
+
+  .hc-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hc-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .hc-app {
+    font-weight: 600;
+    font-size: 21px;
+    color: #191631;
+  }
+
+  .hc-when {
+    font-size: 15px;
+    color: rgba(25, 22, 49, 0.45);
+  }
+
+  .hc-body {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.24;
+    color: #1f1b33;
+    margin-top: 5px;
+  }
+
+  /* The author rides inside the body line, smaller and grey, so the quote
+     stays the star — deck slide 01 parity. */
+  .hc-author {
+    font-size: 15px;
+    color: rgba(25, 22, 49, 0.45);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1120px) {
+    .hero-art { --hw: 470; }
+  }
+  @media (max-width: 900px) {
+    .hero-art { --hw: 420; }
+  }
+  @media (max-width: 470px) {
+    .hero-art { --hw: 330; }
+  }
+  /* 320-class viewports: the container is ~280px wide; the art must not
+     force the grid column past it (found by qa-sweep at xs). */
+  @media (max-width: 380px) {
+    .hero-art { --hw: 272; }
+  }
+</style>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const stack of document.querySelectorAll('[data-hero-stack]')) {
+    const raw = (stack as HTMLElement).dataset.cards;
+    const tmpl = stack.querySelector('template');
+    if (!raw || !tmpl || reduced) continue;
+    const data = JSON.parse(raw);
+    let idx = 2; // slots 0 and 1 are server-rendered
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const cycle = () => {
+      // Background tabs fire timers without painting; skip so slots never
+      // advance invisibly.
+      if (document.hidden) return;
+      if (stack.querySelectorAll('.hero-card').length > 3) return;
+      const card = tmpl.content.firstElementChild!.cloneNode(true) as HTMLElement;
+      const entry = data.cards[idx % data.cards.length];
+      card.querySelector('[data-body]')!.textContent = entry.text;
+      card.querySelector('[data-author]')!.textContent = entry.author ? `  -${entry.author}` : '';
+      card.querySelector('[data-when]')!.textContent = data.whens[idx % data.whens.length];
+      idx += 1;
+      stack.append(card);
+      void card.offsetHeight; // commit the slot-enter state before promoting
+      for (const c of stack.querySelectorAll('.hero-card')) {
+        if (c === card) continue;
+        if (c.classList.contains('slot-1')) {
+          c.classList.replace('slot-1', 'slot-2');
+          setTimeout(() => c.remove(), 800);
+        } else if (c.classList.contains('slot-0')) {
+          c.classList.replace('slot-0', 'slot-1');
+        }
+      }
+      card.classList.replace('slot-enter', 'slot-0');
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !timer) timer = setInterval(cycle, 4600);
+        else if (!entry.isIntersecting && timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(stack);
+  }
+</script>

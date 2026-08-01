@@ -1,0 +1,164 @@
+---
+// The app family band: the 10 real store icons (Holy enlarged, like the
+// deck's proof slide) with the honest family downloads claim.
+import { deck, landing } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+
+// Same set + order as the deck's proof slide, Holy main.
+const family = [
+  { icon: 'wealthy', name: 'Wealthy' },
+  { icon: 'believe', name: 'Believe' },
+  { icon: 'holy', name: 'Holy', main: true },
+  { icon: 'motiv', name: 'Motiv' },
+  { icon: 'unique', name: 'Unique' },
+  { icon: 'divine', name: 'Divine' },
+  { icon: 'manna', name: 'Manna' },
+  { icon: 'monea', name: 'Monea' },
+  { icon: 'lilia', name: 'Lilia' },
+  { icon: 'askbetter', name: 'Ask Better' },
+];
+---
+
+<section class="family">
+  <div class="container inner">
+    <h2>{d.proof.familyTitle}</h2>
+    <p class="sub">{d.proof.familySub}</p>
+    <div class="icons" data-family>
+      {family.map((f, i) => (
+        <div class={`app ${f.main ? 'main' : ''}`} style={`--d:${i * 70}ms`}>
+          <img src={asset(`/img/family/${f.icon}.png`)} alt="" loading="lazy" width="72" height="72" />
+          <span>{f.name}</span>
+        </div>
+      ))}
+      <div class="app more" style={`--d:${family.length * 70}ms`}>
+        <span class="plus" aria-hidden="true">+</span>
+        <span>{s.sections.family.more}</span>
+      </div>
+    </div>
+    <p class="devices">{s.sections.family.body}</p>
+  </div>
+</section>
+
+<style>
+  .family {
+    background: var(--lav-0);
+    padding: clamp(64px, 9vh, 110px) 0;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: clamp(30px, 3.2vw, 46px);
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+
+  .sub {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  .icons {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(18px, 3vw, 34px);
+    max-width: 780px;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .app img {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(21, 63, 64, 0.18);
+  }
+
+  .app.main img {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+    box-shadow: 0 10px 26px rgba(140, 82, 255, 0.32);
+  }
+
+  .app span {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+
+  .app.main span {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .app.more .plus {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    border: 2px dashed rgba(21, 63, 64, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--ink-soft);
+  }
+
+  /* staggered arrival, enabled only once JS is there */
+  .icons.reveal-ready .app {
+    opacity: 0;
+    translate: 0 14px;
+    transition: opacity 0.6s ease var(--d, 0ms), translate 0.6s ease var(--d, 0ms);
+  }
+
+  .icons.reveal-ready.in .app {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .devices {
+    margin-top: 36px;
+    max-width: 56ch;
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+</style>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const icons of document.querySelectorAll('[data-family]')) {
+    if (reduced) continue;
+    icons.classList.add('reveal-ready');
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          icons.classList.add('in');
+          io.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    io.observe(icons);
+  }
+</script>

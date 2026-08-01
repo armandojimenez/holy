@@ -1,0 +1,159 @@
+---
+// Pixel-faithful port of the deck's marketing phone + reminders lock screen
+// (holy-screenshots: src/lib/frame.js device() + src/screens/reminders.js
+// lockScreen(), dark mode). The owner's Holy night wallpaper, light ink,
+// the quiet localized lock-screen widget line. Built at the
+// deck's exact canvas dimensions (1096px wide, 440x956 logical screen
+// scaled 2.37273) so every deck value carries over verbatim; the parent
+// scales the whole thing down with a transform.
+import { asset } from '../config.mjs';
+const { date, time = '10:10', pill = '' } = Astro.props;
+---
+
+<div class="lock-phone">
+  <div class="screen">
+    <div class="logical">
+      <img
+        class="wall"
+        src={asset('/img/tool/holy-lock.webp')}
+        alt=""
+        width="506"
+        height="900"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="status">
+        <span class="st-time">{time}</span>
+        <svg width="78" height="14" viewBox="0 0 78 14" fill="#F6F2FA" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="9" width="3.4" height="5" rx="1"></rect>
+          <rect x="5.4" y="6.5" width="3.4" height="7.5" rx="1"></rect>
+          <rect x="10.8" y="4" width="3.4" height="10" rx="1"></rect>
+          <rect x="16.2" y="1.5" width="3.4" height="12.5" rx="1"></rect>
+          <path d="M33 4.6a10.4 10.4 0 0 1 13.2 0l-1.9 2.2a7.4 7.4 0 0 0-9.4 0L33 4.6Z"></path>
+          <path d="M35.6 7.6a6.4 6.4 0 0 1 8 0l-1.9 2.2a3.4 3.4 0 0 0-4.2 0l-1.9-2.2Z"></path>
+          <circle cx="39.6" cy="11.8" r="1.9"></circle>
+          <rect x="55" y="1.5" width="20" height="11" rx="3.5" fill="none" stroke="#F6F2FA" stroke-opacity="0.45"></rect>
+          <rect x="57" y="3.5" width="16" height="7" rx="1.8"></rect>
+          <path d="M76.5 5.2v3.6c1-.3 1.5-1 1.5-1.8s-.5-1.5-1.5-1.8Z" fill-opacity="0.5"></path>
+        </svg>
+      </div>
+      <div class="date">{date}</div>
+      <div class="clock">{time}</div>
+      <div class="widget">{pill}</div>
+      <div class="home"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .lock-phone {
+    width: 1096px;
+    padding: 26px;
+    border-radius: 159px;
+    background: #ffffff;
+    box-shadow: 0 40px 90px rgba(16, 10, 40, 0.32);
+  }
+
+  .screen {
+    width: 1044px;
+    height: 2268px;
+    border-radius: 133px;
+    overflow: hidden;
+    background: #122630;
+    position: relative;
+  }
+
+  .logical {
+    width: 440px;
+    height: 956px;
+    transform: scale(2.37273);
+    transform-origin: top left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* The owner's Holy night art, full-bleed like deck slide 01. */
+  .wall {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 40px 0 46px;
+    z-index: 30;
+  }
+
+  .st-time {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    color: #f6f2fa;
+  }
+
+  .date {
+    position: absolute;
+    top: 104px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+    color: #f6f2fa;
+  }
+
+  .clock {
+    position: absolute;
+    top: 124px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 96px;
+    letter-spacing: 2px;
+    color: #f6f2fa;
+  }
+
+  /* Inline lock-screen widget: like real iOS, one quiet quote line written
+     on the wallpaper (deck slide 01 parity), midway between the clock and
+     the notification stack. */
+  .widget {
+    position: absolute;
+    top: 252px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    color: rgba(246, 242, 250, 0.82);
+    /* CJK pill lines run ~2x the Latin length; wrap to two centered
+       lines instead of clipping at the bezel (UI review 2026-07-24).
+       The deck relied on its auto-fit shrinker here; the landing wraps. */
+    text-wrap: balance;
+    padding: 0 20px;
+  }
+
+  .home {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 5px;
+    border-radius: 3px;
+    background: rgba(246, 242, 250, 0.8);
+  }
+</style>

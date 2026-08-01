@@ -1,0 +1,289 @@
+---
+// The share studio device (deck port: share.js), alive: the story-ratio
+// Scripture card on Holy's painted share theme over its blurred backdrop, the
+// contrast-aware script logo, and the Story/Square toggle actually flipping — the
+// card morphs between ratios like the real share page.
+import FeatureSection from './FeatureSection.astro';
+import Phone from './Phone.astro';
+import { deck, landing } from '../i18n/index.mjs';
+import { asset } from '../config.mjs';
+import sections from '../data/generated/sections.json';
+
+const { locale = 'en' } = Astro.props;
+const d = deck(locale);
+const s = landing(locale);
+const sec = sections[locale];
+---
+
+<FeatureSection title={d.share.hero} body={s.sections.share.body} tone="light">
+  <div class="scene" role="img" aria-label={s.sections.share.artLabel}>
+    <div class="space" aria-hidden="true">
+      <div class="phone-scale">
+        <Phone frame="light" status="dark" screenBg="#9AB7CE">
+          <div class="sh-screen" data-share>
+            <div
+              class="backdrop"
+              style={`background-image:url(${asset('/img/tool/holy-share.webp')})`}
+            ></div>
+            <div class="close">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </div>
+            <div
+              class="card"
+              data-share-card
+              style={`background-image:url(${asset('/img/tool/holy-share.webp')})`}
+            >
+              <img class="logo" src={asset('/app/images/svgIcons/holy_alt_light.svg')} alt="" width="120" height="36" />
+              <div class="q-box">
+                <p class="q" data-fit>{sec.share.quote.text}</p>
+                {sec.share.quote.author && <p class="a">- {sec.share.quote.author}</p>}
+              </div>
+            </div>
+            <div class="sheet">
+              <div class="toggle">
+                <span class="chip active" data-share-story data-fit>{sec.share.story}</span>
+                <span class="chip" data-share-square data-fit>{sec.share.square}</span>
+              </div>
+              <div class="social">
+                {['instagram', 'facebook', 'twitter', 'whatsapp'].map((name) => (
+                  <img
+                    src={asset(`/app/images/icons/${name}.png`)}
+                    alt=""
+                    width="52"
+                    height="52"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              <div class="actions">
+                <span data-fit>{sec.share.save}</span>
+                <span data-fit>{sec.share.copy}</span>
+                <span data-fit>{sec.share.more}</span>
+              </div>
+            </div>
+          </div>
+        </Phone>
+      </div>
+    </div>
+  </div>
+</FeatureSection>
+
+<style>
+  .scene {
+    --fw: 400;
+    width: calc(var(--fw) * 1px);
+    height: calc(var(--fw) * 1.62px);
+    position: relative;
+  }
+
+  .space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 504px;
+    height: 1068px;
+    transform: scale(calc(var(--fw) / 504));
+    transform-origin: top left;
+  }
+
+  .phone-scale {
+    transform: scale(0.46);
+    transform-origin: top left;
+  }
+
+  /* ── In-screen (440pt logical space, deck share.js geometry) ── */
+  .sh-screen {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* The real Holy share art becomes its own soft, darkened backdrop. */
+  .backdrop {
+    position: absolute;
+    inset: -30px;
+    background-color: #12585b;
+    background-size: cover;
+    background-position: center;
+    filter: blur(26px) brightness(0.92);
+  }
+
+  .close {
+    position: absolute;
+    top: 70px;
+    left: 16px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .card {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 353px;
+    height: 560px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #12585b;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 26px 60px rgba(15, 8, 35, 0.45);
+    z-index: 4;
+    transition: width 0.6s cubic-bezier(0.3, 1, 0.4, 1), height 0.6s cubic-bezier(0.3, 1, 0.4, 1), top 0.6s cubic-bezier(0.3, 1, 0.4, 1);
+  }
+
+  /* Square mode (the toggle flips this on) */
+  .sh-screen.square .card {
+    top: 190px;
+    width: 396px;
+    height: 396px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34%;
+    height: auto;
+  }
+
+  .q-box {
+    position: absolute;
+    inset: 112px 34px 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .q {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 33px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #153f40;
+  }
+
+  .a {
+    margin-top: 12px;
+    font-family: var(--font-sans);
+    font-size: 19px;
+    font-weight: 700;
+    color: #153f40;
+    white-space: nowrap;
+  }
+
+  .sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 252px;
+    padding: 18px 22px 30px;
+    background: rgba(252, 250, 252, 0.94);
+    border-radius: 26px 26px 0 0;
+    box-shadow: 0 -14px 40px rgba(20, 10, 40, 0.18);
+    z-index: 6;
+  }
+
+  .toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .chip {
+    padding: 7px 26px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    background: rgba(49, 153, 157, 0.1);
+    color: #12585b;
+    transition: background 0.4s ease, color 0.4s ease;
+  }
+
+  .chip.active {
+    background: linear-gradient(90deg, #12585b 0%, #31999d 100%);
+    color: #fff;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    margin-bottom: 18px;
+  }
+
+  .social img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .actions span {
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: rgba(49, 153, 157, 0.08);
+    font-weight: 600;
+    font-size: 14px;
+    color: #33345e;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1120px) {
+    .scene { --fw: 350; }
+  }
+  @media (max-width: 470px) {
+    .scene { --fw: 300; }
+  }
+  @media (max-width: 340px) {
+    .scene { --fw: 280; }
+  }
+</style>
+
+<script>
+  // The Story/Square toggle flips on its own, morphing the card ratio.
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const screen of document.querySelectorAll('[data-share]')) {
+    if (reduced) continue;
+    const story = screen.querySelector('[data-share-story]')!;
+    const square = screen.querySelector('[data-share-square]')!;
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const flip = () => {
+      if (document.hidden) return;
+      const isSquare = screen.classList.toggle('square');
+      story.classList.toggle('active', !isSquare);
+      square.classList.toggle('active', isSquare);
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !timer) timer = setInterval(flip, 3600);
+        else if (!entry.isIntersecting && timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(screen);
+  }
+</script>

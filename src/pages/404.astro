@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import { landing } from '../i18n/index.mjs';
+import { BASE } from '../config.mjs';
+
+const locale = 'en';
+const s = landing(locale);
+---
+
+<Base locale={locale} title="Page not found. Holy" description={s.meta.description} noindex>
+  <main class="nf">
+    <span class="dove" aria-hidden="true"></span>
+    <h1>404</h1>
+    <p>This page wandered off. Your daily Scripture is still here.</p>
+    <a class="btn-pill" href={`${BASE}/`}>Holy</a>
+  </main>
+</Base>
+
+<style>
+  .nf {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--lav-0) 0%, var(--lav-1) 100%);
+    padding: 24px;
+  }
+
+  .dove {
+    width: 72px;
+    height: 72px;
+    background: var(--bird);
+    transform: rotate(-8deg);
+    -webkit-mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+    mask: url('/holy/app/images/svgIcons/paloma.svg') no-repeat center / contain;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  p {
+    color: var(--ink-soft);
+    font-size: 17px;
+    max-width: 38ch;
+  }
+</style>
