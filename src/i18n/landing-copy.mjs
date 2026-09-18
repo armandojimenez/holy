@@ -2,6 +2,10 @@
 // Holy screenshot deck; this file supplies the web-only prose and controls.
 // Arrays keep every locale structurally identical and easy to audit.
 
+import { LANGUAGES } from './language-names.mjs';
+import { PUBLISHED_LOCALES } from './published.mjs';
+import { WAVE2 } from './wave2/index.mjs';
+
 const COPY = {
   en: {
     meta: [
@@ -406,8 +410,23 @@ const HERO_TITLES = {
   pl: 'Słowo Boże\nblisko przez\ncały dzień',
 };
 
+// The English block is the shape every Wave 2 module is validated against.
+export const COPY_EN = COPY.en;
+
+// "Which languages are available?" lists exactly the published locales, in
+// each page's own language, so the answer can never promise an unshipped one.
+function languagesAnswer(locale) {
+  const table = LANGUAGES[locale] ?? WAVE2[locale]?.languages ?? LANGUAGES.en;
+  const names = PUBLISHED_LOCALES.map((code) => table.names[code]);
+  const [sep, last] = table.join;
+  const list = names.length > 1 ? `${names.slice(0, -1).join(sep)}${last}${names.at(-1)}` : names[0];
+  return table.sentence.replace('{list}', list);
+}
+
 export function landingCopy(locale) {
-  const c = COPY[locale] ?? COPY.en;
+  const c = COPY[locale] ?? WAVE2[locale]?.copy ?? COPY.en;
+  const heroTitle = HERO_TITLES[locale] ?? WAVE2[locale]?.heroTitle ?? HERO_TITLES.en;
+  const faqs = c.faqs.map(([q, a], i) => [q, i === 5 ? languagesAnswer(locale) : a]);
   const sections = Object.fromEntries(sectionKeys.map((key, i) => [key, {
     body: c.bodies[i],
     artLabel: c.alts[i],
@@ -416,11 +435,11 @@ export function landingCopy(locale) {
   return {
     meta: { title: c.meta[0], description: c.meta[1], ogAlt: c.meta[2] },
     nav: { features: c.nav[0], faq: c.nav[1], download: c.nav[2], contact: c.nav[3] },
-    hero: { title: HERO_TITLES[locale] ?? HERO_TITLES.en, sub: c.hero[0], badgeIos: c.hero[1], badgeAndroid: c.hero[2], artLabel: c.hero[3] },
+    hero: { title: heroTitle, sub: c.hero[0], badgeIos: c.hero[1], badgeAndroid: c.hero[2], artLabel: c.hero[3] },
     proof: { ratingIos: c.proof[0], ratingAndroid: c.proof[1], downloadsValue: '1M+', downloads: c.proof[2] },
     quoteMarks: c.marks,
     sections,
-    faq: { title: c.faqTitle, items: c.faqs.map(([q, a]) => ({ q, a })) },
+    faq: { title: c.faqTitle, items: faqs.map(([q, a]) => ({ q, a })) },
     cta: { title: c.cta[0], body: c.cta[1] },
     contact: { title: c.contact[0], body: c.contact[1], copy: c.contact[2], copied: c.contact[3], open: c.contact[4] },
     footer: { rights: c.footer[0], privacy: c.footer[1], terms: c.footer[2], tagline: c.footer[3] },

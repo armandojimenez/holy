@@ -38,6 +38,16 @@ const PLAY_HL = {
   id: 'id',
   tr: 'tr',
   pl: 'pl',
+  fil: 'fil',
+  hi: 'hi',
+  ro: 'ro',
+  nl: 'nl',
+  cs: 'cs',
+  hr: 'hr',
+  hu: 'hu',
+  sl: 'sl',
+  sv: 'sv',
+  nb: 'no',
 };
 const APPLE_L = {
   es: 'es',
@@ -50,6 +60,15 @@ const APPLE_L = {
   id: 'id',
   tr: 'tr',
   pl: 'pl',
+  hi: 'hi',
+  ro: 'ro',
+  nl: 'nl',
+  cs: 'cs',
+  hr: 'hr',
+  hu: 'hu',
+  sl: 'sl',
+  sv: 'sv',
+  nb: 'nb',
 };
 export const storeUrls = (locale) => ({
   ios: APPLE_L[locale] ? `${APP_STORE_URL}?l=${APPLE_L[locale]}` : APP_STORE_URL,
@@ -72,5 +91,6 @@ const LEGAL = {
 };
 
 // HX8A owner-approved English fallback for locales without a translated
-// policy page. Spanish uses the reviewed es-419 pages.
+// policy page (Wave 2 included, owner decision at LW9). Spanish uses the
+// reviewed es-419 pages.
 export const legalUrls = (locale) => LEGAL[locale] ?? LEGAL.en;

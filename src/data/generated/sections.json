@@ -1131,5 +1131,1035 @@
         "author": "Księga Jeremiasza 29:11"
       }
     ]
+  },
+  "fil": {
+    "categoriesTitle": "Mga Kategorya",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Mga Talata sa Bibliya"
+      },
+      {
+        "key": "faith",
+        "title": "Pananampalataya"
+      },
+      {
+        "key": "hope",
+        "title": "Pag-asa"
+      },
+      {
+        "key": "pray",
+        "title": "Panalangin"
+      },
+      {
+        "key": "gratitude",
+        "title": "Pasasalamat"
+      },
+      {
+        "key": "jesus",
+        "title": "Anak ng Diyos"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Pagpapatawad"
+      },
+      {
+        "key": "love",
+        "title": "Pag-ibig ng Diyos"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Lahat ng mga bagay ay aking magagawa doon sa nagpapalakas sa akin.",
+        "author": "Mga Taga-Filipos 4:13"
+      },
+      "label": "Mga Talata sa Bibliya"
+    },
+    "widgets": {
+      "medium": "Na inyong ilagak sa kaniya ang lahat ng inyong kabalisahan, sapagka't kayo'y ipinagmamalasakit niya.",
+      "smallDark": "Lahat ng mga bagay ay aking magagawa doon sa nagpapalakas sa akin.",
+      "smallPink": "Sapagka't nagsisilakad kami sa pamamagitan ng pananampalataya, hindi sa pamamagitan ng paningin.",
+      "medium2": "Ang Panginoon ay aking kalakasan at awit; at siya'y naging aking kaligtasan."
+    },
+    "themes": {
+      "title": "Piliin ang sining mo",
+      "make": "Gumawa ng sariling tema"
+    },
+    "share": {
+      "quote": {
+        "text": "Sapagka't nagsisilakad kami sa pamamagitan ng pananampalataya, hindi sa pamamagitan ng paningin.",
+        "author": "2 Mga Taga-Corinto 5:7"
+      },
+      "story": "Story",
+      "square": "Parisukat",
+      "save": "I-save",
+      "copy": "Kopyahin",
+      "more": "Higit pa"
+    },
+    "myown": {
+      "title": "Mga Talata Ko",
+      "add": "Idagdag",
+      "dialogTitle": "Magdagdag ng bagong talata!",
+      "save": "I-save"
+    },
+    "practice": {
+      "quote": {
+        "text": "Hanapin ninyo ang Panginoon at ang kaniyang lakas; Hanapin ninyo ang kaniyang mukha na palagi.",
+        "author": "1 Mga Cronica 16:11"
+      },
+      "day": "Araw",
+      "night": "Gabi"
+    },
+    "dark": {
+      "quote": {
+        "text": "At ang ilaw ay lumiliwanag sa kadiliman; at ito'y hindi napagunawa ng kadiliman.",
+        "author": "Juan 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "At ang ilaw ay lumiliwanag sa kadiliman; at ito'y hindi napagunawa ng kadiliman.",
+        "author": "Juan 1:5"
+      },
+      {
+        "text": "Pagpalain ka nawa ng Panginoon at ingatan ka: Paliwanagin nawa ng Panginoon ang kaniyang mukha sa iyo, at mahabag sa iyo: Ilingap nawa ng Panginoon ang kaniyang mukha sa iyo, at bigyan ka ng kapayapaan.",
+        "author": "Mga Bilang 6:24-26"
+      },
+      {
+        "text": "At ang kapayapaan ng Dios, na di masayod ng pagiisip, ay magiingat ng inyong mga puso at ng inyong mga pagiisip kay Cristo Jesus.",
+        "author": "Mga Taga-Filipos 4:7"
+      },
+      {
+        "text": "Sapagka't nalalaman ko ang mga pagiisip na aking iniisip sa inyo, sabi ng Panginoon, mga pagiisip tungkol sa kapayapaan, at hindi tungkol sa kasamaan, upang bigyan kayo ng pagasa sa inyong huling wakas.",
+        "author": "Jeremias 29:11"
+      }
+    ]
+  },
+  "hi": {
+    "categoriesTitle": "श्रेणियाँ",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "बाइबल के पद"
+      },
+      {
+        "key": "faith",
+        "title": "विश्वास"
+      },
+      {
+        "key": "hope",
+        "title": "आशा"
+      },
+      {
+        "key": "pray",
+        "title": "प्रार्थना"
+      },
+      {
+        "key": "gratitude",
+        "title": "आभार"
+      },
+      {
+        "key": "jesus",
+        "title": "परमेश्वर का पुत्र"
+      },
+      {
+        "key": "forgiveness",
+        "title": "क्षमा"
+      },
+      {
+        "key": "love",
+        "title": "परमेश्वर का प्रेम"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "जो मुझे सामर्थ्य देता है उसमें मैं सब कुछ कर सकता हूँ।",
+        "author": "फिलिप्पियों 4:13"
+      },
+      "label": "बाइबल के पद"
+    },
+    "widgets": {
+      "medium": "अपनी सारी चिन्ता उसी पर डाल दो, क्योंकि उसको तुम्हारा ध्यान है।",
+      "smallDark": "जो मुझे सामर्थ्य देता है उसमें मैं सब कुछ कर सकता हूँ।",
+      "smallPink": "क्योंकि हम रूप को देखकर नहीं, पर विश्वास से चलते हैं।",
+      "medium2": "परमेश्वर मेरा बल और भजन का विषय है; वह मेरा उद्धार ठहरा है।"
+    },
+    "themes": {
+      "title": "अपनी कला चुनें",
+      "make": "अपनी थीम बनाएँ"
+    },
+    "share": {
+      "quote": {
+        "text": "क्योंकि हम रूप को देखकर नहीं, पर विश्वास से चलते हैं।",
+        "author": "2 कुरिन्थियों 5:7"
+      },
+      "story": "स्टोरी",
+      "square": "वर्गाकार",
+      "save": "सहेजें",
+      "copy": "कॉपी करें",
+      "more": "अधिक"
+    },
+    "myown": {
+      "title": "मेरी पंक्तियाँ",
+      "add": "जोड़ें",
+      "dialogTitle": "एक नई पंक्ति जोड़ें!",
+      "save": "सहेजें"
+    },
+    "practice": {
+      "quote": {
+        "text": "यहोवा और उसकी सामर्थ्य की खोज करो; उसके दर्शन के लिए लगातार खोज करो।",
+        "author": "1 इतिहास 16:11"
+      },
+      "day": "दिन",
+      "night": "रात"
+    },
+    "dark": {
+      "quote": {
+        "text": "और ज्योति अंधकार में चमकती है; और अंधकार ने उसे ग्रहण न किया।",
+        "author": "यूहन्ना 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "और ज्योति अंधकार में चमकती है; और अंधकार ने उसे ग्रहण न किया।",
+        "author": "यूहन्ना 1:5"
+      },
+      {
+        "text": "“यहोवा तुझे आशीष दे और तेरी रक्षा करे: “यहोवा तुझ पर अपने मुख का प्रकाश चमकाए, और तुझ पर अनुग्रह करे: “यहोवा अपना मुख तेरी ओर करे, और तुझे शान्ति दे।",
+        "author": "गिनती 6:24-26"
+      },
+      {
+        "text": "तब परमेश्वर की शान्ति, जो सारी समझ से बिलकुल परे है, तुम्हारे हृदय और तुम्हारे विचारों को मसीह यीशु में सुरक्षित रखेगी।",
+        "author": "फिलिप्पियों 4:7"
+      },
+      {
+        "text": "क्योंकि यहोवा की यह वाणी है, कि जो कल्पनाएँ मैं तुम्हारे विषय करता हूँ उन्हें मैं जानता हूँ, वे हानि की नहीं, वरन् कुशल ही की हैं, और अन्त में तुम्हारी आशा पूरी करूँगा।",
+        "author": "यिर्मयाह 29:11"
+      }
+    ]
+  },
+  "ro": {
+    "categoriesTitle": "Categorii",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Versete biblice"
+      },
+      {
+        "key": "faith",
+        "title": "Credință"
+      },
+      {
+        "key": "hope",
+        "title": "Speranță"
+      },
+      {
+        "key": "pray",
+        "title": "Rugăciune"
+      },
+      {
+        "key": "gratitude",
+        "title": "Recunoștință"
+      },
+      {
+        "key": "jesus",
+        "title": "Fiul lui Dumnezeu"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Iertare"
+      },
+      {
+        "key": "love",
+        "title": "Dragostea lui Dumnezeu"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Pot toate prin Cristos, care mă întărește.",
+        "author": "Filipeni 4:13"
+      },
+      "label": "Versete biblice"
+    },
+    "widgets": {
+      "medium": "Aruncând toată îngrijorarea voastră asupra lui, pentru că el se îngrijește de voi.",
+      "smallDark": "Pot toate prin Cristos, care mă întărește.",
+      "smallPink": "Fiindcă umblăm prin credință, nu prin vedere.",
+      "medium2": "DOMNUL este puterea și cântarea mea și a devenit salvarea mea."
+    },
+    "themes": {
+      "title": "Alege-ți arta",
+      "make": "Creează o temă proprie"
+    },
+    "share": {
+      "quote": {
+        "text": "Fiindcă umblăm prin credință, nu prin vedere.",
+        "author": "2 Corinteni 5:7"
+      },
+      "story": "Poveste",
+      "square": "Pătrat",
+      "save": "Salvează",
+      "copy": "Copiază",
+      "more": "Mai multe"
+    },
+    "myown": {
+      "title": "Versetele mele",
+      "add": "Adaugă",
+      "dialogTitle": "Adaugă un verset nou!",
+      "save": "Salvează"
+    },
+    "practice": {
+      "quote": {
+        "text": "Căutați pe DOMNUL și puterea lui, căutați neîncetat fața lui.",
+        "author": "1 Cronici 16:11"
+      },
+      "day": "Zi",
+      "night": "Noapte"
+    },
+    "dark": {
+      "quote": {
+        "text": "Și lumina strălucește în întuneric și întunericul nu a cuprins-o.",
+        "author": "Ioan 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Și lumina strălucește în întuneric și întunericul nu a cuprins-o.",
+        "author": "Ioan 1:5"
+      },
+      {
+        "text": "DOMNUL să te binecuvânteze și să te țină; Să facă DOMNUL să strălucească fața sa peste tine și să aibă har fața de tine; Să înalțe DOMNUL înfățișarea sa peste tine și să îți dea pacea.",
+        "author": "Numerele 6:24-26"
+      },
+      {
+        "text": "Și pacea lui Dumnezeu, care întrece orice înțelegere, vă va păzi inimile și mințile prin Cristos Isus.",
+        "author": "Filipeni 4:7"
+      },
+      {
+        "text": "Pentru că eu cunosc gândurile pe care le gândesc față de voi, spune DOMNUL, gânduri de pace și nu de răutate, pentru a vă da un sfârșit așteptat.",
+        "author": "Ieremia 29:11"
+      }
+    ]
+  },
+  "nl": {
+    "categoriesTitle": "Categorieën",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Bijbelverzen"
+      },
+      {
+        "key": "faith",
+        "title": "Geloof"
+      },
+      {
+        "key": "hope",
+        "title": "Hoop"
+      },
+      {
+        "key": "pray",
+        "title": "Gebed"
+      },
+      {
+        "key": "gratitude",
+        "title": "Dankbaarheid"
+      },
+      {
+        "key": "jesus",
+        "title": "Zoon van God"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Vergeving"
+      },
+      {
+        "key": "love",
+        "title": "Gods liefde"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
+        "author": "Filippenzen 4:13"
+      },
+      "label": "Bijbelverzen"
+    },
+    "widgets": {
+      "medium": "Werpt al uw bekommernis op Hem, want Hij zorgt voor u.",
+      "smallDark": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
+      "smallPink": "Want wij wandelen door geloof en niet door aanschouwen.",
+      "medium2": "De HEERE is mijn Sterkte en Psalm, want Hij is mij tot heil geweest."
+    },
+    "themes": {
+      "title": "Kies je ontwerp",
+      "make": "Eigen thema maken"
+    },
+    "share": {
+      "quote": {
+        "text": "Want wij wandelen door geloof en niet door aanschouwen.",
+        "author": "2 Corinthiërs 5:7"
+      },
+      "story": "Story",
+      "square": "Vierkant",
+      "save": "Opslaan",
+      "copy": "Kopiëren",
+      "more": "Meer"
+    },
+    "myown": {
+      "title": "Mijn verzen",
+      "add": "Toevoegen",
+      "dialogTitle": "Voeg een nieuw vers toe!",
+      "save": "Opslaan"
+    },
+    "practice": {
+      "quote": {
+        "text": "Vraagt naar den HEERE en Zijn sterkte, zoekt Zijn aangezicht geduriglijk.",
+        "author": "1 Kronieken 16:11"
+      },
+      "day": "Dag",
+      "night": "Nacht"
+    },
+    "dark": {
+      "quote": {
+        "text": "En het Licht schijnt in de duisternis, en de duisternis heeft hetzelve niet begrepen.",
+        "author": "Johannes 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "En het Licht schijnt in de duisternis, en de duisternis heeft hetzelve niet begrepen.",
+        "author": "Johannes 1:5"
+      },
+      {
+        "text": "De HEERE zegene u, en behoede u! De HEERE doe Zijn aangezicht over u lichten, en zij u genadig! De HEERE verheffe Zijn aangezicht over u, en geve u vrede!",
+        "author": "Numeri 6:24-26"
+      },
+      {
+        "text": "En de vrede Gods, die alle verstand te boven gaat, zal uw harten en uw zinnen bewaren in Christus Jezus.",
+        "author": "Filippenzen 4:7"
+      },
+      {
+        "text": "Want Ik weet de gedachten, die Ik over u denk, spreekt de HEERE, gedachten des vredes, en niet des kwaads, dat Ik u geve het einde en de verwachting.",
+        "author": "Jeremia 29:11"
+      }
+    ]
+  },
+  "cs": {
+    "categoriesTitle": "Kategorie",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Biblické verše"
+      },
+      {
+        "key": "faith",
+        "title": "Víra"
+      },
+      {
+        "key": "hope",
+        "title": "Naděje"
+      },
+      {
+        "key": "pray",
+        "title": "Modlitba"
+      },
+      {
+        "key": "gratitude",
+        "title": "Vděčnost"
+      },
+      {
+        "key": "jesus",
+        "title": "Syn Boží"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Odpuštění"
+      },
+      {
+        "key": "love",
+        "title": "Boží láska"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Všecko mohu v Kristu, kterýž mne posiluje.",
+        "author": "Filipským 4:13"
+      },
+      "label": "Biblické verše"
+    },
+    "widgets": {
+      "medium": "Všelikou péči svou uvrhouce na něj. Nebo on má péči o vás.",
+      "smallDark": "Všecko mohu v Kristu, kterýž mne posiluje.",
+      "smallPink": "Nebo skrze víru chodíme, ne skrze vidění.",
+      "medium2": "Síla má a písnička má jest Hospodin, on byl můj vysvoboditel."
+    },
+    "themes": {
+      "title": "Vyber si svůj styl",
+      "make": "Vytvořit vlastní styl"
+    },
+    "share": {
+      "quote": {
+        "text": "Nebo skrze víru chodíme, ne skrze vidění.",
+        "author": "2. list Korintským 5:7"
+      },
+      "story": "Story",
+      "square": "Čtverec",
+      "save": "Uložit",
+      "copy": "Kopírovat",
+      "more": "Další"
+    },
+    "myown": {
+      "title": "Moje verše",
+      "add": "Přidat",
+      "dialogTitle": "Přidej nový verš!",
+      "save": "Uložit"
+    },
+    "practice": {
+      "quote": {
+        "text": "Hledejte Hospodina i síly jeho, hledejte tváři jeho ustavičně.",
+        "author": "První Letopisu 16:11"
+      },
+      "day": "Den",
+      "night": "Noc"
+    },
+    "dark": {
+      "quote": {
+        "text": "A to světlo v temnostech svítí, ale tmy ho neobsáhly.",
+        "author": "Jan 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "A to světlo v temnostech svítí, ale tmy ho neobsáhly.",
+        "author": "Jan 1:5"
+      },
+      {
+        "text": "Požehnejž tobě Hospodin, a ostříhejž tebe. Osvěť Hospodin tvář svou nad tebou, a buď milostiv tobě. Obratiž Hospodin tvář svou k tobě, a dejž tobě pokoj.",
+        "author": "Čtvrtá Mojžíšova 6:24-26"
+      },
+      {
+        "text": "A pokoj Boží, kterýž převyšuje všeliký rozum, hájiti bude srdcí vašich i smyslů vašich v Kristu Ježíši.",
+        "author": "Filipským 4:7"
+      },
+      {
+        "text": "Nebo já nejlépe znám myšlení, kteráž myslím o vás, dí Hospodin, myšlení o pokoji, a ne o trápení, abych učinil vašemu očekávání konec přežádostivý.",
+        "author": "Jeremjáš 29:11"
+      }
+    ]
+  },
+  "hr": {
+    "categoriesTitle": "Kategorije",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Biblijski stihovi"
+      },
+      {
+        "key": "faith",
+        "title": "Vjera"
+      },
+      {
+        "key": "hope",
+        "title": "Nada"
+      },
+      {
+        "key": "pray",
+        "title": "Molitva"
+      },
+      {
+        "key": "gratitude",
+        "title": "Zahvalnost"
+      },
+      {
+        "key": "jesus",
+        "title": "Sin Božji"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Oprost"
+      },
+      {
+        "key": "love",
+        "title": "Božja ljubav"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Sve mogu u Onome koji me jača!",
+        "author": "Filipljanima 4:13"
+      },
+      "label": "Biblijski stihovi"
+    },
+    "widgets": {
+      "medium": "Svu svoju brigu povjerite njemu jer on se brine za vas.",
+      "smallDark": "Sve mogu u Onome koji me jača!",
+      "smallPink": "Ta u vjeri hodimo, ne u gledanju.",
+      "medium2": "Jahve je moja snaga i pjesma, on mi je spasitelj."
+    },
+    "themes": {
+      "title": "Odaberi svoju temu",
+      "make": "Izradi vlastitu temu"
+    },
+    "share": {
+      "quote": {
+        "text": "Ta u vjeri hodimo, ne u gledanju.",
+        "author": "2 Korinćanima 5:7"
+      },
+      "story": "Priča",
+      "square": "Kvadrat",
+      "save": "Spremi",
+      "copy": "Kopiraj",
+      "more": "Više"
+    },
+    "myown": {
+      "title": "Moji stihovi",
+      "add": "Dodaj",
+      "dialogTitle": "Dodaj novi stih!",
+      "save": "Spremi"
+    },
+    "practice": {
+      "quote": {
+        "text": "Tražite Jahvu i njegovu snagu, tražite svagda njegovo lice!",
+        "author": "1 Ljetopisa 16:11"
+      },
+      "day": "Dan",
+      "night": "Noć"
+    },
+    "dark": {
+      "quote": {
+        "text": "I svjetlo u tami svijetli i tama ga ne obuze.",
+        "author": "Ivan 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "I svjetlo u tami svijetli i tama ga ne obuze.",
+        "author": "Ivan 1:5"
+      },
+      {
+        "text": "Neka te blagoslovi Jahve i neka te čuva! Neka te Jahve licem svojim obasja, milostiv ti bude! Neka pogled svoj Jahve svrati na te i mir ti donese!' Tako neka stavljaju moje ime nad sinove Izraelove, i ja ću ih blagoslivljati.”",
+        "author": "Brojevi 6:24-27"
+      },
+      {
+        "text": "I mir Božji koji je iznad svakog razuma čuvat će srca vaša i vaše misli u Kristu Isusu.",
+        "author": "Filipljanima 4:7"
+      },
+      {
+        "text": "Jer ja znam svoje naume koje s vama namjeravam - riječ je Jahvina - naume mira, a ne nesreće: da vam dadnem budućnost i nadu.",
+        "author": "Jeremija 29:11"
+      }
+    ]
+  },
+  "hu": {
+    "categoriesTitle": "Kategóriák",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Igeversek"
+      },
+      {
+        "key": "faith",
+        "title": "Hit"
+      },
+      {
+        "key": "hope",
+        "title": "Remény"
+      },
+      {
+        "key": "pray",
+        "title": "Ima"
+      },
+      {
+        "key": "gratitude",
+        "title": "Hála"
+      },
+      {
+        "key": "jesus",
+        "title": "Isten Fia"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Megbocsátás"
+      },
+      {
+        "key": "love",
+        "title": "Isten szeretete"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Mindenre van erőm a Krisztusban, a ki engem megerősít.",
+        "author": "Filippi 4:13"
+      },
+      "label": "Igeversek"
+    },
+    "widgets": {
+      "medium": "Minden gondotokat ő reá vessétek, mert néki gondja van reátok.",
+      "smallDark": "Mindenre van erőm a Krisztusban, a ki engem megerősít.",
+      "smallPink": "Mert hitben járunk, nem látásban.",
+      "medium2": "Erősségem és énekem az Úr, és ő lőn nékem szabadulásul."
+    },
+    "themes": {
+      "title": "Válaszd ki a stílusodat",
+      "make": "Egyéni stílus létrehozása"
+    },
+    "share": {
+      "quote": {
+        "text": "Mert hitben járunk, nem látásban.",
+        "author": "2 Korinthus 5:7"
+      },
+      "story": "Story",
+      "square": "Négyzet",
+      "save": "Mentés",
+      "copy": "Másolás",
+      "more": "Továbbiak"
+    },
+    "myown": {
+      "title": "Saját gondolataim",
+      "add": "Hozzáadás",
+      "dialogTitle": "Adj hozzá egy új gondolatot!",
+      "save": "Mentés"
+    },
+    "practice": {
+      "quote": {
+        "text": "Keressétek az Urat és az ő erősségét; keressétek az ő orczáját szüntelen.",
+        "author": "1 Krónika 16:11"
+      },
+      "day": "Nap",
+      "night": "Éjszaka"
+    },
+    "dark": {
+      "quote": {
+        "text": "És a világosság a sötétségben fénylik, de a sötétség nem fogadta be azt.",
+        "author": "János 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "És a világosság a sötétségben fénylik, de a sötétség nem fogadta be azt.",
+        "author": "János 1:5"
+      },
+      {
+        "text": "Áldjon meg tégedet az Úr, és őrizzen meg tégedet. Világosítsa meg az Úr az ő orczáját te rajtad, és könyörüljön te rajtad. Fordítsa az Úr az ő orczáját te reád, és adjon békességet néked.",
+        "author": "4 Mózes 6:24-26"
+      },
+      {
+        "text": "És az Istennek békessége, mely minden értelmet felül halad, meg fogja őrizni szíveiteket és gondolataitokat a Krisztus Jézusban.",
+        "author": "Filippi 4:7"
+      },
+      {
+        "text": "Mert én tudom az én gondolatimat, a melyeket én felőletek gondolok, azt mondja az Úr; békességnek és nem háborúságnak gondolata, hogy kivánatos véget adjak néktek.",
+        "author": "Jeremiás 29:11"
+      }
+    ]
+  },
+  "sl": {
+    "categoriesTitle": "Kategorije",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Svetopisemski verzi"
+      },
+      {
+        "key": "faith",
+        "title": "Vera"
+      },
+      {
+        "key": "hope",
+        "title": "Upanje"
+      },
+      {
+        "key": "pray",
+        "title": "Molitev"
+      },
+      {
+        "key": "gratitude",
+        "title": "Hvaležnost"
+      },
+      {
+        "key": "jesus",
+        "title": "Božji Sin"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Odpuščanje"
+      },
+      {
+        "key": "love",
+        "title": "Božja ljubezen"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Vse morem v njem, ki me krepča, v Kristusu.",
+        "author": "Filipljanom 4:13"
+      },
+      "label": "Svetopisemski verzi"
+    },
+    "widgets": {
+      "medium": "Vso skrb svojo zvrnite nanj, ker on skrbi za vas.",
+      "smallDark": "Vse morem v njem, ki me krepča, v Kristusu.",
+      "smallPink": "Zakaj po veri živimo, ne po tem, kar gledamo.",
+      "medium2": "Moč moja in pesem moja je Gospod, on mi je bil v rešenje."
+    },
+    "themes": {
+      "title": "Izberi svojo temo",
+      "make": "Ustvari lastno temo"
+    },
+    "share": {
+      "quote": {
+        "text": "Zakaj po veri živimo, ne po tem, kar gledamo.",
+        "author": "2 Korinčanom 5:7"
+      },
+      "story": "Story",
+      "square": "Kvadrat",
+      "save": "Shrani",
+      "copy": "Kopiraj",
+      "more": "Več"
+    },
+    "myown": {
+      "title": "Moje misli",
+      "add": "Dodaj",
+      "dialogTitle": "Dodaj novo misel!",
+      "save": "Shrani"
+    },
+    "practice": {
+      "quote": {
+        "text": "Iščite Gospoda in moči njegove, iščite vedno obličje njegovo!",
+        "author": "1 Kroniška 16:11"
+      },
+      "day": "Dan",
+      "night": "Noč"
+    },
+    "dark": {
+      "quote": {
+        "text": "In luč sveti v temi, in tema se je ni polastila.",
+        "author": "Janez 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "In luč sveti v temi, in tema se je ni polastila.",
+        "author": "Janez 1:5"
+      },
+      {
+        "text": "Gospod te blagoslóvi in te varuj! Gospod razsvétli obličje svoje proti tebi in ti bodi milostiv! Gospod obrni obličje svoje milo k tebi in ti daj mir!",
+        "author": "4 Mojzesova 6:24-26"
+      },
+      {
+        "text": "In mir Božji, ki presega ves razum, bo čuval in ohranil srca vaša in misli vaše v Kristusu Jezusu.",
+        "author": "Filipljanom 4:7"
+      },
+      {
+        "text": "Zakaj jaz dobro vem misli, ki jih mislim za vas, govori Gospod, misli o miru, ne pa o nadlogi, da vam dam srečen konec in upanje.",
+        "author": "Jeremija 29:11"
+      }
+    ]
+  },
+  "sv": {
+    "categoriesTitle": "Kategorier",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Bibelverser"
+      },
+      {
+        "key": "faith",
+        "title": "Tro"
+      },
+      {
+        "key": "hope",
+        "title": "Hopp"
+      },
+      {
+        "key": "pray",
+        "title": "Bön"
+      },
+      {
+        "key": "gratitude",
+        "title": "Tacksamhet"
+      },
+      {
+        "key": "jesus",
+        "title": "Guds Son"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Förlåtelse"
+      },
+      {
+        "key": "love",
+        "title": "Guds kärlek"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Allt förmår jag i honom som giver mig kraft.",
+        "author": "Filipperbrevet 4:13"
+      },
+      "label": "Bibelverser"
+    },
+    "widgets": {
+      "medium": "Och »kasten alla edra bekymmer på honom», ty han har omsorg om eder.",
+      "smallDark": "Allt förmår jag i honom som giver mig kraft.",
+      "smallPink": "Ty vi vandra här i tro och icke i åskådning.",
+      "medium2": "HERREN är min starkhet och min lovsång, och han blev mig till frälsning."
+    },
+    "themes": {
+      "title": "Välj din stil",
+      "make": "Skapa eget tema"
+    },
+    "share": {
+      "quote": {
+        "text": "Ty vi vandra här i tro och icke i åskådning.",
+        "author": "2 Korintierbrevet 5:7"
+      },
+      "story": "Story",
+      "square": "Kvadrat",
+      "save": "Spara",
+      "copy": "Kopiera",
+      "more": "Mer"
+    },
+    "myown": {
+      "title": "Mina verser",
+      "add": "Lägg till",
+      "dialogTitle": "Lägg till en ny vers!",
+      "save": "Spara"
+    },
+    "practice": {
+      "quote": {
+        "text": "Frågen efter HERREN och hans makt, söken hans ansikte beständigt.",
+        "author": "1 Krönikeboken 16:11"
+      },
+      "day": "Dag",
+      "night": "Natt"
+    },
+    "dark": {
+      "quote": {
+        "text": "Och ljuset lyser i mörkret, och mörkret har icke fått makt därmed.",
+        "author": "Johannes 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Och ljuset lyser i mörkret, och mörkret har icke fått makt därmed.",
+        "author": "Johannes 1:5"
+      },
+      {
+        "text": "HERREN välsigne dig och bevare dig. HERREN låte sitt ansikte lysa över dig och vare dig nådig. HERREN vände sitt ansikte till dig och give dig frid.",
+        "author": "Fjärde Moseboken 6:24-26"
+      },
+      {
+        "text": "Så skall Guds frid, som övergår allt förstånd, bevara edra hjärtan och edra tankar, i Kristus Jesus.",
+        "author": "Filipperbrevet 4:7"
+      },
+      {
+        "text": "Jag vet väl vilka tankar jag har för eder, säger HERREN, nämligen fridens tankar och icke ofärdens, till att giva eder en framtid och ett hopp.",
+        "author": "Jeremia 29:11"
+      }
+    ]
+  },
+  "nb": {
+    "categoriesTitle": "Kategorier",
+    "categories": [
+      {
+        "key": "holy_verses",
+        "title": "Bibelvers"
+      },
+      {
+        "key": "faith",
+        "title": "Tro"
+      },
+      {
+        "key": "hope",
+        "title": "Håp"
+      },
+      {
+        "key": "pray",
+        "title": "Bønn"
+      },
+      {
+        "key": "gratitude",
+        "title": "Takknemlighet"
+      },
+      {
+        "key": "jesus",
+        "title": "Guds Sønn"
+      },
+      {
+        "key": "forgiveness",
+        "title": "Tilgivelse"
+      },
+      {
+        "key": "love",
+        "title": "Guds kjærlighet"
+      }
+    ],
+    "card": {
+      "quote": {
+        "text": "Jeg formår alt i ham som gjør mig sterk.",
+        "author": "Filipperne 4:13"
+      },
+      "label": "Bibelvers"
+    },
+    "widgets": {
+      "medium": "Og kast all eders sorg på ham! for han har omsorg for eder.",
+      "smallDark": "Jeg formår alt i ham som gjør mig sterk.",
+      "smallPink": "For vi vandrer i tro, ikke i beskuelse.",
+      "medium2": "Herren er min styrke og lovsang, og han blev mig til frelse."
+    },
+    "themes": {
+      "title": "Velg stilen din",
+      "make": "Lag eget tema"
+    },
+    "share": {
+      "quote": {
+        "text": "For vi vandrer i tro, ikke i beskuelse.",
+        "author": "2 Korinter 5:7"
+      },
+      "story": "Story",
+      "square": "Kvadrat",
+      "save": "Lagre",
+      "copy": "Kopier",
+      "more": "Mer"
+    },
+    "myown": {
+      "title": "Mine vers",
+      "add": "Legg til",
+      "dialogTitle": "Legg til et nytt vers!",
+      "save": "Lagre"
+    },
+    "practice": {
+      "quote": {
+        "text": "Spør efter Herren og hans makt, søk hans åsyn all tid!",
+        "author": "1 Krønikebok 16:11"
+      },
+      "day": "Dag",
+      "night": "Natt"
+    },
+    "dark": {
+      "quote": {
+        "text": "Og lyset skinner i mørket, og mørket tok ikke imot det.",
+        "author": "Johannes 1:5"
+      }
+    },
+    "bands": [
+      {
+        "text": "Og lyset skinner i mørket, og mørket tok ikke imot det.",
+        "author": "Johannes 1:5"
+      },
+      {
+        "text": "Herren velsigne dig og bevare dig! Herren la sitt åsyn lyse over dig og være dig nådig! Herren løfte sitt åsyn på dig og gi dig fred!",
+        "author": "4 Mosebok 6:24-26"
+      },
+      {
+        "text": "Og Guds fred, som overgår all forstand, skal bevare eders hjerter og eders tanker i Kristus Jesus.",
+        "author": "Filipperne 4:7"
+      },
+      {
+        "text": "For jeg vet de tanker jeg tenker om eder, sier Herren, fredstanker og ikke tanker til ulykke, å gi eder fremtid og håp.",
+        "author": "Jeremia 29:11"
+      }
+    ]
   }
 }

@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Cuvântul lui Dumnezeu\naproape toată ziua',
+    date: 'luni, 1 ianuarie',
+    time: '3:16',
+    whens: ['acum', '3:16', '3:16'],
+  },
+  hook: { hero: 'Un verset biblic\npentru fiecare zi' },
+  categories: { hero: 'Scriptura pentru orice\nstare și moment' },
+  widgets: {
+    hero: 'Cuvântul lui Dumnezeu\npe ecranul principal',
+    heroAndroid: 'Cuvântul lui Dumnezeu\npe ecranul principal',
+  },
+  themes: { hero: 'Fă fiecare verset\ncu adevărat al tău', sample: 'Aa' },
+  share: { hero: 'Împărtășește\nScriptura frumos' },
+  myown: {
+    hero: 'Ține-ți rugăciunile\nși gândurile aproape',
+    dialogTyped: 'Doamne, călăuzește-mi azi inima și pașii.',
+    dialogAuthor: 'Rugăciunea mea',
+    rows: [
+      { text: 'Doamne, ajută-mă să umblu azi prin credință.', date: '21 iulie' },
+      { text: 'Dă-mi înțelepciune pentru ce urmează.', date: '14 iulie' },
+      { text: 'Îți mulțumesc pentru îndurările noi în fiecare dimineață.', date: '6 iulie' },
+      { text: 'Păstrează-mi inima liniștită în pacea Ta.', date: '28 iunie' },
+      { text: 'Învață-mă să iert din toată inima.', date: '19 iunie' },
+      { text: 'Fie ca vorbele mele să aducă azi speranță.', date: '9 iunie' },
+      { text: 'Pun această zi în mâinile Tale.', date: '1 iunie' },
+    ],
+  },
+  practice: { hero: 'Ia-ți timp pentru\nun singur text' },
+  dark: { hero: 'Cu tine,\nzi și noapte' },
+  proof: {
+    hero: 'Iubită de cititorii care\nse întorc la Scriptură',
+    heroAndroid: 'Iubită de cititori\ndin toată lumea',
+    storeIos: 'în App Store',
+    storeAndroid: 'pe Google Play',
+    familyTitle: 'Creată cu drag de familia Believe',
+    familySub: 'Peste 1 milion de descărcări ale aplicațiilor noastre',
+  },
+  feature: { hero: 'Versete biblice\nzilnice', qOpen: '„', qClose: '”' },
+};

@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Měj Boží slovo\nnablízku celý den',
+    date: 'pondělí 1. ledna',
+    time: '3:16',
+    whens: ['nyní', '3:16', '3:16'],
+  },
+  hook: { hero: 'Biblický verš\nna každý den' },
+  categories: { hero: 'Písmo pro každou\nnáladu i chvíli' },
+  widgets: {
+    hero: 'Boží slovo na\ndomovské obrazovce',
+    heroAndroid: 'Boží slovo na\ndomovské obrazovce',
+  },
+  themes: { hero: 'Přizpůsob si\nkaždý verš', sample: 'Aa' },
+  share: { hero: 'Sdílej Písmo\nv krásné podobě' },
+  myown: {
+    hero: 'Měj své modlitby\na slova nablízku',
+    dialogTyped: 'Pane, veď dnes mé srdce i mé kroky.',
+    dialogAuthor: 'Moje modlitba',
+    rows: [
+      { text: 'Pane, pomoz mi dnes kráčet ve víře.', date: '21. července' },
+      { text: 'Dej mi moudrost pro to, co přijde.', date: '14. července' },
+      { text: 'Děkuji za Tvé milosrdenství, nové každé ráno.', date: '6. července' },
+      { text: 'Udrž mé srdce pevné ve Tvém pokoji.', date: '28. června' },
+      { text: 'Nauč mě odpouštět z celého srdce.', date: '19. června' },
+      { text: 'Ať má slova dnes přinášejí naději.', date: '9. června' },
+      { text: 'Tento den vkládám do Tvých rukou.', date: '1. června' },
+    ],
+  },
+  practice: { hero: 'Zpomal\nu jednoho úryvku' },
+  dark: { hero: 'S tebou\nve dne i v noci' },
+  proof: {
+    hero: 'Oblíbená u čtenářů,\nkteří se vracejí k Písmu',
+    heroAndroid: 'Oblíbená u čtenářů\npo celém světě',
+    storeIos: 'v App Storu',
+    storeAndroid: 'na Google Play',
+    familyTitle: 'S láskou od rodiny aplikací Believe',
+    familySub: 'Přes 1 milion stažení našich aplikací',
+  },
+  feature: { hero: 'Denní\nbiblické verše', qOpen: '„', qClose: '“' },
+};

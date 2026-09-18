@@ -11,11 +11,25 @@ import ko from './ko.js';
 import id from './id.js';
 import tr from './tr.js';
 import pl from './pl.js';
+import fil from './fil.js';
+import hi from './hi.js';
+import ro from './ro.js';
+import nl from './nl.js';
+import cs from './cs.js';
+import hr from './hr.js';
+import hu from './hu.js';
+import sl from './sl.js';
+import sv from './sv.js';
+import nb from './nb.js';
 
 // Order = export order. Locale codes match the store upload mapping; `pt`
 // carries pt-BR content (the app's assets/content/pt-BR) per the l10n
-// program.
-export const LOCALE_COPY = { en, es, pt, de, fr, it, ja, ko, id, tr, pl };
+// program. Locale Wave 2 (LW8) appends the ten new app locales under their
+// app codes; nb ships to the stores as no / no-NO.
+export const LOCALE_COPY = {
+  en, es, pt, de, fr, it, ja, ko, id, tr, pl,
+  fil, hi, ro, nl, cs, hr, hu, sl, sv, nb,
+};
 
 const dig = (obj, path) =>
   path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
@@ -32,7 +46,7 @@ export const t = (path) => {
   return out;
 };
 
-/// Optional tool-side UI overrides. Holy already ships the 11 target
+/// Optional tool-side UI overrides. Holy already ships all 21 target
 /// locales, so the screenshot copy modules normally leave this empty.
 export const uiOverlay = (locale) => LOCALE_COPY[locale]?.ui ?? null;
 

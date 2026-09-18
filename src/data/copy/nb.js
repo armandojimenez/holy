@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Hold Guds ord\nnær hele dagen',
+    date: 'mandag 1. januar',
+    time: '3:16',
+    whens: ['nå', '3:16', '3:16'],
+  },
+  hook: { hero: 'Et bibelvers\nfor hver dag' },
+  categories: { hero: 'Guds ord for hver\nstemning og stund' },
+  widgets: {
+    hero: 'Guds ord på\nHjem-skjermen',
+    heroAndroid: 'Guds ord på\nstartskjermen',
+  },
+  themes: { hero: 'Gjør hvert vers\ntil ditt eget', sample: 'Aa' },
+  share: { hero: 'Del Guds ord\npå en vakker måte' },
+  myown: {
+    hero: 'Hold bønnene\nog ordene dine nær',
+    dialogTyped: 'Herre, led hjertet mitt og stegene mine i dag.',
+    dialogAuthor: 'Min bønn',
+    rows: [
+      { text: 'Herre, hjelp meg å vandre i tro i dag.', date: '21. juli' },
+      { text: 'Gi meg visdom for det som kommer.', date: '14. juli' },
+      { text: 'Takk for din miskunn, ny hver morgen.', date: '6. juli' },
+      { text: 'Hold hjertet mitt stødig i din fred.', date: '28. juni' },
+      { text: 'Lær meg å tilgi av hele hjertet.', date: '19. juni' },
+      { text: 'La ordene mine gi håp i dag.', date: '9. juni' },
+      { text: 'Jeg legger denne dagen i dine hender.', date: '1. juni' },
+    ],
+  },
+  practice: { hero: 'Stopp opp\nved ett bibelord' },
+  dark: { hero: 'Med deg,\ndag og natt' },
+  proof: {
+    hero: 'Elsket av lesere som\nstadig søker Guds ord',
+    heroAndroid: 'Elsket av lesere\nover hele verden',
+    storeIos: 'i App Store',
+    storeAndroid: 'på Google Play',
+    familyTitle: 'Laget med kjærlighet av Believe-familien',
+    familySub: 'Over 1 million nedlastinger av appene våre',
+  },
+  feature: { hero: 'Daglige\nbibelvers', qOpen: '«', qClose: '»' },
+};

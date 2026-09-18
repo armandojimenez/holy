@@ -134,7 +134,7 @@ function cleanScriptureForMarketing(text, locale) {
   return cleaned;
 }
 
-// ── 1. Deck copy modules (reviewed marketing strings, all 11 locales) ──
+// ── 1. Deck copy modules (reviewed marketing strings, every deck locale) ──
 copyGlob(COPY_SRC, COPY_DST, (f) => f.endsWith('.js'));
 manifest.sources.copy = path.relative(REPO, COPY_SRC);
 
@@ -329,6 +329,23 @@ for (const f of fs.readdirSync(FONT_CACHE)) {
   }
 }
 
+// Hindi (LW9): Poppins already carries Devanagari with full shaping, the
+// same face the app renders. It ships as a separate subset whose
+// unicode-range in global.css keeps it off every non-Devanagari page. The
+// serif role falls back to the platform's Devanagari serif.
+const DEVANAGARI_UNICODES = 'U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF';
+for (const f of ['Poppins-Regular.ttf', 'Poppins-Bold.ttf']) {
+  const dstRel = `public/fonts/${f.replace(/\.ttf$/, '-Devanagari.woff2')}`;
+  execFileSync(pyftsubset, [
+    path.join(FONT_CACHE, f),
+    `--output-file=${path.join(REPO, dstRel)}`,
+    '--flavor=woff2',
+    '--layout-features=*',
+    `--unicodes=${DEVANAGARI_UNICODES}`,
+  ], { stdio: 'ignore' });
+  manifest.files.push(dstRel);
+}
+
 // ── 3. Generated per-locale data (tiny, so pages never fetch corpus) ──
 const { LOCALE_COPY } = await import(
   pathToFileURL(path.join(COPY_DST, 'index.js')).href
@@ -462,9 +479,13 @@ for (const locale of Object.keys(LOCALE_COPY)) {
     path.join(EXPORTS, `play-feature/${locale}/01-feature.png`),
     path.join(REPO, `public/og/${locale}.png`)
   );
-  const shots = fs.readdirSync(path.join(EXPORTS, `apple-6.9/${locale}`)).sort();
+  // Play-only locales (fil) have no Apple deck; their phone shot is Android's.
+  const deckDir = ['apple-6.9', 'android-phone']
+    .map((size) => path.join(EXPORTS, `${size}/${locale}`))
+    .find((dir) => fs.existsSync(dir));
+  const shots = fs.readdirSync(deckDir).sort();
   copyFile(
-    path.join(EXPORTS, `apple-6.9/${locale}`, shots[0]),
+    path.join(deckDir, shots[0]),
     path.join(REPO, `public/og/screenshot-${locale}.png`)
   );
   downscale(`public/og/screenshot-${locale}.png`, 1200);

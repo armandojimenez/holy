@@ -251,5 +251,235 @@
         "author": "List do Rzymian 8:31"
       }
     ]
+  },
+  "fil": {
+    "appName": "Holy",
+    "whens": [
+      "ngayon",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Mahal ako ng Diyos.",
+    "cards": [
+      {
+        "text": "Na inyong ilagak sa kaniya ang lahat ng inyong kabalisahan, sapagka't kayo'y ipinagmamalasakit niya.",
+        "author": "1 Pedro 5:7"
+      },
+      {
+        "text": "Sapagka't nagsisilakad kami sa pamamagitan ng pananampalataya, hindi sa pamamagitan ng paningin.",
+        "author": "2 Mga Taga-Corinto 5:7"
+      },
+      {
+        "text": "Ano ang ating sasabihin sa mga bagay na ito? Kung ang Dios ay kakampi natin, sino ang laban sa atin?",
+        "author": "Mga Taga-Roma 8:31"
+      }
+    ]
+  },
+  "hi": {
+    "appName": "Holy",
+    "whens": [
+      "अभी",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "परमेश्वर मुझसे प्रेम करता है।",
+    "cards": [
+      {
+        "text": "अपनी सारी चिन्ता उसी पर डाल दो, क्योंकि उसको तुम्हारा ध्यान है।",
+        "author": "1 पतरस 5:7"
+      },
+      {
+        "text": "क्योंकि हम रूप को देखकर नहीं, पर विश्वास से चलते हैं।",
+        "author": "2 कुरिन्थियों 5:7"
+      },
+      {
+        "text": "तो हम इन बातों के विषय में क्या कहें? यदि परमेश्वर हमारी ओर है, तो हमारा विरोधी कौन हो सकता है?",
+        "author": "रोमियों 8:31"
+      }
+    ]
+  },
+  "ro": {
+    "appName": "Holy",
+    "whens": [
+      "acum",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Dumnezeu mă iubește.",
+    "cards": [
+      {
+        "text": "Aruncând toată îngrijorarea voastră asupra lui, pentru că el se îngrijește de voi.",
+        "author": "1 Petru 5:7"
+      },
+      {
+        "text": "Fiindcă umblăm prin credință, nu prin vedere.",
+        "author": "2 Corinteni 5:7"
+      },
+      {
+        "text": "Ce vom spune atunci față de acestea? Dacă Dumnezeu este pentru noi, cine poate fi împotriva noastră?",
+        "author": "Romani 8:31"
+      }
+    ]
+  },
+  "nl": {
+    "appName": "Holy",
+    "whens": [
+      "nu",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "God houdt van mij.",
+    "cards": [
+      {
+        "text": "Werpt al uw bekommernis op Hem, want Hij zorgt voor u.",
+        "author": "1 Petrus 5:7"
+      },
+      {
+        "text": "Want wij wandelen door geloof en niet door aanschouwen.",
+        "author": "2 Corinthiërs 5:7"
+      },
+      {
+        "text": "Wat zullen wij dan tot deze dingen zeggen? Zo God voor ons is, wie zal tegen ons zijn?",
+        "author": "Romeinen 8:31"
+      }
+    ]
+  },
+  "cs": {
+    "appName": "Holy",
+    "whens": [
+      "nyní",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Bůh mě miluje.",
+    "cards": [
+      {
+        "text": "Všelikou péči svou uvrhouce na něj. Nebo on má péči o vás.",
+        "author": "1. list Petrův 5:7"
+      },
+      {
+        "text": "Nebo skrze víru chodíme, ne skrze vidění.",
+        "author": "2. list Korintským 5:7"
+      },
+      {
+        "text": "Což tedy díme k tomu? Kdyžť jest Bůh s námi, i kdo proti nám?",
+        "author": "Římanům 8:31"
+      }
+    ]
+  },
+  "hr": {
+    "appName": "Holy",
+    "whens": [
+      "sada",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Bog me voli.",
+    "cards": [
+      {
+        "text": "Svu svoju brigu povjerite njemu jer on se brine za vas.",
+        "author": "1 Petrova 5:7"
+      },
+      {
+        "text": "Ta u vjeri hodimo, ne u gledanju.",
+        "author": "2 Korinćanima 5:7"
+      },
+      {
+        "text": "Što ćemo dakle na to reći? Ako je Bog za nas, tko će protiv nas?",
+        "author": "Rimljanima 8:31"
+      }
+    ]
+  },
+  "hu": {
+    "appName": "Holy",
+    "whens": [
+      "most",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Isten szeret engem.",
+    "cards": [
+      {
+        "text": "Minden gondotokat ő reá vessétek, mert néki gondja van reátok.",
+        "author": "1 Péter 5:7"
+      },
+      {
+        "text": "Mert hitben járunk, nem látásban.",
+        "author": "2 Korinthus 5:7"
+      },
+      {
+        "text": "Mit mondunk azért ezekre? Ha az Isten velünk, kicsoda ellenünk?",
+        "author": "Róma 8:31"
+      }
+    ]
+  },
+  "sl": {
+    "appName": "Holy",
+    "whens": [
+      "zdaj",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Bog me ljubi.",
+    "cards": [
+      {
+        "text": "Vso skrb svojo zvrnite nanj, ker on skrbi za vas.",
+        "author": "1 Peter 5:7"
+      },
+      {
+        "text": "Zakaj po veri živimo, ne po tem, kar gledamo.",
+        "author": "2 Korinčanom 5:7"
+      },
+      {
+        "text": "Kaj torej porečemo na to? Če je Bog z nami, kdo je proti nam?",
+        "author": "Rimljanom 8:31"
+      }
+    ]
+  },
+  "sv": {
+    "appName": "Holy",
+    "whens": [
+      "nu",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Gud älskar mig.",
+    "cards": [
+      {
+        "text": "Och »kasten alla edra bekymmer på honom», ty han har omsorg om eder.",
+        "author": "1 Petrusbrevet 5:7"
+      },
+      {
+        "text": "Ty vi vandra här i tro och icke i åskådning.",
+        "author": "2 Korintierbrevet 5:7"
+      },
+      {
+        "text": "Vad skola vi nu säga härom? Är Gud för oss, vem kan då vara emot oss?",
+        "author": "Romarbrevet 8:31"
+      }
+    ]
+  },
+  "nb": {
+    "appName": "Holy",
+    "whens": [
+      "nå",
+      "3:16",
+      "3:16"
+    ],
+    "pill": "Gud elsker meg.",
+    "cards": [
+      {
+        "text": "Og kast all eders sorg på ham! for han har omsorg for eder.",
+        "author": "1 Peter 5:7"
+      },
+      {
+        "text": "For vi vandrer i tro, ikke i beskuelse.",
+        "author": "2 Korinter 5:7"
+      },
+      {
+        "text": "Hvad skal vi da si til dette? Er Gud for oss, hvem er da imot oss?",
+        "author": "Romerne 8:31"
+      }
+    ]
   }
 }

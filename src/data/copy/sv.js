@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Håll Guds ord\nnära hela dagen',
+    date: 'måndag 1 januari',
+    time: '3:16',
+    whens: ['nu', '3:16', '3:16'],
+  },
+  hook: { hero: 'En bibelvers\nför varje dag' },
+  categories: { hero: 'Guds ord för varje\nkänsla och stund' },
+  widgets: {
+    hero: 'Guds ord på\nhemskärmen',
+    heroAndroid: 'Guds ord på\nstartskärmen',
+  },
+  themes: { hero: 'Gör varje vers\ntill din egen', sample: 'Aa' },
+  share: { hero: 'Dela Guds ord\npå ett vackert sätt' },
+  myown: {
+    hero: 'Håll dina böner\noch ord nära',
+    dialogTyped: 'Herre, led mitt hjärta och mina steg i dag.',
+    dialogAuthor: 'Min bön',
+    rows: [
+      { text: 'Herre, hjälp mig att vandra i tro i dag.', date: '21 juli' },
+      { text: 'Ge mig vishet för det som väntar.', date: '14 juli' },
+      { text: 'Tack för din nåd, ny varje morgon.', date: '6 juli' },
+      { text: 'Håll mitt hjärta stilla i din frid.', date: '28 juni' },
+      { text: 'Lär mig att förlåta av hela hjärtat.', date: '19 juni' },
+      { text: 'Låt mina ord ge hopp i dag.', date: '9 juni' },
+      { text: 'Jag lägger den här dagen i dina händer.', date: '1 juni' },
+    ],
+  },
+  practice: { hero: 'Stanna upp\nvid ett bibelord' },
+  dark: { hero: 'Med dig,\ndag och natt' },
+  proof: {
+    hero: 'Älskad av läsare som\nåtervänder till Bibeln',
+    heroAndroid: 'Älskad av läsare\növer hela världen',
+    storeIos: 'i App Store',
+    storeAndroid: 'på Google Play',
+    familyTitle: 'Gjord med kärlek av Believe-familjen',
+    familySub: 'Över 1 miljon nedladdningar av våra appar',
+  },
+  feature: { hero: 'Dagliga\nbibelverser', qOpen: '”', qClose: '”' },
+};

@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Houd Gods Woord\nde hele dag dichtbij',
+    date: 'maandag 1 januari',
+    time: '3:16',
+    whens: ['nu', '3:16', '3:16'],
+  },
+  hook: { hero: 'Een bijbeltekst\nvoor elke dag' },
+  categories: { hero: 'Gods Woord voor elk\ngevoel en moment' },
+  widgets: {
+    hero: 'Gods Woord op\nje beginscherm',
+    heroAndroid: 'Gods Woord op\nje startscherm',
+  },
+  themes: { hero: 'Maak elke tekst\nhelemaal van jou', sample: 'Aa' },
+  share: { hero: 'Deel Gods Woord\nop een mooie manier' },
+  myown: {
+    hero: 'Houd je gebeden\nen woorden dichtbij',
+    dialogTyped: 'Heer, leid vandaag mijn hart en mijn stappen.',
+    dialogAuthor: 'Mijn gebed',
+    rows: [
+      { text: 'Heer, help me vandaag in geloof te wandelen.', date: '21 juli' },
+      { text: 'Geef me wijsheid voor wat komen gaat.', date: '14 juli' },
+      { text: 'Dank U voor Uw goedheid, elke morgen nieuw.', date: '6 juli' },
+      { text: 'Houd mijn hart rustig in Uw vrede.', date: '28 juni' },
+      { text: 'Leer mij van harte te vergeven.', date: '19 juni' },
+      { text: 'Laat mijn woorden vandaag hoop geven.', date: '9 juni' },
+      { text: 'Ik leg deze dag in Uw handen.', date: '1 juni' },
+    ],
+  },
+  practice: { hero: 'Kom tot rust\nbij één tekst' },
+  dark: { hero: 'Bij jou,\ndag en nacht' },
+  proof: {
+    hero: 'Geliefd bij wie telkens\nde Bijbel weer opent',
+    heroAndroid: 'Geliefd bij lezers\nover de hele wereld',
+    storeIos: 'in de App Store',
+    storeAndroid: 'op Google Play',
+    familyTitle: 'Met liefde gemaakt door de Believe-familie',
+    familySub: 'Meer dan 1 miljoen downloads van onze apps',
+  },
+  feature: { hero: 'Dagelijkse\nbijbelteksten', qOpen: '“', qClose: '”' },
+};

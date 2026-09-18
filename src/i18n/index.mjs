@@ -17,35 +17,22 @@ import ko from './ko.mjs';
 import id from './id.mjs';
 import tr from './tr.mjs';
 import pl from './pl.mjs';
+import fil from './fil.mjs';
+import hi from './hi.mjs';
+import ro from './ro.mjs';
+import nl from './nl.mjs';
+import cs from './cs.mjs';
+import hr from './hr.mjs';
+import hu from './hu.mjs';
+import sl from './sl.mjs';
+import sv from './sv.mjs';
+import nb from './nb.mjs';
 
-const LANDING = { en, es, pt, de, fr, it, ja, ko, id, tr, pl };
+const LANDING = { en, es, pt, de, fr, it, ja, ko, id, tr, pl, fil, hi, ro, nl, cs, hr, hu, sl, sv, nb };
 
-export const LOCALES = Object.keys(LOCALE_COPY); // en es pt de fr it ja ko id tr pl
+export const LOCALES = Object.keys(LOCALE_COPY); // Wave 1 (11) + Wave 2 (10)
 
-// THE LAUNCH GATE (HX8): a locale's page publishes only once the shipped
-// app actually speaks that language — the mockups show real in-app content,
-// and marketing a language the download can't deliver breaks the honesty
-// rule. This list drives everything: routes, hreflang cluster, og
-// alternates, language selector/sheet/footer lists, the first-visit banner,
-// and the schema's inLanguage claim.
-// TO FLIP A LOCALE LIVE — the closing reminder of each language's GX9
-// publishing step, done ONLY after that language's app update is approved
-// and rolling out on the stores: add it here AND to the sitemap i18n map in
-// astro.config.mjs (kept in sync by hand — the config can't import this
-// file), run scripts/qa-sweep.mjs, deploy.
-export const PUBLISHED_LOCALES = [
-  'en',
-  'es',
-  'pt',
-  'de',
-  'fr',
-  'it',
-  'ja',
-  'ko',
-  'id',
-  'tr',
-  'pl',
-];
+export { PUBLISHED_LOCALES } from './published.mjs';
 
 // The first-visit language banner shows the VISITOR'S language, so every
 // page inlines this tiny map (3 short strings per locale).
@@ -66,6 +53,16 @@ export const HREFLANG = {
   id: 'id',
   tr: 'tr',
   pl: 'pl',
+  fil: 'fil',
+  hi: 'hi',
+  ro: 'ro',
+  nl: 'nl',
+  cs: 'cs',
+  hr: 'hr',
+  hu: 'hu',
+  sl: 'sl',
+  sv: 'sv',
+  nb: 'nb',
 };
 
 // og:locale wants territory-qualified codes.
@@ -81,6 +78,16 @@ export const OG_LOCALE = {
   id: 'id_ID',
   tr: 'tr_TR',
   pl: 'pl_PL',
+  fil: 'fil_PH',
+  hi: 'hi_IN',
+  ro: 'ro_RO',
+  nl: 'nl_NL',
+  cs: 'cs_CZ',
+  hr: 'hr_HR',
+  hu: 'hu_HU',
+  sl: 'sl_SI',
+  sv: 'sv_SE',
+  nb: 'nb_NO',
 };
 
 // Language names in their own language, for the selector + footer links.
@@ -96,6 +103,16 @@ export const ENDONYMS = {
   id: 'Bahasa Indonesia',
   tr: 'Türkçe',
   pl: 'Polski',
+  fil: 'Filipino',
+  hi: 'हिन्दी',
+  ro: 'Română',
+  nl: 'Nederlands',
+  cs: 'Čeština',
+  hr: 'Hrvatski',
+  hu: 'Magyar',
+  sl: 'Slovenščina',
+  sv: 'Svenska',
+  nb: 'Norsk',
 };
 
 /// Deck copy module for a locale (heroes, whens, myown rows...).

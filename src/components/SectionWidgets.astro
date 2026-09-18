@@ -166,6 +166,12 @@ const widgets = [
     padding: 0 35px;
   }
 
+  /* Filipino Scripture runs long-worded (the app's widget AutoSizeText
+     shrinks it); step the small widgets down so the verse fits its box. */
+  :global(:lang(fil)) .small .w-text {
+    font-size: 17px;
+  }
+
   @media (max-width: 1120px) {
     .scene { --fw: 350; }
   }

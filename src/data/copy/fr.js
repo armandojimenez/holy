@@ -34,7 +34,7 @@ export default {
     heroAndroid: 'Aimée par des lecteurs\ndu monde entier',
     storeIos: 'sur l’App Store',
     storeAndroid: 'sur Google Play',
-    familyTitle: 'Fait avec amour, au sein de la famille Believe',
+    familyTitle: 'Fait avec amour par la famille Believe',
     familySub: 'Plus d’un million de téléchargements, toutes nos apps confondues',
   },
   feature: { hero: 'Versets bibliques\nquotidiens', qOpen: '« ', qClose: ' »' },

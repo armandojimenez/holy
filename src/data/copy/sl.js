@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Naj bo Božja beseda\nblizu ves dan',
+    date: 'ponedeljek, 1. januar',
+    time: '3:16',
+    whens: ['zdaj', '3:16', '3:16'],
+  },
+  hook: { hero: 'Svetopisemski verz\nza vsak dan' },
+  categories: { hero: 'Sveto pismo za vsak\nobčutek in trenutek' },
+  widgets: {
+    hero: 'Božja beseda na\nzačetnem zaslonu',
+    heroAndroid: 'Božja beseda na\nzačetnem zaslonu',
+  },
+  themes: { hero: 'Vsak verz\npo tvoji meri', sample: 'Aa' },
+  share: { hero: 'Deli Sveto pismo\nna lep način' },
+  myown: {
+    hero: 'Naj bodo tvoje molitve\nin besede blizu',
+    dialogTyped: 'Gospod, vodi danes moje srce in moje korake.',
+    dialogAuthor: 'Moja molitev',
+    rows: [
+      { text: 'Gospod, pomagaj mi danes hoditi v veri.', date: '21. julij' },
+      { text: 'Daj mi modrost za to, kar prihaja.', date: '14. julij' },
+      { text: 'Hvala Ti za usmiljenje, novo vsako jutro.', date: '6. julij' },
+      { text: 'Ohrani moje srce trdno v Tvojem miru.', date: '28. junij' },
+      { text: 'Nauči me odpuščati iz srca.', date: '19. junij' },
+      { text: 'Naj moje besede danes prinašajo upanje.', date: '9. junij' },
+      { text: 'Ta dan polagam v Tvoje roke.', date: '1. junij' },
+    ],
+  },
+  practice: { hero: 'Upočasni\nob enem odlomku' },
+  dark: { hero: 'S teboj,\npodnevi in ponoči' },
+  proof: {
+    hero: 'Priljubljena med bralci,\nki se vračajo k Bibliji',
+    heroAndroid: 'Priljubljena med bralci\npo vsem svetu',
+    storeIos: 'v trgovini App Store',
+    storeAndroid: 'v trgovini Google Play',
+    familyTitle: 'Z ljubeznijo ustvarila družina Believe',
+    familySub: 'Več kot 1 milijon prenosov naših aplikacij',
+  },
+  feature: { hero: 'Svetopisemski\nverzi za vsak dan', qOpen: '„', qClose: '“' },
+};

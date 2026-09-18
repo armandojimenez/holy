@@ -2,12 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { APP_STORE_URL, PLAY_STORE_URL } from '../src/config.mjs';
+import { PUBLISHED_LOCALES } from '../src/i18n/published.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..');
 const DIST = path.join(REPO, 'dist');
 const LEGACY = path.resolve(REPO, '../../landings/holy_landing');
-const locales = ['en', 'es', 'pt', 'de', 'fr', 'it', 'ja', 'ko', 'id', 'tr', 'pl'];
+// Every published locale, so the gate grows with the launch gate.
+const locales = PUBLISHED_LOCALES;
 const errors = [];
 const fail = (message) => errors.push(message);
 const descriptions = [];

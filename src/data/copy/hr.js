@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Neka Božja riječ\nbude blizu cijeli dan',
+    date: 'ponedjeljak, 1. siječnja',
+    time: '3:16',
+    whens: ['sada', '3:16', '3:16'],
+  },
+  hook: { hero: 'Biblijski stih\nza svaki dan' },
+  categories: { hero: 'Sveto pismo za svaki\nosjećaj i trenutak' },
+  widgets: {
+    hero: 'Božja riječ na\npočetnom zaslonu',
+    heroAndroid: 'Božja riječ na\npočetnom zaslonu',
+  },
+  themes: { hero: 'Prilagodi\nsvaki stih sebi', sample: 'Aa' },
+  share: { hero: 'Dijeli Sveto pismo\nna lijep način' },
+  myown: {
+    hero: 'Neka tvoje molitve\ni riječi budu blizu',
+    dialogTyped: 'Gospodine, vodi danas moje srce i moje korake.',
+    dialogAuthor: 'Moja molitva',
+    rows: [
+      { text: 'Gospodine, pomozi mi danas hoditi u vjeri.', date: '21. srpnja' },
+      { text: 'Daj mi mudrosti za ono što dolazi.', date: '14. srpnja' },
+      { text: 'Hvala Ti na milosrđu koje je novo svakoga jutra.', date: '6. srpnja' },
+      { text: 'Učvrsti moje srce u Tvom miru.', date: '28. lipnja' },
+      { text: 'Nauči me opraštati od srca.', date: '19. lipnja' },
+      { text: 'Neka moje riječi danas donesu nadu.', date: '9. lipnja' },
+      { text: 'Ovaj dan stavljam u Tvoje ruke.', date: '1. lipnja' },
+    ],
+  },
+  practice: { hero: 'Uspori\nuz jedan odlomak' },
+  dark: { hero: 'S tobom,\ndanju i noću' },
+  proof: {
+    hero: 'Vole je čitatelji koji\nse vraćaju Bibliji',
+    heroAndroid: 'Vole je čitatelji\ndiljem svijeta',
+    storeIos: 'u App Storeu',
+    storeAndroid: 'na Google Playu',
+    familyTitle: 'S ljubavlju, od obitelji Believe',
+    familySub: 'Više od milijun preuzimanja naših aplikacija',
+  },
+  feature: { hero: 'Dnevni\nbiblijski stihovi', qOpen: '„', qClose: '“' },
+};

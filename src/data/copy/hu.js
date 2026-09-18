@@ -1,0 +1,41 @@
+export default {
+  reminders: {
+    hero: 'Legyen Isten igéje\nközel egész nap',
+    date: 'január 1., hétfő',
+    time: '3:16',
+    whens: ['most', '3:16', '3:16'],
+  },
+  hook: { hero: 'Egy igevers\nminden napra' },
+  categories: { hero: 'Igék minden érzésre\nés élethelyzetre' },
+  widgets: {
+    hero: 'Isten igéje\na kezdőképernyődön',
+    heroAndroid: 'Isten igéje\na kezdőképernyődön',
+  },
+  themes: { hero: 'Tedd személyessé\nminden igeversed', sample: 'Aa' },
+  share: { hero: 'Oszd meg az igét\nszép formában' },
+  myown: {
+    hero: 'Imáid és szavaid\nmindig veled',
+    dialogTyped: 'Uram, vezesd ma a szívemet és a lépteimet.',
+    dialogAuthor: 'Imádságom',
+    rows: [
+      { text: 'Uram, segíts ma hitben járnom.', date: 'július 21.' },
+      { text: 'Adj bölcsességet ahhoz, ami előttem áll.', date: 'július 14.' },
+      { text: 'Köszönöm, hogy irgalmad minden reggel új.', date: 'július 6.' },
+      { text: 'Őrizd meg a szívemet a békességedben.', date: 'június 28.' },
+      { text: 'Taníts meg szívből megbocsátani.', date: 'június 19.' },
+      { text: 'Szavaim ma reményt adjanak.', date: 'június 9.' },
+      { text: 'Ezt a napot a kezedbe teszem.', date: 'június 1.' },
+    ],
+  },
+  practice: { hero: 'Lassíts le\negyetlen igénél' },
+  dark: { hero: 'Veled\néjjel-nappal' },
+  proof: {
+    hero: 'Az Igéhez visszatérő\nolvasók kedvence',
+    heroAndroid: 'Olvasók kedvence\nszerte a világon',
+    storeIos: 'az App Store-ban',
+    storeAndroid: 'a Google Playen',
+    familyTitle: 'Szeretettel készítette a Believe család',
+    familySub: 'Alkalmazásainkat több mint 1 milliószor töltötték le',
+  },
+  feature: { hero: 'Napi\nigeversek', qOpen: '„', qClose: '”' },
+};
