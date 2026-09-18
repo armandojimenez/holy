@@ -15,7 +15,7 @@ export default defineConfig({
       // Emits xhtml:link alternates per published locale folder (en at
       // /holy/, the rest at /holy/<locale>/). KEEP IN SYNC WITH
       // PUBLISHED_LOCALES in src/i18n/index.mjs — a locale flips live in
-      // both places when its app update ships (full 11-locale map: pt is
+      // both places when its app update ships (full 21-locale map: pt is
       // pt-BR, rest map to themselves).
       i18n: {
         defaultLocale: 'en',
@@ -31,6 +31,16 @@ export default defineConfig({
           id: 'id',
           tr: 'tr',
           pl: 'pl',
+          fil: 'fil',
+          hi: 'hi',
+          ro: 'ro',
+          nl: 'nl',
+          cs: 'cs',
+          hr: 'hr',
+          hu: 'hu',
+          sl: 'sl',
+          sv: 'sv',
+          nb: 'nb',
         },
       },
     }),

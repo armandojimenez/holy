@@ -7,8 +7,7 @@
 // TO FLIP A LOCALE LIVE — done ONLY after that language's app update is
 // approved and rolling out on the stores: add it here AND to the sitemap i18n
 // map in astro.config.mjs (kept in sync by hand — the config can't import
-// this file), run scripts/qa-sweep.mjs, deploy. Wave 2 (fil hi ro nl cs hr hu
-// sl sv nb) flips at LW10.
+// this file), run scripts/qa-sweep.mjs, deploy.
 export const PUBLISHED_LOCALES = [
   'en',
   'es',
@@ -21,4 +20,14 @@ export const PUBLISHED_LOCALES = [
   'id',
   'tr',
   'pl',
+  'fil',
+  'hi',
+  'ro',
+  'nl',
+  'cs',
+  'hr',
+  'hu',
+  'sl',
+  'sv',
+  'nb',
 ];

@@ -1,7 +1,6 @@
 // LW9: the ten Locale Wave 2 landing locales. Each module carries its landing
 // block (same shape as COPY.en in ../landing-copy.mjs), its hero line breaks
-// and its language-name table. Built and QA'd in dev; they go live only when
-// added to PUBLISHED_LOCALES at LW10, once the app update is rolling out.
+// and its language-name table. Published 2026-09-17 by owner decision.
 import cs from './cs.mjs';
 import fil from './fil.mjs';
 import hi from './hi.mjs';
